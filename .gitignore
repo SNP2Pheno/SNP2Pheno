@@ -1,0 +1,47 @@
+# General
+*.log
+*.tmp
+*.bak
+*.swp
+*.pdf
+*.db
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+CMakeScripts/
+Testing/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Qt Creator
+*.pro.user
+*.pro.user.*
+*.qmake.stash
+
+# CLion
+.idea/
+cmake-build-*/
+
+# Visual Studio
+.vscode/
+.vs/
+*.vcxproj*
+*.sln
+*.suo
+*.user
+*.filters
+*.idb
+*.pdb
+*.opendb
+*.VC.db
+
+# macOS
+*.DS_Store
+*.AppleDouble
+._*
+
+# Windows
+Thumbs.db
+Desktop.ini
