@@ -76,7 +76,6 @@ int main(int argc, char* argv[])
     engine.rootContext()->setContextProperty("vcfParser", parserController);
 
 
-
     engine.load(QUrl::fromLocalFile("../main.qml"));
     if (engine.rootObjects().isEmpty())
         return -1;
