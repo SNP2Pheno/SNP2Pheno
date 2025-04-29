@@ -13,10 +13,10 @@ if response.status_code == 200:
     expression = firstAssociation.get('pvalueDescription')
     trait = firstAssociation.get('_links').get('efoTraits')
 
-    response_trait = requests.get(trait[0].get('href'))
+    response_trait = requests.get(trait.get('href'))
     if response_trait.status_code == 200:
         data_trait = response_trait.json()
-        trait_name = data_trait['_embedded']['efoTraits'][0].get('traitName')
+        trait_name = data_trait['_embedded']['efoTraits'][0].get('trait')
     else:
         trait_name = "Unknown Trait"
 
