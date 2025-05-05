@@ -1,10 +1,10 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <qqml.h>
-#include "vcf_to_snp.h"
-#include <iostream>  // For std::cout
-#include "debugconsole.h"
-#include "vcfparsercontroller.h"
+#include "headers/vcf_to_snp.h"
+#include <iostream>
+#include "headers/debugconsole.h"
+#include "headers/vcfparsercontroller.h"
 #include <QQmlContext>
 
 
@@ -39,6 +39,9 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const Q
         break;
     case QtFatalMsg:
         txt = QString("Fatal: %1").arg(msg);
+        break;
+        case QtInfoMsg:
+        txt = QString("Info: %1").arg(msg);
         break;
     }
 
