@@ -60,7 +60,7 @@ int main(int argc, char* argv[])
     // Register VcfToSnp with QML under the module "MyApp"
     qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
 
-    // Installiere den eigenen Message Handler
+    // install own message handler
     qInstallMessageHandler(myMessageHandler);
 
     QQmlApplicationEngine engine;
