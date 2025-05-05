@@ -39,8 +39,6 @@ QStringList VcfToSnp::parseVCF(const QString& filePath) {
     while (!in.atEnd()) {
         QString line = in.readLine();
         ++lineCount;
-        // Uncomment below if you want to see progress every 1000 lines:
-        // if (lineCount % 1000 == 0) qDebug() << "Processed" << lineCount << "lines.";
 
         if (line.isEmpty() || line.startsWith('#'))
             continue;
@@ -89,7 +87,7 @@ QStringList VcfToSnp::parseVCF(const QString& filePath) {
                 }
             }
             else {
-                // If the expected arrow ("->") isn�t found, add the raw id.
+                // If the expected arrow ("->") isn't found, add the raw id.
                 result << id;
                 qDebug() << "Parsed SNP (raw id):" << id;
             }
