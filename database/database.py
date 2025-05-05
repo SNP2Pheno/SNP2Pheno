@@ -103,11 +103,9 @@ except OperationalError as OE:
 con.execute("CREATE TABLE if not exists APPEARANCE_TABLE (          \
             Allele_ID integer,                                      \
             Pheno_ID integer,                                       \
-            OpenSNP_ID integer,                                     \
             GWAS_ID integer,                                        \
             FOREIGN KEY (Allele_ID) REFERENCES ALLELE_TABLE(ID),    \
             FOREIGN KEY (Pheno_ID) REFERENCES PHENO_TABLE(ID),      \
-            FOREIGN KEY (OpenSNP_ID) REFERENCES OpenSNP_TABLE(ID),  \
             FOREIGN KEY (GWAS_ID) REFERENCES GWAS_TABLE(ID)         \
             )")
 
