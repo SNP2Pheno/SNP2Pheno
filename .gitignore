@@ -12,6 +12,7 @@ CMakeFiles/
 CMakeScripts/
 Testing/
 Makefile
+CMakeLists.txt
 cmake_install.cmake
 install_manifest.txt
 
