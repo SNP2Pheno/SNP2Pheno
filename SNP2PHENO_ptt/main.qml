@@ -15,7 +15,7 @@ ApplicationWindow {
     height: 600
     title: "SNP2PHENO"
 
-    // Neue Beispiel-Daten (als Krankheiten mit Markern)
+    // new sample data
     property var preExistingList: [
         {
             name: "Diabetes",
@@ -43,7 +43,6 @@ ApplicationWindow {
     ]
     property var fileItems: []
     property bool infoVisible: false
-    // F�r die Krankheitsdetails wird jetzt ein Array erwartet
     property var selectedInfo: []
     property string selectedName: ""
     property var parsedFiles: ({})
@@ -55,7 +54,7 @@ ApplicationWindow {
     Connections {
         target: vcfParser
         onSnpListChanged: {
-            console.log("snpListChanged ausgel�st: " + vcfParser.snpList);
+            console.log("snpListChanged ausgelöst: " + vcfParser.snpList);
             fileItems = vcfParser.snpList;
         }
     }
@@ -90,7 +89,7 @@ ApplicationWindow {
         }
     }
 
-    // Hauptinhalt
+    // main body
     Row {
         id: mainRow
         anchors {
@@ -101,7 +100,7 @@ ApplicationWindow {
         }
         spacing: 10
 
-        // Linker Bereich: Enth�lt nun die tabContentBox
+        // left area: only contains tabContentBox
         Rectangle {
             id: leftBox
             width: parent.width * 0.6 - 10
@@ -127,7 +126,7 @@ ApplicationWindow {
                             color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
-                            // Inhalt ggf. �ndern
+                            //TODO: Add action to onClick
                         }
                     }
                     Button {
@@ -140,7 +139,7 @@ ApplicationWindow {
                             color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
-                            // Inhalt ggf. �ndern
+                            //TODO: Add action to onClick
                         }
                     }
                     Button {
@@ -153,7 +152,7 @@ ApplicationWindow {
                             color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
-                            // Inhalt ggf. �ndern
+                            //TODO: Add action to onClick
                         }
                     }
                 }
@@ -172,7 +171,7 @@ ApplicationWindow {
                         anchors.fill: parent
                         spacing: 10
 
-                        // Linke Seite: Krankheitsliste
+                        // left area: disease area
                         ColumnLayout {
                             id: listLayout
                             Layout.preferredWidth: infoVisible ? parent.width / 2 : parent.width
@@ -233,7 +232,7 @@ ApplicationWindow {
                             }
                         }
 
-                        // Rechte Seite: Tabelle mit genetischen Markern
+                        // right area: area with genetic markers
                         Rectangle {
                             id: infoBox
                             visible: infoVisible
@@ -257,7 +256,6 @@ ApplicationWindow {
                                         font.bold: true
                                         font.pixelSize: 18
                                         Layout.fillWidth: true
-                                        //width: parent.width - 10
                                         elide: Text.ElideRight
                                     }
                                     Button {
@@ -266,7 +264,7 @@ ApplicationWindow {
                                     }
                                 }
 
-                                // Tabellenkopf
+                                // table header
                                 Row {
                                     id: headerRow
                                     width: parent.width
@@ -292,7 +290,7 @@ ApplicationWindow {
                                     }
                                 }
 
-                                // Tabelleninhalt
+                                // table content
                                 ListView {
                                     id: infoListView
                                     width: headerRow.width
@@ -305,7 +303,7 @@ ApplicationWindow {
                                         height: 40
                                         spacing: 0
 
-                                        // SNP-Spalte
+                                        // SNP-column
                                         Rectangle {
                                             width: infoListView.width / 3
                                             height: 40
@@ -321,7 +319,7 @@ ApplicationWindow {
                                             }
                                         }
 
-                                        // Effekt-Spalte
+                                        // effect column
                                         Rectangle {
                                             width: infoListView.width / 3
                                             height: 40
@@ -337,7 +335,7 @@ ApplicationWindow {
                                             }
                                         }
 
-                                        // Schwere-Spalte
+                                        // severity column
                                         Rectangle {
                                             width: infoListView.width / 3
                                             height: 40
@@ -361,21 +359,19 @@ ApplicationWindow {
             }
         }
 
-        // Rechter Bereich: VCF File Viewer (unver�ndert)
-        // Rechter Bereich: VCF File Viewer + SNP Liste
+        // right area: VCF File Viewer (unchanged)
+        // right area: VCF File Viewer and SNP list
 Rectangle {
     id: rightBox
     width: parent.width * 0.4 - 10
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-    //Helper für layout
-    //border.width: 10
     color: "#9cccd9"
 
     ColumnLayout {
         anchors.fill: parent
         anchors.margins: 20
-        // Oberer Bereich: VCF File Viewer (bestehender Inhalt)
+        // upper area: VCF File Viewer (persisting content)
         Rectangle {
             id: topHalf
             Layout.fillWidth: true
@@ -386,7 +382,7 @@ Rectangle {
                 spacing: 10
 
                 Button {
-                    text: "Ordner mit VCF-Dateien ausw�hlen"
+                    text: "Ordner mit VCF-Dateien auswählen"
                     onClicked: folderDialog.open()
                 }
 
@@ -428,14 +424,14 @@ Rectangle {
             }
         }
 
-        // Unterer Bereich: SNP Liste (fileItems)
+        // lower area: SNP list (fileItems)
         Rectangle {
             id: bottomHalf
-    Layout.minimumHeight: 100  // Mindesth�he sicherstellen
+            Layout.minimumHeight: 100
 
             Layout.fillWidth: true
             Layout.preferredHeight: rightBox.height / 2 - 5
-    Layout.bottomMargin: 70
+            Layout.bottomMargin: 70
 
             color: "darkgrey"
 
@@ -480,7 +476,7 @@ Rectangle {
     }
 }
     }       
-    // Debug-Konsole am unteren Rand
+    // debug-console on the lower edge
     Rectangle {
         id: debugConsoleView
         anchors {
@@ -515,7 +511,7 @@ Rectangle {
         }
     }
 
-    // FileDialog f�r .vcf Dateien
+    // FileDialog for .vcf files
     FileDialog {
         id: fileDialog_vcf
         title: "Select .vcf file"
@@ -531,17 +527,17 @@ Rectangle {
         }
     }
 
-    // FileDialog f�r SNP Listen
+    // FileDialog for SNP lists
     FileDialog {
         id: fileDialog_snp
         title: "Select SNP list"
         nameFilters: ["*.txt"]
         onAccepted: {
-            // Verarbeitung der SNP Liste
+            //TODO: process SNP list
         }
     }
 
-    // Modelle f�r Krankheitsliste und Info-Tabelle
+    // model for disease list and info table
     ListModel {
         id: filteredModel
         Component.onCompleted: {
@@ -555,19 +551,19 @@ Rectangle {
         id: infoModel
     }
 
-    // FolderDialog zur Auswahl eines Ordners mit VCF-Dateien
+    // FolderDialog for selection of folder containing VCF files
     FolderDialog {
         id: folderDialog
         title: "Ordner mit VCF-Dateien ausw�hlen"
         currentFolder: StandardPaths.writableLocation(StandardPaths.HomeLocation)
         onAccepted: {
             folderModel.folder = selectedFolder
-            // Bei Ordnerwechsel zur�cksetzen
+            //reset when switching folders
             parsedFiles = {}
         }
     }
 
-    // FolderListModel zur Anzeige der VCF-Dateien
+    // FolderListModel to display VCF files
     FolderListModel {
         id: folderModel
         folder: ""

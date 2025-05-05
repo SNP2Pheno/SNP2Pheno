@@ -14,7 +14,6 @@
 
 void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg)
 {
-
     // Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
     QString fileName = QString(context.file);
     if (!fileName.contains("vcf_to_snp.cpp")) {
@@ -22,9 +21,6 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const Q
         std::cout << msg.toStdString() << std::endl;
         return;
     }
-
-
-
 
     QString txt;
     switch (type) {
@@ -45,15 +41,12 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const Q
         break;
     }
 
-    // Also output to the standard output.
     std::cout << txt.toStdString() << std::endl;
 
     // Forward the message to the QML debug console by invoking the appendLog slot.
     QMetaObject::invokeMethod(DebugConsole::instance(), "appendLog", Qt::QueuedConnection,
         Q_ARG(QString, txt));
 }
-
-
 
 int main(int argc, char* argv[])
 {
@@ -67,9 +60,8 @@ int main(int argc, char* argv[])
     // Register VcfToSnp with QML under the module "MyApp"
     qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
 
-    // Installiere den eigenen Message Handler
+    // install own message handler
     qInstallMessageHandler(myMessageHandler);
-
 
     QQmlApplicationEngine engine;
 
@@ -77,8 +69,6 @@ int main(int argc, char* argv[])
 
     VcfParserController* parserController = new VcfParserController();
     engine.rootContext()->setContextProperty("vcfParser", parserController);
-
-
 
     engine.load(QUrl::fromLocalFile("../main.qml"));
     if (engine.rootObjects().isEmpty())
