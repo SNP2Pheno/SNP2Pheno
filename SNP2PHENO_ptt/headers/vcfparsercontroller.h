@@ -7,7 +7,7 @@
 class VcfParserController : public QObject
 {
     Q_OBJECT
-        Q_PROPERTY(QStringList snpList READ snpList NOTIFY snpListChanged)
+    Q_PROPERTY(QStringList snpList READ snpList NOTIFY snpListChanged)
 public:
     explicit VcfParserController(QObject* parent = nullptr);
 
