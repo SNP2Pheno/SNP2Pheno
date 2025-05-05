@@ -1,6 +1,6 @@
-#include "vcfworker.h"
+#include "../headers/vcfworker.h"
 #include <QDebug>
-#include "vcf_to_snp.h"
+#include "../headers/vcf_to_snp.h"
 
 VcfWorker::VcfWorker(const QString& fileUrl, QObject* parent)
     : QObject(parent), m_fileUrl(fileUrl)

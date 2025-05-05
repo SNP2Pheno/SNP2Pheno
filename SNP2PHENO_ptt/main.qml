@@ -67,7 +67,7 @@ ApplicationWindow {
         anchors.left: parent.left
         anchors.right: parent.right
         height: 60
-        color: "#00b894"
+        color: "#17415D"
         Row {
             anchors.centerIn: parent
             spacing: 10
@@ -107,7 +107,7 @@ ApplicationWindow {
             width: parent.width * 0.6 - 10
             anchors.top: parent.top
             anchors.bottom: parent.bottom
-            color: "#0984e3"
+            color: "#5f9eb3"
             Column {
                 id: leftColumn
                 anchors.fill: parent
@@ -116,14 +116,15 @@ ApplicationWindow {
 
                 Row {
                     id: tabButtonsRow
-                    spacing: 10
+                    spacing: 5
                     Button {
                         id: appearanceBtn
                         text: "Appearance"
                         background: Rectangle {
-                            color: appearanceBtn.hovered ? "#0984e3" : "#74b9ff"
                             radius: 5
-                            border.color: "black"
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
                             // Inhalt ggf. �ndern
@@ -133,9 +134,10 @@ ApplicationWindow {
                         id: diseasesBtn
                         text: "Diseases"
                         background: Rectangle {
-                            color: diseasesBtn.hovered ? "#0984e3" : "#81ecec"
                             radius: 5
-                            border.color: "black"
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
                             // Inhalt ggf. �ndern
@@ -145,9 +147,10 @@ ApplicationWindow {
                         id: otherBtn
                         text: "Other"
                         background: Rectangle {
-                            color: otherBtn.hovered ? "#0984e3" : "#a29bfe"
                             radius: 5
-                            border.color: "black"
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
                         }
                         onClicked: {
                             // Inhalt ggf. �ndern
@@ -365,8 +368,9 @@ Rectangle {
     width: parent.width * 0.4 - 10
     anchors.top: parent.top
     anchors.bottom: parent.bottom
-    border.width: 10
-    color: "#dfe6e9"
+    //Helper für layout
+    //border.width: 10
+    color: "#9cccd9"
 
     ColumnLayout {
         anchors.fill: parent
