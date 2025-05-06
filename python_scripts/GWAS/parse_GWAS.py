@@ -39,7 +39,6 @@ def parseSNP(snpID):
                 data_trait = response_trait.json()
                 ass_obj.trait_name = data_trait['_embedded']['efoTraits'][0].get('trait')
 
-            # check if there is a same pheno-expression pair => then look at p-Value
             for d in output_data:
                 if d.trait_name == ass_obj.trait_name and d.expression == ass_obj.expression:
                     if is_better(d, ass_obj):
