@@ -60,6 +60,13 @@ def parseSNP(snpID):
                     INSERT INTO PHENO_TABLE (Phenotype, Expression) VALUES (?, ?)
                 ''', (trait_name, expression))
 
+            # add data to GWAS
+            con.execute('''
+                INSERT INTO GWAS_TABLE (PValueMantissa, PValueExponent, OR_value, CI_min, CI_max) VALUES ( ?, ?, ?, ?, ?)
+            ''', (pValueMantisse, pValueExponent, orValue, CIMin, CIMax))
+
+            # TODO: check if disease or appearance
+
             con.commit()
         con.close()
 
@@ -69,3 +76,4 @@ def parseSNP(snpID):
 
 
 parseSNP("rs7329174")
+parseSNP("rs75161997")
