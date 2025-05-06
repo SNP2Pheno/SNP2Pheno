@@ -1,0 +1,576 @@
+import QtQuick 2.15
+import QtQuick.Window 2.2
+import QtQuick.Controls 2.15
+import QtQuick.Layouts 1.15
+import QtQuick.Dialogs
+import Qt.labs.settings 1.0
+import MyApp 1.0
+import Qt.labs.folderlistmodel 2.1
+import Qt.labs.qmlmodels 1.0
+
+ApplicationWindow {
+    id: window
+    visible: true
+    width: 1000
+    height: 600
+    title: "SNP2PHENO"
+
+    // new sample data
+    property var preExistingList: [
+        {
+            name: "Diabetes",
+            markers: [
+                { snp: "rs1234, rs2345", effect: "Increases risk (insulin resistance)", severity: 2 },
+                { snp: "rs3456", effect: "Decreases risk (improves metabolism)", severity: 1 },
+                { snp: "rs6789", effect: "Decreases risk (better vasodilation)", severity: 1 },
+                { snp: "rs7890", effect: "Increases risk (vascular stiffness)", severity: 2 }
+            ]
+        },
+        {
+            name: "Alzheimer's",
+            markers: [
+                { snp: "rs4567", effect: "No significant effect", severity: 0 },
+                { snp: "rs5678", effect: "Increases risk (amyloid plaque buildup)", severity: 2 }
+            ]
+        },
+        {
+            name: "Hypertension",
+            markers: [
+                { snp: "rs6789", effect: "Decreases risk (better vasodilation)", severity: 1 },
+                { snp: "rs7890", effect: "Increases risk (vascular stiffness)", severity: 2 }
+            ]
+        }
+    ] //preExistingList
+    property var fileItems: []
+    property bool infoVisible: false
+    property var selectedInfo: []
+    property string selectedName: ""
+    property var parsedFiles: ({})
+
+    VcfToSnp {
+        id: vcfToSnp
+    } //VcfToSnp
+
+    Connections {
+        target: vcfParser
+        onSnpListChanged: {
+            console.log("snpListChanged ausgelöst: " + vcfParser.snpList);
+            fileItems = vcfParser.snpList;
+        } //onSnpListChanged
+    } //Connections
+
+    // Header
+    Rectangle {
+        id: header
+        anchors.top: parent.top
+        anchors.left: parent.left
+        anchors.right: parent.right
+        height: 60
+        color: "#17415D"
+        Row {
+            anchors.centerIn: parent
+            spacing: 10
+            Rectangle {
+                id: logo
+                width: 40
+                height: 40
+                color: "white"
+                Text {
+                    anchors.centerIn: parent
+                    text: "Logo"
+                    font.pixelSize: 12
+                } //Text
+            } //Rectangle
+
+            Text {
+                text: "SNP2PHENO"
+                font.pixelSize: 24
+                color: "white"
+            } //Text
+        } //Row
+    } //Rectangle
+
+    // main body
+    Row {
+        id: mainRow
+        anchors {
+            top: header.bottom
+            left: parent.left
+            right: parent.right
+            bottom: debugConsoleView.top
+        } //anchors
+        spacing: 10
+
+        // left area: only contains tabContentBox
+        Rectangle {
+            id: leftBox
+            width: parent.width * 0.6 - 10
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            color: "#5f9eb3"
+            Column {
+                id: leftColumn
+                anchors.fill: parent
+                anchors.margins: 10
+                spacing: 10
+
+                Row {
+                    id: tabButtonsRow
+                    spacing: 5
+                    Button {
+                        id: appearanceBtn
+                        text: "Appearance"
+                        background: Rectangle {
+                            radius: 5
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                        }
+                        onClicked: {
+                            //TODO: Add action to onClick
+                        }
+                    }
+                    Button {
+                        id: diseasesBtn
+                        text: "Diseases"
+                        background: Rectangle {
+                            radius: 5
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                        }
+                        onClicked: {
+                            //TODO: Add action to onClick
+                        }
+                    }
+                    Button {
+                        id: otherBtn
+                        text: "Other"
+                        background: Rectangle {
+                            radius: 5
+                            bottomLeftRadius: 0
+                            bottomRightRadius: 0
+                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                        }
+                        onClicked: {
+                            //TODO: Add action to onClick
+                        }
+                    }
+                }
+
+                Rectangle {
+                    id: tabContentBox
+                    anchors {
+                        top: tabButtonsRow.bottom
+                        left: parent.left
+                        right: parent.right
+                        bottom: parent.bottom
+                    }
+                    color: "#dfe6e9"
+                    RowLayout {
+                        id: mainRowContent
+                        anchors.fill: parent
+                        spacing: 10
+
+                        // left area: disease area
+                        ColumnLayout {
+                            id: listLayout
+                            Layout.preferredWidth: infoVisible ? parent.width / 2 : parent.width
+                            Layout.fillHeight: true
+                            spacing: 10
+
+                            TextField {
+                                id: searchBar
+                                placeholderText: "Search diseases..."
+                                Layout.fillWidth: true
+                                onTextChanged: {
+                                    filteredModel.clear();
+                                    for (var i = 0; i < preExistingList.length; i++) {
+                                        var disease = preExistingList[i];
+                                        if (disease.name.toLowerCase().includes(searchBar.text.toLowerCase())) {
+                                            filteredModel.append({ "name": disease.name, "index": i });
+                                        }
+                                    }
+                                }
+                            }
+
+                            ListView {
+                                id: diseaseListView
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                model: filteredModel
+                                clip: true
+                                delegate: Rectangle {
+                                    width: diseaseListView.width
+                                    height: 40
+                                    color: ListView.isCurrentItem ? "blue" : (mouseArea.containsMouse ? "lightblue" : "white")
+                                    border.color: "darkgray"
+                                    border.width: 2
+
+                                    Text {
+                                        text: name
+                                        anchors.centerIn: parent
+                                        color: ListView.isCurrentItem ? "white" : "black"
+                                        font.pixelSize: 16
+                                    }
+
+                                    MouseArea {
+                                        id: mouseArea
+                                        anchors.fill: parent
+                                        hoverEnabled: true
+                                        onClicked: {
+                                            diseaseListView.currentIndex = index;
+                                            selectedName = name;
+                                            selectedInfo = preExistingList[index].markers;
+                                            infoVisible = true;
+                                            infoModel.clear();
+                                            for (var i = 0; i < selectedInfo.length; i++) {
+                                                infoModel.append(selectedInfo[i]);
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        // right area: area with genetic markers
+                        Rectangle {
+                            id: infoBox
+                            visible: infoVisible
+                            Layout.preferredWidth: parent.width / 2
+                            Layout.fillHeight: true
+                            color: "white"
+                            border.color: "black"
+                            border.width: 2
+
+                            ColumnLayout {
+                                anchors.fill: parent
+                                anchors.margins: 10
+                                spacing: 10
+
+                                RowLayout {
+                                    Layout.fillWidth: true
+                                    spacing: 10
+
+                                    Text {
+                                        text: "Genetic markers for \"" + selectedName + "\""
+                                        font.bold: true
+                                        font.pixelSize: 18
+                                        Layout.fillWidth: true
+                                        elide: Text.ElideRight
+                                    }
+                                    Button {
+                                        text: "Close"
+                                        onClicked: infoVisible = false
+                                    }
+                                }
+
+                                // table header
+                                Row {
+                                    id: headerRow
+                                    width: parent.width
+                                    Layout.fillWidth: true
+                                    height: 30
+                                    spacing: 0
+
+                                    Repeater {
+                                        model: ["SNPs", "Effect", "Severity"]
+                                        Rectangle {
+                                            width: headerRow.width / 3
+                                            height: 30
+                                            color: "#f0f0f0"
+                                            border.color: "black"
+                                            border.width: 1
+
+                                            Text {
+                                                text: modelData
+                                                anchors.centerIn: parent
+                                                font.bold: true
+                                            }
+                                        }
+                                    }
+                                }
+
+                                // table content
+                                ListView {
+                                    id: infoListView
+                                    width: headerRow.width
+                                    Layout.fillHeight: true
+                                    Layout.fillWidth: true
+                                    model: infoModel
+                                    clip: true
+                                    delegate: Row {
+                                        width: infoListView.width
+                                        height: 40
+                                        spacing: 0
+
+                                        // SNP-column
+                                        Rectangle {
+                                            width: infoListView.width / 3
+                                            height: 40
+                                            color: index % 2 === 0 ? "#ffffff" : "#f8f8f8"
+                                            border.color: "black"
+                                            border.width: 1
+
+                                            Text {
+                                                text: snp
+                                                anchors.centerIn: parent
+                                                width: parent.width - 10
+                                                elide: Text.ElideRight
+                                            }
+                                        }
+
+                                        // effect column
+                                        Rectangle {
+                                            width: infoListView.width / 3
+                                            height: 40
+                                            color: index % 2 === 0 ? "#ffffff" : "#f8f8f8"
+                                            border.color: "black"
+                                            border.width: 1
+
+                                            Text {
+                                                text: effect
+                                                anchors.centerIn: parent
+                                                width: parent.width - 10
+                                                elide: Text.ElideRight
+                                            }
+                                        }
+
+                                        // severity column
+                                        Rectangle {
+                                            width: infoListView.width / 3
+                                            height: 40
+                                            color: index % 2 === 0 ? "#ffffff" : "#f8f8f8"
+                                            border.color: "black"
+                                            border.width: 1
+
+                                            Text {
+                                                text: severity === 0 ? "No effect" : severity === 1 ? "Protective" : "Risk factor"
+                                                anchors.centerIn: parent
+                                                color: severity === 0 ? "black" : severity === 1 ? "green" : "red"
+                                                font.bold: severity !== 0
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } //Rectangle
+    
+        // right area: VCF File Viewer (unchanged)
+        // right area: VCF File Viewer and SNP list
+        Rectangle {
+            id: rightBox
+            width: parent.width * 0.4 - 10
+            anchors.top: parent.top
+            anchors.bottom: parent.bottom
+            color: "#9cccd9"
+
+            ColumnLayout {
+                anchors.fill: parent
+                anchors.margins: 20
+                // upper area: VCF File Viewer (persisting content)
+                Rectangle {
+                    id: topHalf
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: rightBox.height / 2 - 5
+                    color: "lightgrey"
+                    ColumnLayout {
+                        anchors.fill: parent
+                        spacing: 10
+
+                        Button {
+                            text: "Ordner mit VCF-Dateien auswählen"
+                            onClicked: folderDialog.open()
+                        } //Button
+
+                        ListView {
+                            id: vcfListView
+                            Layout.fillWidth: true
+                            Layout.fillHeight: true
+                            model: folderModel
+                            delegate: Rectangle {
+                                id: fileDelegate
+                                width: vcfListView.width
+                                height: 40
+                                border.width: 1
+                                border.color: "gray"
+                                color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
+
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: fileName
+                                    font.pixelSize: 16
+                                    color: "black"
+                                    width: parent.width - 10
+                                    elide: Text.ElideRight
+                                } //Text
+
+                                MouseArea {
+                                    id: mouseArea
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                    onClicked: vcfListView.currentIndex = index
+                                    onDoubleClicked: {
+                                        console.log("Parsing file:", filePath)
+                                        vcfParser.startParsing(filePath)
+                                        parsedFiles[filePath] = true
+                                    } //onDoubleClicked
+                                } //MouseArea
+                            } //delegate: Rectangle
+                        } //ListView
+                    } //ColumnLayout
+                } //Rectangle
+
+                // lower area: SNP list (fileItems)
+                Rectangle {
+                    id: bottomHalf
+                    Layout.minimumHeight: 100
+
+                    Layout.fillWidth: true
+                    Layout.preferredHeight: rightBox.height / 2 - 5
+                    Layout.bottomMargin: 70
+
+                    color: "darkgrey"
+
+
+                    ScrollView {
+                        anchors.fill: parent
+                        anchors.margins: 10
+                        ScrollBar.vertical.policy: ScrollBar.AsNeeded
+
+                        ListView {
+                            id: fileListView
+                            anchors.margins: 10
+                            clip: true
+                            model: fileItems = ["test","test","test","test","test","test","test","test"]
+                            delegate: Rectangle {
+                                id: delegateRect
+                                property bool isHovered: false
+                                width: fileListView.width
+                                height: 40
+                                color: ListView.isCurrentItem ? "blue" : (isHovered ? "lightblue" : "white")
+                                border.width: 2
+                                border.color: "darkgray"
+
+                                Text {
+                                    text: modelData
+                                    anchors.centerIn: parent
+                                    color: ListView.isCurrentItem ? "white" : (isHovered ? "red" : "black")
+                                    font.pixelSize: 16
+                                } //Text
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    hoverEnabled: true
+                                    onClicked: fileListView.currentIndex = index
+                                    onEntered: delegateRect.isHovered = true
+                                    onExited: delegateRect.isHovered = false
+                                } //Text
+                            } //delegate:Rectangle
+                        } //ListView
+                    } //ScrollView
+                } //Rectangle
+            } //ColumnLayout
+        } //Rectangle
+    } //Row       
+
+    // debug-console on the lower edge
+    Rectangle {
+        id: debugConsoleView
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: parent.bottom
+        } //anchors
+        height: 150
+        color: "black"
+        border.width: 4
+        border.color: "red"
+
+        ScrollView {
+            id: consoleScroll
+            anchors.fill: parent
+            ScrollBar.vertical.policy: ScrollBar.AsNeeded
+
+            TextArea {
+                id: consoleTextArea
+                Layout.fillWidth: true
+                Layout.fillHeight: true
+                readOnly: true
+                wrapMode: Text.Wrap
+                font.pixelSize: 14
+                color: "green"
+                background: null
+                text: debugConsole.log
+                onTextChanged: {
+                    consoleTextArea.cursorPosition = consoleTextArea.text.length;
+                } //onTextChanged
+            } //TextArea
+        } //ScrollView
+    } //Rectangle
+
+    // FileDialog for .vcf files
+    FileDialog {
+        id: fileDialog_vcf
+        title: "Select .vcf file"
+        nameFilters: ["*.vcf", "*.txt"]
+        currentFolder: StandardPaths.writableLocation(StandardPaths.HomeLocation)
+        onAccepted: {
+            if (selectedFiles.length > 0) {
+                var fileUrlStr = selectedFiles[0];
+                vcfParser.startParsing(fileUrlStr);
+            } else {
+                console.log("No file selected");
+            } //if
+        } //onAccepted
+    } //FileDialog
+
+    // FileDialog for SNP lists
+    FileDialog {
+        id: fileDialog_snp
+        title: "Select SNP list"
+        nameFilters: ["*.txt"]
+        onAccepted: {
+            //TODO: process SNP list
+        } //onAccepted
+    } //FileDialog
+
+    // model for disease list and info table
+    ListModel {
+        id: filteredModel
+        Component.onCompleted: {
+            for (var i = 0; i < preExistingList.length; i++) {
+                filteredModel.append({ "name": preExistingList[i].name, "index": i });
+            } //for
+        } //Component.onCompleted
+    } //ListModel
+
+    ListModel {
+        id: infoModel
+    } //ListModel
+
+    // FolderDialog for selection of folder containing VCF files
+    FolderDialog {
+        id: folderDialog
+        title: "Ordner mit VCF-Dateien ausw�hlen"
+        currentFolder: StandardPaths.writableLocation(StandardPaths.HomeLocation)
+        onAccepted: {
+            folderModel.folder = selectedFolder
+            //reset when switching folders
+            parsedFiles = {}
+        } //onAccepted
+    } //FolderDialog
+
+    // FolderListModel to display VCF files
+    FolderListModel {
+        id: folderModel
+        folder: ""
+        nameFilters: ["*.vcf"]
+        showDirs: false
+        property string filePath: fileURL
+    } //FolderListModel
+} //ApplicationWindow
