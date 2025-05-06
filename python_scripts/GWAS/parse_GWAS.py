@@ -2,78 +2,69 @@ import sqlite3
 
 import requests
 
-def parseSNP(snpID):
-    con = sqlite3.connect("SNP2Pheno.db")
+from python_scripts.GWAS.Association import Association
 
+def is_better(ass_new, ass_old):
+    """Return True if the new association is more significant and has all necessary data."""
+    if ass_old.pValueExponent > ass_new.pValueExponent:
+        return True
+    if ass_old.pValueExponent == ass_new.pValueExponent and ass_old.pValueMantissa > ass_new.pValueMantissa:
+        return True
+    return False
+
+def has_valid_values(ass_obj):
+    """Check if all key values are non-zero (or not None)."""
+    return all([
+        ass_obj.CIMin not in [None, 0],
+        ass_obj.CIMax not in [None, 0],
+        ass_obj.orValue not in [None, 0]
+    ])
+
+
+def parseSNP(snpID):
+    output_data = []
     link = "https://www.ebi.ac.uk/gwas/rest/api/singleNucleotidePolymorphisms/" + snpID + "/associations"
     response = requests.get(link)
     if response.status_code == 200:
-
-        # check if SNP already exists in the database
-        cursor = con.execute('''
-            SELECT 1 FROM SNP_TABLE WHERE rs_ID = ?
-        ''', (int(snpID.replace("rs", "")),))
-        # if it exists, update it
-        if cursor.fetchone() is None:
-            # if not, insert it
-            con.execute('''
-                INSERT INTO SNP_TABLE (rs_ID, Ref) VALUES (?, ?)
-            ''', (int(snpID.replace("rs", "")), "Unknown"))
-            con.commit()
-
         data = response.json()
         for association in data['_embedded']['associations']:
-            pValueExponent = 0
-            pValueMantisse = 0
-            orValue = 0.0
-            CIMax = 0.0
-            CIMin = 0.0
-            expression = "Unknown"
+            ass_obj = Association()
 
             if association.get('pvalueMantissa') is not None and association.get('pvalueExponent') is not None:
-                pValueMantisse = association.get('pvalueMantissa')
-                pValueExponent = association.get('pvalueExponent')
+                ass_obj.pValueMantissa = association.get('pvalueMantissa')
+                ass_obj.pValueExponent = association.get('pvalueExponent')
             if association.get('orPerCopyNum') is not None:
-                orValue = association.get('orPerCopyNum')
+                ass_obj.orValue = association.get('orPerCopyNum')
             if association.get('range') is not None and association.get('range') != '[NR]':
-                CIMin = association.get('range')[1:].split('-')[0]
-                CIMax = association.get('range')[:-1].split('-')[1]
+                ass_obj.CIMin = association.get('range')[1:].split('-')[0]
+                ass_obj.CIMax = association.get('range')[:-1].split('-')[1]
             if association.get('pvalueDescription') is not None:
-                expression = association.get('pvalueDescription')
+                ass_obj.expression = association.get('pvalueDescription')
             trait = association.get('_links').get('efoTraits')
 
             response_trait = requests.get(trait.get('href'))
             if response_trait.status_code == 200:
                 data_trait = response_trait.json()
-                trait_name = data_trait['_embedded']['efoTraits'][0].get('trait')
+                ass_obj.trait_name = data_trait['_embedded']['efoTraits'][0].get('trait')
+
+            # check if there is a same pheno-expression pair => then look at p-Value and that other values are not null
+            # check if there is a same pheno-expression pair
+            for d in output_data:
+                if d.trait_name == ass_obj.trait_name and d.expression == ass_obj.expression:
+                    if is_better(d, ass_obj) and has_valid_values(ass_obj):
+                        output_data.remove(d)
+                        output_data.append(ass_obj)
+                    break
             else:
-                trait_name = "Unknown Trait"
+                output_data.append(ass_obj)
 
-            # Insert data into the database
-            # check if phenotype already exists
-            cursor = con.execute('''
-                SELECT 1 FROM PHENO_TABLE WHERE Phenotype = ? AND Expression = ?
-            ''', (trait_name, expression))
-
-            if cursor.fetchone() is None:
-                con.execute('''
-                    INSERT INTO PHENO_TABLE (Phenotype, Expression) VALUES (?, ?)
-                ''', (trait_name, expression))
-
-            # add data to GWAS
-            con.execute('''
-                INSERT INTO GWAS_TABLE (PValueMantissa, PValueExponent, OR_value, CI_min, CI_max) VALUES ( ?, ?, ?, ?, ?)
-            ''', (pValueMantisse, pValueExponent, orValue, CIMin, CIMax))
-
-            # TODO: check if disease or appearance
-
-            con.commit()
-        con.close()
 
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")
 
+    return output_data
 
 
-parseSNP("rs7329174")
+
+output_data = parseSNP("rs7329174")
 parseSNP("rs75161997")
