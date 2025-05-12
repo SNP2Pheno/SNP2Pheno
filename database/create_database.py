@@ -1,7 +1,7 @@
 import sqlite3
 from sqlite3 import OperationalError
 
-con = sqlite3.connect("../python_scripts/GWAS/SNP2Pheno.db")
+con = sqlite3.connect("SNP2Pheno.db")
 
 try:
     con.execute('DROP TABLE SNP_TABLE')
