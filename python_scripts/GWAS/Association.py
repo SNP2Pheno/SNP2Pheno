@@ -9,6 +9,9 @@ class Association:
         self.pValueExponent = 0
         self.pValueMantissa = 0
         self.orValue = 0.0
+        self.betaNum = 0.0
+        self.betaUnit = "Unknown"
+        self.betaDirection = "Unknown"
         self.CIMax = 0.0
         self.CIMin = 0.0
         self.expression = "Unknown"
@@ -90,3 +93,32 @@ class Association:
             self._type = value
         else:
             raise ValueError("Invalid type. Must be an instance of TYPE Enum.")
+
+    # Getter and Setter for betaNum
+    @property
+    def betaNum(self):
+        return self._betaNum
+
+    @betaNum.setter
+    def betaNum(self, value):
+        self._betaNum = value
+
+
+    # Getter and Setter for betaUnit
+    @property
+    def betaUnit(self):
+        return self._betaUnit
+
+    @betaUnit.setter
+    def betaUnit(self, value):
+        self._betaUnit = value
+
+
+    # Getter and Setter for betaDirection
+    @property
+    def betaDirection(self):
+        return self._betaDirection
+
+    @betaDirection.setter
+    def betaDirection(self, value):
+        self._betaDirection = value
