@@ -15,7 +15,7 @@ class Association:
         self.CIMax = 0.0
         self.CIMin = 0.0
         self.expression = "Unknown"
-        self.trait_name = "Unknown Trait"
+        self.traitName = "Unknown Trait"
         self.type = TYPE.DISEASE
         self.NumOfIndividualsInStudy = 0
 
@@ -76,11 +76,11 @@ class Association:
 
     # Getter and Setter for trait_name
     @property
-    def trait_name(self):
+    def traitName(self):
         return self._trait_name
 
-    @trait_name.setter
-    def trait_name(self, value):
+    @traitName.setter
+    def traitName(self, value):
         self._trait_name = value
 
     # Getter and Setter for type
@@ -145,7 +145,7 @@ class Association:
             f"CIMax={self.CIMax}, "
             f"CIMin={self.CIMin}, "
             f"expression='{self.expression}', "
-            f"trait_name='{self.trait_name}', "
+            f"traitName='{self.traitName}', "
             f"type={self.type.name}), "
             f"NumOfIndividualsInStudy={self.NumOfIndividualsInStudy}"
         )
