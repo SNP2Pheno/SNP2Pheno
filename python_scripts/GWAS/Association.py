@@ -1,3 +1,9 @@
+from enum import Enum
+
+class TYPE(Enum):
+    DISEASE = 1
+    APPEARANCE = 2
+
 class Association:
     def __init__(self):
         self.pValueExponent = 0
@@ -7,6 +13,8 @@ class Association:
         self.CIMin = 0.0
         self.expression = "Unknown"
         self.trait_name = "Unknown Trait"
+        self.type = TYPE.DISEASE
+
 
     # Getter and Setter for pValueExponent
     @property
@@ -70,3 +78,15 @@ class Association:
     @trait_name.setter
     def trait_name(self, value):
         self._trait_name = value
+
+    # Getter and Setter for type
+    @property
+    def type(self):
+        return self._type
+
+    @type.setter
+    def type(self, value):
+        if isinstance(value, TYPE):
+            self._type = value
+        else:
+            raise ValueError("Invalid type. Must be an instance of TYPE Enum.")
