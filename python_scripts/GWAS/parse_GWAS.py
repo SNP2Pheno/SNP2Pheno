@@ -32,6 +32,12 @@ def parseSNP(snpID):
                 ass_obj.CIMax = association.get('range')[:-1].split('-')[1]
             if association.get('pvalueDescription') is not None:
                 ass_obj.expression = association.get('pvalueDescription')
+            if association.get('betaNum') is not None:
+                ass_obj.betaNum = association.get('betaNum')
+            if association.get('betaUnit') is not None:
+                ass_obj.betaUnit = association.get('betaUnit')
+            if association.get('betaDirection') is not None:
+                ass_obj.betaDirection = association.get('betaDirection')
             trait = association.get('_links').get('efoTraits')
 
             response_trait = requests.get(trait.get('href'))
@@ -66,4 +72,6 @@ def parseSNP(snpID):
 
 
 output_data = parseSNP("rs7329174")
+for i, output_datum in enumerate(output_data):
+    print(output_datum.__str__())
 #parseSNP("rs75161997")
