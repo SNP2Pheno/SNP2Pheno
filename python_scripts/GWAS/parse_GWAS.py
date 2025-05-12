@@ -2,10 +2,10 @@ import sqlite3
 
 import requests
 
-from python_scripts.GWAS.Association import Association
+from python_scripts.GWAS.Association import Association, TYPE
+
 
 def is_better(ass_new, ass_old):
-    """Return True if the new association is more significant and has all necessary data."""
     if ass_old.pValueExponent > ass_new.pValueExponent:
         return True
     if ass_old.pValueExponent == ass_new.pValueExponent and ass_old.pValueMantissa > ass_new.pValueMantissa:
@@ -39,6 +39,15 @@ def parseSNP(snpID):
                 data_trait = response_trait.json()
                 ass_obj.trait_name = data_trait['_embedded']['efoTraits'][0].get('trait')
 
+                response_ols = requests.get('https://www.ebi.ac.uk/ols4/api/ontologies/efo/terms?short_form=' + data_trait['_embedded']['efoTraits'][0].get('shortForm'))
+                if response_ols.status_code == 200:
+                    data_ols = response_ols.json()
+                    description = data_ols['_embedded']['terms'][0]['description'][0]
+                    if str(description).__contains__('disease') or str(description).__contains__('disorder'):
+                        ass_obj.type = TYPE.DISEASE
+                    else:
+                        ass_obj.type = TYPE.APPEARANCE
+
             for d in output_data:
                 if d.trait_name == ass_obj.trait_name and d.expression == ass_obj.expression:
                     if is_better(d, ass_obj):
@@ -57,4 +66,4 @@ def parseSNP(snpID):
 
 
 output_data = parseSNP("rs7329174")
-parseSNP("rs75161997")
+#parseSNP("rs75161997")
