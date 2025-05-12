@@ -86,10 +86,3 @@ def parseSNP(snpID):
         outputData.append(bestAssociation)
 
     return outputData
-
-
-
-output_data = parseSNP("rs7329174")
-for i, output_datum in enumerate(output_data):
-    print(output_datum.__str__())
-#parseSNP("rs75161997")
