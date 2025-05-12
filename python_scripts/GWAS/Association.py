@@ -17,6 +17,7 @@ class Association:
         self.expression = "Unknown"
         self.trait_name = "Unknown Trait"
         self.type = TYPE.DISEASE
+        self.NumOfIndividualsInStudy = 0
 
 
     # Getter and Setter for pValueExponent
@@ -122,3 +123,29 @@ class Association:
     @betaDirection.setter
     def betaDirection(self, value):
         self._betaDirection = value
+
+    # Getter and Setter for NumOfIndividualsInStudy
+    @property
+    def NumOfIndividualsInStudy(self):
+        return self._NumOfIndividualsInStudy
+
+    @NumOfIndividualsInStudy.setter
+    def NumOfIndividualsInStudy(self, value):
+        self._NumOfIndividualsInStudy = value
+
+    def __str__(self):
+        return (
+            f"Association("
+            f"pValueExponent={self.pValueExponent}, "
+            f"pValueMantissa={self.pValueMantissa}, "
+            f"orValue={self.orValue}, "
+            f"betaNum={self.betaNum}, "
+            f"betaUnit='{self.betaUnit}', "
+            f"betaDirection='{self.betaDirection}', "
+            f"CIMax={self.CIMax}, "
+            f"CIMin={self.CIMin}, "
+            f"expression='{self.expression}', "
+            f"trait_name='{self.trait_name}', "
+            f"type={self.type.name}), "
+            f"NumOfIndividualsInStudy={self.NumOfIndividualsInStudy}"
+        )
