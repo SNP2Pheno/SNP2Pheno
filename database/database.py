@@ -63,20 +63,6 @@ con.execute("CREATE TABLE if not exists ALLELE_TABLE (              \
             )")
 
 try:
-    con.execute('DROP TABLE PHENO_TABLE')
-except OperationalError as OE:
-    if OE.sqlite_errorcode == 1:
-        pass
-    else:
-        raise OE
-
-con.execute("CREATE TABLE if not exists PHENO_TABLE (               \
-            ID integer primary key autoincrement,                   \
-            Phenotype text NOT NULL,                                \
-            Expression text NOT NULL                                \
-            )")
-
-try:
     con.execute('DROP TABLE GWAS_TABLE')
 except OperationalError as OE:
     if OE.sqlite_errorcode == 1:
@@ -102,10 +88,10 @@ except OperationalError as OE:
         raise OE
 con.execute("CREATE TABLE if not exists APPEARANCE_TABLE (          \
             Allele_ID integer,                                      \
-            Pheno_ID integer,                                       \
             GWAS_ID integer,                                        \
+            Phenotype text,                                         \
+            Expression text,                                        \
             FOREIGN KEY (Allele_ID) REFERENCES ALLELE_TABLE(ID),    \
-            FOREIGN KEY (Pheno_ID) REFERENCES PHENO_TABLE(ID),      \
             FOREIGN KEY (GWAS_ID) REFERENCES GWAS_TABLE(ID)         \
             )")
 
@@ -119,11 +105,10 @@ except OperationalError as OE:
         raise OE
 con.execute("CREATE TABLE if not exists DISEASE_TABLE (             \
             Allele_ID integer,                                      \
-            Pheno_ID integer,                                       \
-            Uniprot_Note text,                                      \
             GWAS_ID integer,                                        \
+            Disease text,                                           \
+            Effect text,                                            \
             FOREIGN KEY (Allele_ID) REFERENCES ALLELE_TABLE(ID),    \
-            FOREIGN KEY (Pheno_ID) REFERENCES PHENO_TABLE(ID),      \
             FOREIGN KEY (GWAS_ID) REFERENCES GWAS_TABLE(ID)         \
             )")
 
