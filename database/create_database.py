@@ -74,6 +74,9 @@ con.execute("CREATE TABLE if not exists GWAS_TABLE (                \
             PValueMantissa integer,                                 \
             PValueExponent integer,                                 \
             OR_value real,                                          \
+            betaNum real,                                          \
+            betaUnit text,                                         \
+            betaDirection text,                                   \
             CI_min real,                                            \
             CI_max real                                             \
             )")
