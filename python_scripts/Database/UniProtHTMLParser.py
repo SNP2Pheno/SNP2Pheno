@@ -129,24 +129,29 @@ class UniProtHTMLParser:
 
     def run(self):
         rsIDs = self.get_rsIDs_from_db()
-        primaryAccessions = None
         for rsID in rsIDs:
             primaryAccessions = self.get_primaryAccessions_for_rsID(rsID)
 
-        if primaryAccessions is not None:
-            for EntryID in primaryAccessions:
-                data = self.get_protein_variants(EntryID)
-                print (data)
-                print(f"Found {len(data)} disease-variant associations for {EntryID}")
+            if primaryAccessions is not None:
+                for EntryID in primaryAccessions:
+                    data = self.get_protein_variants(EntryID)
+                    for result in data:
+                        exit
+                        disease_present = self.cursor.execute("SELECT * FROM DISEASE_TABLE WHERE Disease = ?",
+                                                              (result['disease'],)).fetchone()
+
+                        if disease_present is None:
+                            self.cursor.execute("INSERT INTO DISEASE_TABLE (Disease) VALUES (?)", (result['disease'],))
+                            self.db.commit()
+
+                        rsID_present = self.cursor.execute("SELECT rs_ID FROM SNP_TABLE WHERE rs_ID = ?",
+                                                      (result['rs_id'],)).fetchone()
+                        if rsID_present is None:
+                            self.cursor.execute("INSERT INTO SNP_TABLE (rs_ID) VALUES (?);", (result['rs_id'],))
+                            self.db.commit()
+                    print(f"Found {len(data)} disease-variant associations for {EntryID}")
+
 
 if __name__ == "__main__":
     parser = UniProtHTMLParser("SNP2Pheno.db")
     parser.run()
-
-    results = None
-    if results:
-        print("\nResults:")
-        for result in results:
-            print(f"Disease: {result['disease']}")
-            print(f"RS ID: {result['rs_id']}")
-            print("-" * 50)

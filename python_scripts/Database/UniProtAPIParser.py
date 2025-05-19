@@ -25,7 +25,7 @@ class UniProtParser:
                                 disease_ids.append(disease_id)
         return disease_ids
 
-    def get_rs_IDs(self):
+    def get_rsIDs_from_db(self):
         self.cursor.execute("SELECT rs_ID FROM SNP_TABLE")
         return [row[0] for row in self.cursor.fetchall()]
 
