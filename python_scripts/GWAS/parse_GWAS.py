@@ -28,8 +28,9 @@ def parseSNP(snpID):
             if association.get('orPerCopyNum') is not None:
                 assicationObj.orValue = association.get('orPerCopyNum')
             if association.get('range') is not None and association.get('range') != '[NR]':
-                assicationObj.CIMin = association.get('range')[1:].split('-')[0]
-                assicationObj.CIMax = association.get('range')[:-1].split('-')[1]
+                association_normalized = association.get('range').replace("–", "-")
+                assicationObj.CIMin = association_normalized.split('-')[0]
+                assicationObj.CIMax = association_normalized.split('-')[1]
             if association.get('pvalueDescription') is not None:
                 assicationObj.expression = association.get('pvalueDescription')
             if association.get('betaNum') is not None:
@@ -85,3 +86,7 @@ def parseSNP(snpID):
         outputData.append(bestAssociation)
 
     return outputData
+
+with open('../OpenSNP/output_files/output_file.txt') as snps_file:
+    for line in snps_file:
+        print(parseSNP(line.split('\t')[0]))
