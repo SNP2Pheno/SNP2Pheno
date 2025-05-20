@@ -86,7 +86,3 @@ def parseSNP(snpID):
         outputData.append(bestAssociation)
 
     return outputData
-
-with open('../OpenSNP/output_files/output_file.txt') as snps_file:
-    for line in snps_file:
-        print(parseSNP(line.split('\t')[0]))
