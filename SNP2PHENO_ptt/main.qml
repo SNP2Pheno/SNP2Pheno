@@ -1,4 +1,5 @@
 import QtQuick 2.15
+import QtCore
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
@@ -7,6 +8,7 @@ import Qt.labs.settings 1.0
 import MyApp 1.0
 import Qt.labs.folderlistmodel 2.1
 import Qt.labs.qmlmodels 1.0
+
 
 ApplicationWindow {
     id: window
@@ -390,41 +392,88 @@ Rectangle {
                     onClicked: folderDialog.open()
                 }
 
+//VCF LISTE EINLESEN
                 ListView {
                     id: vcfListView
                     Layout.fillWidth: true
                     Layout.fillHeight: true
                     model: folderModel
+
+                    // Initialisierung des parsedFiles-Objekts
+                    property var parsedFiles: ({})
+
                     delegate: Rectangle {
                         id: fileDelegate
                         width: vcfListView.width
                         height: 40
                         border.width: 1
                         border.color: "gray"
-                        color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
+                        color: (vcfListView.parsedFiles[filePath] === true) ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: fileName
-                            font.pixelSize: 16
-                            color: "black"
-                            width: parent.width - 10
-                            elide: Text.ElideRight
+                        RowLayout {
+                            anchors.fill: parent
+                            spacing: 10
+                            anchors.margins: 5
+
+                            Text {
+                                Layout.fillWidth: true
+                                text: fileName
+                                font.pixelSize: 16
+                                color: "black"
+                                elide: Text.ElideRight
+                            }
+
+                            Rectangle {
+                                id: button_Edit_AFQ
+                                visible: vcfListView.parsedFiles[filePath] === true
+                                width: 30
+                                height: 30
+                                color: "transparent"
+                                border.color: "darkgreen"
+                                border.width: 1
+                                radius: 4
+                                Layout.alignment: Qt.AlignRight
+
+                                Image {
+                                    anchors.centerIn: parent
+                                    width: 24
+                                    height: 24
+                                    source: "./images/SNP_AFQ_ICON.jpg"
+                                    fillMode: Image.PreserveAspectFit
+                                }
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: {
+                                        console.log("AFQ-Button geklickt für:", filePath)
+                                        windowLauncher.openAFQEditor()
+                                    }
+                                }
+                            }
                         }
 
                         MouseArea {
                             id: mouseArea
                             anchors.fill: parent
                             hoverEnabled: true
-                            onClicked: vcfListView.currentIndex = index
+                            propagateComposedEvents: true // Allow child MouseAreas to receive events
+                            onClicked: {
+                                vcfListView.currentIndex = index
+                                mouse.accepted = false // Let the event propagate to children
+                            }
                             onDoubleClicked: {
-                                console.log("Parsing file:", filePath)
-                                vcfParser.startParsing(filePath)
-                                parsedFiles[filePath] = true
+                                console.log("Parsing file:", filePath);
+                                vcfParser.startParsing(filePath);
+
+                                var updatedParsedFiles = vcfListView.parsedFiles;
+                                updatedParsedFiles[filePath] = true;
+                                vcfListView.parsedFiles = updatedParsedFiles;
                             }
                         }
                     }
                 }
+                //Listview
             }
         }
 
