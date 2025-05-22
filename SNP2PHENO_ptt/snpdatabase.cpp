@@ -7,7 +7,7 @@ SnpDatabase::SnpDatabase(QObject *parent) : QObject(parent)
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
     //db.setDatabaseName("gwas_data.db");  // adjust path if needed
-    db.setDatabaseName("/home/florian/CLionProjects/SNP2Phenp/SNP2PHENO_ptt/gwas_data.db");
+    db.setDatabaseName("../gwas_data.db");
 
     if (!db.open()) {
         qWarning() << "Failed to open database:" << db.lastError().text();
@@ -83,4 +83,3 @@ QVariantMap SnpDatabase::queryEffect(const QString &snpId_R_allele) {
 
     return result;
 }
-
