@@ -1,9 +1,7 @@
 from collections import defaultdict
 
 import requests
-
-from python_scripts.GWAS.Association import Association, TYPE
-
+from Association import Association, TYPE
 
 def is_better(associationNew, associationOld):
     if associationOld.pValueExponent > associationNew.pValueExponent:
@@ -29,7 +27,7 @@ def parseSNP(snpID):
                 assicationObj.orValue = association.get('orPerCopyNum')
             if association.get('range') is not None and association.get('range') != '[NR]':
                 assicationObj.CIMin = association.get('range')[1:].split('-')[0]
-                assicationObj.CIMax = association.get('range')[:-1].split('-')[1]
+                assicationObj.CIMax = association.get('range')[:-1].split('-')[1] #TODO: index out of bounds possible
             if association.get('pvalueDescription') is not None:
                 assicationObj.expression = association.get('pvalueDescription')
             if association.get('betaNum') is not None:
@@ -49,7 +47,7 @@ def parseSNP(snpID):
                 response_ols = requests.get('https://www.ebi.ac.uk/ols4/api/ontologies/efo/terms?short_form=' + data_trait['_embedded']['efoTraits'][0].get('shortForm'))
                 if response_ols.status_code == 200:
                     data_ols = response_ols.json()
-                    description = data_ols['_embedded']['terms'][0]['description'][0]
+                    description = data_ols['_embedded']['terms'][0]['description'][0] #TODO: index out of bounds possible
                     if str(description).__contains__('disease') or str(description).__contains__('disorder'):
                         assicationObj.type = TYPE.DISEASE
                     else:
