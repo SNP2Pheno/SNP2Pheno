@@ -1,9 +1,7 @@
 from collections import defaultdict
 
 import requests
-
-from python_scripts.GWAS.Association import Association, TYPE
-
+from Association import Association, TYPE
 
 def is_better(associationNew, associationOld):
     if associationOld.pValueExponent > associationNew.pValueExponent:
@@ -27,9 +25,10 @@ def parseSNP(snpID):
                 assicationObj.pValueExponent = association.get('pvalueExponent')
             if association.get('orPerCopyNum') is not None:
                 assicationObj.orValue = association.get('orPerCopyNum')
-            if association.get('range') is not None and association.get('range') != '[NR]':
-                assicationObj.CIMin = association.get('range')[1:].split('-')[0]
-                assicationObj.CIMax = association.get('range')[:-1].split('-')[1]
+            if association.get('range') is not None and not str(association.get('range')).__contains__('NR'):
+                association_normalized = association.get('range').replace("–", "-")
+                assicationObj.CIMin = association_normalized.split('-')[0]
+                assicationObj.CIMax = association_normalized.split('-')[1]
             if association.get('pvalueDescription') is not None:
                 assicationObj.expression = association.get('pvalueDescription')
             if association.get('betaNum') is not None:
@@ -45,15 +44,16 @@ def parseSNP(snpID):
             if responseTrait.status_code == 200:
                 data_trait = responseTrait.json()
                 assicationObj.traitName = data_trait['_embedded']['efoTraits'][0].get('trait')
-
-                response_ols = requests.get('https://www.ebi.ac.uk/ols4/api/ontologies/efo/terms?short_form=' + data_trait['_embedded']['efoTraits'][0].get('shortForm'))
-                if response_ols.status_code == 200:
-                    data_ols = response_ols.json()
-                    description = data_ols['_embedded']['terms'][0]['description'][0]
-                    if str(description).__contains__('disease') or str(description).__contains__('disorder'):
-                        assicationObj.type = TYPE.DISEASE
-                    else:
-                        assicationObj.type = TYPE.APPEARANCE
+                if data_trait['_embedded']['efoTraits'][0].get('shortForm') is not None:
+                    response_ols = requests.get('https://www.ebi.ac.uk/ols4/api/ontologies/efo/terms?short_form=' + data_trait['_embedded']['efoTraits'][0].get('shortForm'))
+                    if response_ols.status_code == 200:
+                        data_ols = response_ols.json()
+                        if len(data_ols['_embedded']['terms'][0].get('description')) != 0:
+                            description = data_ols['_embedded']['terms'][0]['description'][0]
+                            if str(description).__contains__('disease') or str(description).__contains__('disorder'):
+                                assicationObj.type = TYPE.DISEASE
+                            else:
+                                assicationObj.type = TYPE.APPEARANCE
 
             responseNumOfIndividuals = requests.get(numOfInd.get('href'))
             if responseNumOfIndividuals.status_code == 200:
@@ -65,7 +65,6 @@ def parseSNP(snpID):
                             assicationObj.NumOfIndividualsInStudy = a['numberOfIndividuals']
 
             allAssociations.append(assicationObj)
-
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")
 
@@ -83,5 +82,4 @@ def parseSNP(snpID):
 
         bestAssociation = min(topAssociations, key=lambda x: (x.pValueExponent, x.pValueMantissa))
         outputData.append(bestAssociation)
-
     return outputData
