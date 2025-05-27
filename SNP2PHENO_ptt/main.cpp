@@ -1,11 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <qqml.h>
-#include "headers/vcf_to_snp.h"
-#include <iostream>
-#include "headers/debugconsole.h"
-#include "headers/vcfparsercontroller.h"
+#include "vcf_to_snp.h"
+#include "windowlauncher.h"
+#include <iostream>  // For std::cout
+#include "debugconsole.h"
+#include "vcfparsercontroller.h"
 #include <QQmlContext>
+#include "snpdatabase.h"
 
 
 #include <QDebug>
@@ -14,8 +16,10 @@
 
 void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg)
 {
+
     // Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
     QString fileName = QString(context.file);
+
     if (!fileName.contains("vcf_to_snp.cpp")) {
         // Output messages from other files to standard output.
         std::cout << msg.toStdString() << std::endl;
@@ -24,23 +28,25 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const Q
 
     QString txt;
     switch (type) {
-    case QtDebugMsg:
-        txt = QString("Debug: %1").arg(msg);
-        break;
-    case QtWarningMsg:
-        txt = QString("Warning: %1").arg(msg);
-        break;
-    case QtCriticalMsg:
-        txt = QString("Critical: %1").arg(msg);
-        break;
-    case QtFatalMsg:
-        txt = QString("Fatal: %1").arg(msg);
-        break;
+        case QtDebugMsg:
+            txt = QString("Debug: %1").arg(msg);
+            break;
+        case QtWarningMsg:
+            txt = QString("Warning: %1").arg(msg);
+            break;
+        case QtCriticalMsg:
+            txt = QString("Critical: %1").arg(msg);
+            break;
+
+        case QtFatalMsg:
+            txt = QString("Fatal: %1").arg(msg);
+            break;
         case QtInfoMsg:
-        txt = QString("Info: %1").arg(msg);
-        break;
+            txt = QString("Info: %1").arg(msg);
+            break;
     }
 
+    // Also output to the standard output.
     std::cout << txt.toStdString() << std::endl;
 
     // Forward the message to the QML debug console by invoking the appendLog slot.
@@ -48,9 +54,11 @@ void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const Q
         Q_ARG(QString, txt));
 }
 
+
+
 int main(int argc, char* argv[])
 {
-#if defined(Q_OS_WIN) && QT_VERSION_CHECK(5, 6, 0) <= QT_VERSION && QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+#if defined(Q_OS_WIN) && QT_VERSION_CHECK(6, 9, 0) <= QT_VERSION && QT_VERSION < QT_VERSION_CHECK(6, 9, 0)
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 
@@ -60,8 +68,11 @@ int main(int argc, char* argv[])
     // Register VcfToSnp with QML under the module "MyApp"
     qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
 
-    // install own message handler
+    qmlRegisterType<SnpDatabase>("QueryApp", 1, 0, "SnpDatabase");
+
+    // Installiere den eigenen Message Handler
     qInstallMessageHandler(myMessageHandler);
+
 
     QQmlApplicationEngine engine;
 
@@ -69,6 +80,9 @@ int main(int argc, char* argv[])
 
     VcfParserController* parserController = new VcfParserController();
     engine.rootContext()->setContextProperty("vcfParser", parserController);
+
+    WindowLauncher windowLauncher;
+    engine.rootContext()->setContextProperty("windowLauncher", &windowLauncher);
 
     engine.load(QUrl::fromLocalFile("../main.qml"));
     if (engine.rootObjects().isEmpty())
