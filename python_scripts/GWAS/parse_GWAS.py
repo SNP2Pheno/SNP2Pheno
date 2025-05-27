@@ -55,15 +55,6 @@ def parseSNP(snpID):
                             else:
                                 assicationObj.type = TYPE.APPEARANCE
 
-                response_ols = requests.get('https://www.ebi.ac.uk/ols4/api/ontologies/efo/terms?short_form=' + data_trait['_embedded']['efoTraits'][0].get('shortForm'))
-                if response_ols.status_code == 200:
-                    data_ols = response_ols.json()
-                    description = data_ols['_embedded']['terms'][0]['description'][0] #TODO: index out of bounds possible
-                    if str(description).__contains__('disease') or str(description).__contains__('disorder'):
-                        assicationObj.type = TYPE.DISEASE
-                    else:
-                        assicationObj.type = TYPE.APPEARANCE
-
             responseNumOfIndividuals = requests.get(numOfInd.get('href'))
             if responseNumOfIndividuals.status_code == 200:
                 dataNumOfInd = responseNumOfIndividuals.json()
@@ -94,13 +85,3 @@ def parseSNP(snpID):
         outputData.append(bestAssociation)
 
     return outputData
-
-#parseSNP('rs2493292')
-
-with open('../OpenSNP/output_files/output_file.txt') as snps_file:
-    i = 1
-    for line in snps_file:
-        print("Line " + str(i))
-        print(parseSNP(line.split('\t')[0]))
-        i += 1
-
