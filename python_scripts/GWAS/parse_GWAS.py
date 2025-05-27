@@ -65,7 +65,6 @@ def parseSNP(snpID):
                             assicationObj.NumOfIndividualsInStudy = a['numberOfIndividuals']
 
             allAssociations.append(assicationObj)
-
     else:
         print(f"Failed to fetch data. Status code: {response.status_code}")
 
@@ -83,5 +82,4 @@ def parseSNP(snpID):
 
         bestAssociation = min(topAssociations, key=lambda x: (x.pValueExponent, x.pValueMantissa))
         outputData.append(bestAssociation)
-
     return outputData
