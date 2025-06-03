@@ -368,63 +368,58 @@ Rectangle {
     anchors.bottom: parent.bottom
     color: "#9cccd9"
 
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: 20
-        // upper area: VCF File Viewer (persisting content)
-        Rectangle {
-            id: topHalf
-            Layout.fillWidth: true
-            Layout.preferredHeight: rightBox.height / 2 - 5
-            color: "lightgrey"
-            ColumnLayout {
-                anchors.fill: parent
-                spacing: 10
+    Rectangle {
+        id: topHalf
+        width: rightBox.width
+        height: rightBox.height
+        color: "lightgrey"
 
-                Button {
-                    text: "Ordner mit VCF-Dateien auswählen"
-                    onClicked: folderDialog.open()
+        Button {
+            text: "Ordner mit VCF-Dateien auswählen"
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: 10
+            onClicked: folderDialog.open()
+        }
+
+        ListView {
+            id: vcfListView
+            anchors.top: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            model: folderModel
+            delegate: Rectangle {
+                id: fileDelegate
+                width: vcfListView.width
+                height: 40
+                border.width: 1
+                border.color: "gray"
+                color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
+
+                Text {
+                    anchors.centerIn: parent
+                    text: fileName
+                    font.pixelSize: 16
+                    color: "black"
+                    width: parent.width - 10
+                    elide: Text.ElideRight
                 }
 
-                ListView {
-                    id: vcfListView
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    model: folderModel
-                    delegate: Rectangle {
-                        id: fileDelegate
-                        width: vcfListView.width
-                        height: 40
-                        border.width: 1
-                        border.color: "gray"
-                        color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
-
-                        Text {
-                            anchors.centerIn: parent
-                            text: fileName
-                            font.pixelSize: 16
-                            color: "black"
-                            width: parent.width - 10
-                            elide: Text.ElideRight
-                        }
-
-                        MouseArea {
-                            id: mouseArea
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            onClicked: vcfListView.currentIndex = index
-                            onDoubleClicked: {
-                                console.log("Parsing file:", filePath)
-                                vcfParser.startParsing(filePath)
-                                parsedFiles[filePath] = true
-                            }
-                        }
+                MouseArea {
+                    id: mouseArea
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: vcfListView.currentIndex = index
+                    onDoubleClicked: {
+                        console.log("Parsing file:", filePath)
+                        vcfParser.startParsing(filePath)
+                        parsedFiles[filePath] = true
                     }
                 }
             }
         }
-
-        
     }
 }
     }       
