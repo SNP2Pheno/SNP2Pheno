@@ -424,55 +424,7 @@ Rectangle {
             }
         }
 
-        // lower area: SNP list (fileItems)
-        Rectangle {
-            id: bottomHalf
-            Layout.minimumHeight: 100
-
-            Layout.fillWidth: true
-            Layout.preferredHeight: rightBox.height / 2 - 5
-            Layout.bottomMargin: 70
-
-            color: "darkgrey"
-
-
-            ScrollView {
-                anchors.fill: parent
-                anchors.margins: 10
-                ScrollBar.vertical.policy: ScrollBar.AsNeeded
-
-                ListView {
-                    id: fileListView
-                    anchors.margins: 10
-                    clip: true
-                    model: fileItems = ["test","test","test","test","test","test","test","test"]
-                    delegate: Rectangle {
-                        id: delegateRect
-                        property bool isHovered: false
-                        width: fileListView.width
-                        height: 40
-                        color: ListView.isCurrentItem ? "blue" : (isHovered ? "lightblue" : "white")
-                        border.width: 2
-                        border.color: "darkgray"
-
-                        Text {
-                            text: modelData
-                            anchors.centerIn: parent
-                            color: ListView.isCurrentItem ? "white" : (isHovered ? "red" : "black")
-                            font.pixelSize: 16
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            onClicked: fileListView.currentIndex = index
-                            onEntered: delegateRect.isHovered = true
-                            onExited: delegateRect.isHovered = false
-                        }
-                    }
-                }
-            }
-        }
+        
     }
 }
     }       
