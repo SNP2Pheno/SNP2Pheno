@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.30)
 project(SNP2PHENO_ptt)
 
-set(CMAKE_PREFIX_PATH "$ENV{HOME}/Qt6.9.0/lib/cmake")
+set(CMAKE_PREFIX_PATH "/opt/Qt/6.9.0/macos/lib/cmake")
 set(CMAKE_CXX_STANDARD 23)
 
 find_package(Qt6 REQUIRED COMPONENTS Core Gui Widgets Quick Qml QuickControls2 Sql QmlModels)
@@ -17,18 +17,18 @@ qt6_add_resources(SNP2PHENO_ptt resources.qrc)
 # Quellcode-Dateien
 add_executable(SNP2PHENO_ptt
         main.cpp
-        debugconsole.cpp
-        vcfparsercontroller.cpp
-        vcf_to_snp.cpp
-        vcfworker.cpp
-        windowlauncher.cpp
-        snpdatabase.cpp
-        debugconsole.h
-        vcfparsercontroller.h
-        vcf_to_snp.h
-        vcfworker.h
-        windowlauncher.h
-        snpdatabase.h
+        sources/debugconsole.cpp
+        sources/vcfparsercontroller.cpp
+        sources/vcf_to_snp.cpp
+        sources/vcfworker.cpp
+        sources/windowlauncher.cpp
+        sources/snpdatabase.cpp
+        headers/debugconsole.h
+        headers/vcfparsercontroller.h
+        headers/vcf_to_snp.h
+        headers/vcfworker.h
+        headers/windowlauncher.h
+        headers/snpdatabase.h
 )
 
 # Link mit Qt-Modulen
