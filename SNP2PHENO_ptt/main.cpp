@@ -70,7 +70,11 @@ int main(int argc, char* argv[])
     VcfParserController* parserController = new VcfParserController();
     engine.rootContext()->setContextProperty("vcfParser", parserController);
 
-    engine.load(QUrl::fromLocalFile("../main.qml"));
+    //PFAD FÜR WINDOWS
+    engine.load(QUrl::fromLocalFile("../../../main.qml"));
+    
+    //PFAD FÜR LINUX
+    //engine.load(QUrl::fromLocalFile("../main.qml"));
     if (engine.rootObjects().isEmpty())
         return -1;
 
