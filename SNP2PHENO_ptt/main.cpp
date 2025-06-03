@@ -1,13 +1,13 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <qqml.h>
-#include "vcf_to_snp.h"
-#include "windowlauncher.h"
+#include "headers/vcf_to_snp.h"
+#include "headers/windowlauncher.h"
 #include <iostream>  // For std::cout
-#include "debugconsole.h"
-#include "vcfparsercontroller.h"
+#include "headers/debugconsole.h"
+#include "headers/vcfparsercontroller.h"
 #include <QQmlContext>
-#include "snpdatabase.h"
+#include "headers/snpdatabase.h"
 
 
 #include <QDebug>
