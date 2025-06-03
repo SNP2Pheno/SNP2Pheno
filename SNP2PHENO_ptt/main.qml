@@ -408,7 +408,7 @@ Rectangle {
                 }
 
                 MouseArea {
-                    id: mouseArea
+                    id: mouseAreaVcfListView
                     anchors.fill: parent
                     hoverEnabled: true
                     onClicked: vcfListView.currentIndex = index
