@@ -23,7 +23,6 @@ def write_to_file(snp_dict, output_file):
 if __name__ == "__main__":
     import os
 
-if __name__ == "__main__":
     script_dir = os.path.dirname(os.path.abspath(__file__))
     folder_path = os.path.join(script_dir, "data")
     output_folder = os.path.join(script_dir, "data_output")
