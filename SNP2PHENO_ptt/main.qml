@@ -96,7 +96,7 @@ ApplicationWindow {
             top: header.bottom
             left: parent.left
             right: parent.right
-            bottom: debugConsoleView.top
+            bottom: parent.bottom
         }
         spacing: 10
 
@@ -476,40 +476,7 @@ Rectangle {
     }
 }
     }       
-    // debug-console on the lower edge
-    Rectangle {
-        id: debugConsoleView
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-        height: 150
-        color: "black"
-        border.width: 4
-        border.color: "red"
 
-        ScrollView {
-            id: consoleScroll
-            anchors.fill: parent
-            ScrollBar.vertical.policy: ScrollBar.AsNeeded
-
-            TextArea {
-                id: consoleTextArea
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                readOnly: true
-                wrapMode: Text.Wrap
-                font.pixelSize: 14
-                color: "green"
-                background: null
-                text: debugConsole.log
-                onTextChanged: {
-                    consoleTextArea.cursorPosition = consoleTextArea.text.length;
-                }
-            }
-        }
-    }
 
     // FileDialog for .vcf files
     FileDialog {
