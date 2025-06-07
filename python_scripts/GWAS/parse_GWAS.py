@@ -1,5 +1,4 @@
 from collections import defaultdict
-import itertools
 import requests
 from Association import Association, TYPE
 
