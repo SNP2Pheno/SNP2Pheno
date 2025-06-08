@@ -5,6 +5,7 @@
 #include <iostream>
 #include "headers/vcfparsercontroller.h"
 #include <QQmlContext>
+#include <QIcon>
 
 #include <QDebug>
 #include <QMessageLogContext>
@@ -31,8 +32,10 @@ int main(int argc, char* argv[])
 	qputenv("QML_XHR_ALLOW_FILE_READ", QByteArray("1"));
 	QGuiApplication app(argc, argv);
 
-	// Register VcfToSnp with QML under the module "MyApp"
-	qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
+  app.setWindowIcon(QIcon("../../../images/ICONV6.ico"));
+
+  // Register VcfToSnp with QML under the module "MyApp"
+  qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
 
 	// install own message handler
 	qInstallMessageHandler(myMessageHandler);

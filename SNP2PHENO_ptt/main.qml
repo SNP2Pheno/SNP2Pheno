@@ -74,11 +74,12 @@ ApplicationWindow {
                 id: logo
                 width: 40
                 height: 40
-                color: "white"
-                Text {
+                color: "transparent"
+                Image {
                     anchors.centerIn: parent
-                    text: "Logo"
-                    font.pixelSize: 12
+                    width: parent.width
+                    height: parent.height
+                    source: "images/LOGOV6.png"
                 }
             }
             Text {
