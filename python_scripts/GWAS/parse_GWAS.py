@@ -1,5 +1,4 @@
 from collections import defaultdict
-
 import requests
 from Association import Association, TYPE
 
@@ -26,9 +25,10 @@ def parseSNP(snpID):
             if association.get('orPerCopyNum') is not None:
                 assicationObj.orValue = association.get('orPerCopyNum')
             if association.get('range') is not None and not str(association.get('range')).__contains__('NR'):
-                association_normalized = association.get('range').replace("–", "-")
-                assicationObj.CIMin = association_normalized.split('-')[0]
-                assicationObj.CIMax = association_normalized.split('-')[1]
+                association_normalized = association.get('range').replace("–", "-").replace(", ", "-")
+                if len(association_normalized.split('-')) == 2:
+                    assicationObj.CIMin = association_normalized.split('-')[0]
+                    assicationObj.CIMax = association_normalized.split('-')[1]
             if association.get('pvalueDescription') is not None:
                 assicationObj.expression = association.get('pvalueDescription')
             if association.get('betaNum') is not None:
@@ -63,6 +63,8 @@ def parseSNP(snpID):
                     for a in ancestries:
                         if a['type'] == 'initial':
                             assicationObj.NumOfIndividualsInStudy = a['numberOfIndividuals']
+                            if assicationObj.NumOfIndividualsInStudy is None:
+                                assicationObj.NumOfIndividualsInStudy = 0
 
             allAssociations.append(assicationObj)
     else:
