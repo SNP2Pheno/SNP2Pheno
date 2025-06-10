@@ -76,11 +76,12 @@ ApplicationWindow {
                 id: logo
                 width: 40
                 height: 40
-                color: "white"
-                Text {
+                color: "transparent"
+                Image {
                     anchors.centerIn: parent
-                    text: "Logo"
-                    font.pixelSize: 12
+                    width: parent.width
+                    height: parent.height
+                    source: "images/LOGOV6.png"
                 }
             }
             Text {
@@ -98,7 +99,7 @@ ApplicationWindow {
             top: header.bottom
             left: parent.left
             right: parent.right
-            bottom: debugConsoleView.top
+            bottom: parent.bottom
         }
         spacing: 10
 
@@ -370,154 +371,54 @@ Rectangle {
     anchors.bottom: parent.bottom
     color: "#9cccd9"
 
-    ColumnLayout {
-        anchors.fill: parent
-        anchors.margins: 20
-        // upper area: VCF File Viewer (persisting content)
-        Rectangle {
-            id: topHalf
-            Layout.fillWidth: true
-            Layout.preferredHeight: rightBox.height / 2 - 5
-            color: "lightgrey"
-            ColumnLayout {
-                anchors.fill: parent
-                spacing: 10
+    Rectangle {
+        id: topHalf
+        width: rightBox.width
+        height: rightBox.height
+        color: "lightgrey"
 
-                Button {
-                    text: "Ordner mit VCF-Dateien auswählen"
-                    onClicked: folderDialog.open()
-                }
-
-//VCF LISTE EINLESEN
-                ListView {
-                    id: vcfListView
-                    Layout.fillWidth: true
-                    Layout.fillHeight: true
-                    model: folderModel
-
-                    // Initialisierung des parsedFiles-Objekts
-                    property var parsedFiles: ({})
-
-                    delegate: Rectangle {
-                        id: fileDelegate
-                        width: vcfListView.width
-                        height: 40
-                        border.width: 1
-                        border.color: "gray"
-                        color: (vcfListView.parsedFiles[filePath] === true) ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
-
-                        RowLayout {
-                            anchors.fill: parent
-                            spacing: 10
-                            anchors.margins: 5
-
-                            Text {
-                                Layout.fillWidth: true
-                                text: fileName
-                                font.pixelSize: 16
-                                color: "black"
-                                elide: Text.ElideRight
-                            }
-
-                            Rectangle {
-                                id: button_Edit_AFQ
-                                visible: vcfListView.parsedFiles[filePath] === true
-                                width: 30
-                                height: 30
-                                color: "transparent"
-                                border.color: "darkgreen"
-                                border.width: 1
-                                radius: 4
-                                Layout.alignment: Qt.AlignRight
-
-                                Image {
-                                    anchors.centerIn: parent
-                                    width: 24
-                                    height: 24
-                                    source: "./images/SNP_AFQ_ICON.jpg"
-                                    fillMode: Image.PreserveAspectFit
-                                }
-
-                                MouseArea {
-                                    anchors.fill: parent
-                                    cursorShape: Qt.PointingHandCursor
-                                    onClicked: {
-                                        console.log("AFQ-Button geklickt für:", filePath)
-                                        windowLauncher.openAFQEditor()
-                                    }
-                                }
-                            }
-                        }
-
-                        MouseArea {
-                            id: mouseArea
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            propagateComposedEvents: true // Allow child MouseAreas to receive events
-                            onClicked: {
-                                vcfListView.currentIndex = index
-                                mouse.accepted = false // Let the event propagate to children
-                            }
-                            onDoubleClicked: {
-                                console.log("Parsing file:", filePath);
-                                vcfParser.startParsing(filePath);
-
-                                var updatedParsedFiles = vcfListView.parsedFiles;
-                                updatedParsedFiles[filePath] = true;
-                                vcfListView.parsedFiles = updatedParsedFiles;
-                            }
-                        }
-                    }
-                }
-                //Listview
-            }
+        Button {
+            text: "Ordner mit VCF-Dateien auswählen"
+            anchors.top: parent.top
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.margins: 10
+            onClicked: folderDialog.open()
         }
 
-        // lower area: SNP list (fileItems)
-        Rectangle {
-            id: bottomHalf
-            Layout.minimumHeight: 100
+        ListView {
+            id: vcfListView
+            anchors.top: parent.bottom
+            anchors.left: parent.left
+            anchors.right: parent.right
+            anchors.bottom: parent.bottom
+            model: folderModel
+            delegate: Rectangle {
+                id: fileDelegate
+                width: vcfListView.width
+                height: 40
+                border.width: 1
+                border.color: "gray"
+                color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
 
-            Layout.fillWidth: true
-            Layout.preferredHeight: rightBox.height / 2 - 5
-            Layout.bottomMargin: 70
+                Text {
+                    anchors.centerIn: parent
+                    text: fileName
+                    font.pixelSize: 16
+                    color: "black"
+                    width: parent.width - 10
+                    elide: Text.ElideRight
+                }
 
-            color: "darkgrey"
-
-
-            ScrollView {
-                anchors.fill: parent
-                anchors.margins: 10
-                ScrollBar.vertical.policy: ScrollBar.AsNeeded
-
-                ListView {
-                    id: fileListView
-                    anchors.margins: 10
-                    clip: true
-                    model: fileItems = ["test","test","test","test","test","test","test","test"]
-                    delegate: Rectangle {
-                        id: delegateRect
-                        property bool isHovered: false
-                        width: fileListView.width
-                        height: 40
-                        color: ListView.isCurrentItem ? "blue" : (isHovered ? "lightblue" : "white")
-                        border.width: 2
-                        border.color: "darkgray"
-
-                        Text {
-                            text: modelData
-                            anchors.centerIn: parent
-                            color: ListView.isCurrentItem ? "white" : (isHovered ? "red" : "black")
-                            font.pixelSize: 16
-                        }
-
-                        MouseArea {
-                            anchors.fill: parent
-                            hoverEnabled: true
-                            onClicked: fileListView.currentIndex = index
-                            onEntered: delegateRect.isHovered = true
-                            onExited: delegateRect.isHovered = false
-                        }
+                MouseArea {
+                    id: mouseAreaVcfListView
+                    anchors.fill: parent
+                    hoverEnabled: true
+                    onClicked: vcfListView.currentIndex = index
+                    onDoubleClicked: {
+                        console.log("Parsing file:", filePath)
+                        vcfParser.startParsing(filePath)
+                        parsedFiles[filePath] = true
                     }
                 }
             }
@@ -525,40 +426,7 @@ Rectangle {
     }
 }
     }       
-    // debug-console on the lower edge
-    Rectangle {
-        id: debugConsoleView
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: parent.bottom
-        }
-        height: 150
-        color: "black"
-        border.width: 4
-        border.color: "red"
 
-        ScrollView {
-            id: consoleScroll
-            anchors.fill: parent
-            ScrollBar.vertical.policy: ScrollBar.AsNeeded
-
-            TextArea {
-                id: consoleTextArea
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                readOnly: true
-                wrapMode: Text.Wrap
-                font.pixelSize: 14
-                color: "green"
-                background: null
-                text: debugConsole.log
-                onTextChanged: {
-                    consoleTextArea.cursorPosition = consoleTextArea.text.length;
-                }
-            }
-        }
-    }
 
     // FileDialog for .vcf files
     FileDialog {
