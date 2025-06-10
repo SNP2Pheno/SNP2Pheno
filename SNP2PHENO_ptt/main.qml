@@ -1,4 +1,5 @@
 import QtQuick 2.15
+import QtCore
 import QtQuick.Window 2.2
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
@@ -7,6 +8,7 @@ import Qt.labs.settings 1.0
 import MyApp 1.0
 import Qt.labs.folderlistmodel 2.1
 import Qt.labs.qmlmodels 1.0
+
 
 ApplicationWindow {
     id: window
