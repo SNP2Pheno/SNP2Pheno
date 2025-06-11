@@ -1,7 +1,6 @@
 #include "../headers/vcf_to_snp.h"
 #include <QFile>
 #include <QTextStream>
-#include <QDebug>
 #include <QUrl>
 
 

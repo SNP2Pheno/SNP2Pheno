@@ -1,7 +1,6 @@
 #include "../headers/vcfparsercontroller.h"
 #include "../headers/vcfworker.h"
 #include <QThread>
-#include <QDebug>
 
 VcfParserController::VcfParserController(QObject* parent)
     : QObject(parent)
