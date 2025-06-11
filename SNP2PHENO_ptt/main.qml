@@ -378,7 +378,7 @@ Rectangle {
         color: "lightgrey"
 
         Button {
-            text: "Ordner mit VCF-Dateien auswählen"
+            text: "select folder with VCF-files"
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
@@ -471,7 +471,7 @@ Rectangle {
     // FolderDialog for selection of folder containing VCF files
     FolderDialog {
         id: folderDialog
-        title: "Ordner mit VCF-Dateien ausw�hlen"
+        title: "select folder with VCF-files"
         currentFolder: StandardPaths.writableLocation(StandardPaths.HomeLocation)
         onAccepted: {
             folderModel.folder = selectedFolder

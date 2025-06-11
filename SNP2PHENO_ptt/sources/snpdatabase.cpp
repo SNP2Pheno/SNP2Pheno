@@ -6,7 +6,6 @@
 SnpDatabase::SnpDatabase(QObject *parent) : QObject(parent)
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
-    //db.setDatabaseName("gwas_data.db");  // adjust path if needed
     db.setDatabaseName("../gwas_data.db");
 
     if (!db.open()) {

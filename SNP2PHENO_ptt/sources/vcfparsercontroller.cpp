@@ -17,7 +17,7 @@ void VcfParserController::startParsing(const QString& fileUrl)
 
     connect(worker, &VcfWorker::finished, this, [=](const QStringList& result) {
         m_snpList = result;
-        emit snpListChanged();  // Signal, damit QML die �nderung mitbekommt
+        emit snpListChanged();
         });
 
     connect(worker, &VcfWorker::finished, thread, &QThread::quit);
