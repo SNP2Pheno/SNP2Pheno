@@ -6,7 +6,7 @@
 SnpDatabase::SnpDatabase(QObject *parent) : QObject(parent)
 {
     db = QSqlDatabase::addDatabase("QSQLITE");
-    db.setDatabaseName("../gwas_data.db");
+    db.setDatabaseName("../SNP2Pheno.db");
 
     if (!db.open()) {
         qWarning() << "Failed to open database:" << db.lastError().text();

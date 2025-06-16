@@ -2,25 +2,51 @@
 #include <QQmlApplicationEngine>
 #include <qqml.h>
 #include "headers/vcf_to_snp.h"
+#include "headers/windowlauncher.h"
 #include <iostream>
 #include "headers/vcfparsercontroller.h"
 #include <QQmlContext>
+#include "headers/snpdatabase.h"
 #include <QIcon>
 
-#include <QDebug>
 #include <QMessageLogContext>
 #include <QString>
 
 void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg)
 {
-	// Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
-	QString fileName = QString(context.file);
-	if (!fileName.contains("vcf_to_snp.cpp"))
-	{
-		// Output messages from other files to standard output.
-		std::cout << msg.toStdString() << std::endl;
-		return;
-	}
+
+    // Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
+    QString fileName = QString(context.file);
+
+    if (!fileName.contains("sources/vcf_to_snp.cpp")) {
+        // Output messages from other files to standard output.
+        std::cout << msg.toStdString() << std::endl;
+        return;
+    }
+
+    QString txt;
+    switch (type) {
+    case QtDebugMsg:
+        txt = QString("Debug: %1").arg(msg);
+        break;
+    case QtWarningMsg:
+        txt = QString("Warning: %1").arg(msg);
+        break;
+    case QtCriticalMsg:
+        txt = QString("Critical: %1").arg(msg);
+        break;
+
+    case QtFatalMsg:
+        txt = QString("Fatal: %1").arg(msg);
+        break;
+    case QtInfoMsg:
+        txt = QString("Info: %1").arg(msg);
+        break;
+    }
+
+    // Also output to the standard output.
+    std::cout << txt.toStdString() << std::endl;
+
 }
 
 
@@ -31,26 +57,32 @@ int main(int argc, char* argv[])
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
 
-	qputenv("QML_XHR_ALLOW_FILE_READ", QByteArray("1"));
-	QGuiApplication app(argc, argv);
+    qputenv("QML_XHR_ALLOW_FILE_READ", QByteArray("1"));
+    QGuiApplication app(argc, argv);
 
-  app.setWindowIcon(QIcon("../../../images/ICONV6.ico"));
+    app.setWindowIcon(QIcon("../../../images/ICONV6.ico"));
 
-  // Register VcfToSnp with QML under the module "MyApp"
-  qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
+    // Register VcfToSnp with QML under the module "MyApp"
+    qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
 
-	// install own message handler
-	qInstallMessageHandler(myMessageHandler);
+    qmlRegisterType<SnpDatabase>("QueryApp", 1, 0, "SnpDatabase");
 
-	QQmlApplicationEngine engine;
+    // Installiere den eigenen Message Handler
+    qInstallMessageHandler(myMessageHandler);
 
 
-	VcfParserController* parserController = new VcfParserController();
-	engine.rootContext()->setContextProperty("vcfParser", parserController);
+    QQmlApplicationEngine engine;
 
-	engine.load(QUrl::fromLocalFile("../../../main.qml"));
-	if (engine.rootObjects().isEmpty())
-		return -1;
+    VcfParserController* parserController = new VcfParserController();
+    engine.rootContext()->setContextProperty("vcfParser", parserController);
 
-	return app.exec();
+    WindowLauncher windowLauncher;
+    engine.rootContext()->setContextProperty("windowLauncher", &windowLauncher);
+
+    engine.load(QUrl::fromLocalFile("../../../main.qml"));
+    if (engine.rootObjects().isEmpty())
+        return -1;
+
+    return app.exec();
 }
+
