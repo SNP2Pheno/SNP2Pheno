@@ -17,13 +17,11 @@ qt6_add_resources(SNP2PHENO_ptt resources.qrc)
 # Quellcode-Dateien
 add_executable(SNP2PHENO_ptt
         main.cpp
-        sources/debugconsole.cpp
         sources/vcfparsercontroller.cpp
         sources/vcf_to_snp.cpp
         sources/vcfworker.cpp
         sources/windowlauncher.cpp
         sources/snpdatabase.cpp
-        headers/debugconsole.h
         headers/vcfparsercontroller.h
         headers/vcf_to_snp.h
         headers/vcfworker.h
