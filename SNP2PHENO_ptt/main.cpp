@@ -14,39 +14,14 @@
 
 void myMessageHandler(QtMsgType type, const QMessageLogContext& context, const QString& msg)
 {
-
-    // Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
-    QString fileName = QString(context.file);
-
-    if (!fileName.contains("sources/vcf_to_snp.cpp")) {
-        // Output messages from other files to standard output.
-        std::cout << msg.toStdString() << std::endl;
-        return;
-    }
-
-    QString txt;
-    switch (type) {
-    case QtDebugMsg:
-        txt = QString("Debug: %1").arg(msg);
-        break;
-    case QtWarningMsg:
-        txt = QString("Warning: %1").arg(msg);
-        break;
-    case QtCriticalMsg:
-        txt = QString("Critical: %1").arg(msg);
-        break;
-
-    case QtFatalMsg:
-        txt = QString("Fatal: %1").arg(msg);
-        break;
-    case QtInfoMsg:
-        txt = QString("Info: %1").arg(msg);
-        break;
-    }
-
-    // Also output to the standard output.
-    std::cout << txt.toStdString() << std::endl;
-
+	// Only forward messages from "vcf_to_snp.cpp" to the QML debug console.
+	QString fileName = QString(context.file);
+	if (!fileName.contains("vcf_to_snp.cpp"))
+	{
+		// Output messages from other files to standard output.
+		std::cout << msg.toStdString() << std::endl;
+		return;
+	}
 }
 
 
@@ -60,7 +35,7 @@ int main(int argc, char* argv[])
     qputenv("QML_XHR_ALLOW_FILE_READ", QByteArray("1"));
     QGuiApplication app(argc, argv);
 
-    app.setWindowIcon(QIcon("../../../images/ICONV6.ico"));
+  app.setWindowIcon(QIcon(":/images/ICONV6.ico"));
 
     // Register VcfToSnp with QML under the module "MyApp"
     qmlRegisterType<VcfToSnp>("MyApp", 1, 0, "VcfToSnp");
@@ -79,7 +54,7 @@ int main(int argc, char* argv[])
     WindowLauncher windowLauncher;
     engine.rootContext()->setContextProperty("windowLauncher", &windowLauncher);
 
-    engine.load(QUrl::fromLocalFile("../../../main.qml"));
+    engine.load(QUrl("qrc:/QML/main.qml"));
     if (engine.rootObjects().isEmpty())
         return -1;
 
