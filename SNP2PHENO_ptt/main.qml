@@ -56,7 +56,6 @@ ApplicationWindow {
     Connections {
         target: vcfParser
         onSnpListChanged: {
-            console.log("snpListChanged ausgelöst: " + vcfParser.snpList);
             fileItems = vcfParser.snpList;
         }
     }
@@ -378,6 +377,7 @@ Rectangle {
         color: "lightgrey"
 
         Button {
+			id: vcfSelectFileButton
             text: "select folder with VCF-files"
             anchors.top: parent.top
             anchors.left: parent.left
@@ -388,7 +388,7 @@ Rectangle {
 
         ListView {
             id: vcfListView
-            anchors.top: parent.bottom
+            anchors.top: vcfSelectFileButton.bottom
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
@@ -399,7 +399,7 @@ Rectangle {
                 height: 40
                 border.width: 1
                 border.color: "gray"
-                color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
+                color: parsedFiles[filePath] ? "lightgreen" : (mouseAreaVcfListView.containsMouse ? "lightgray" : "white")
 
                 Text {
                     anchors.centerIn: parent
@@ -416,7 +416,6 @@ Rectangle {
                     hoverEnabled: true
                     onClicked: vcfListView.currentIndex = index
                     onDoubleClicked: {
-                        console.log("Parsing file:", filePath)
                         vcfParser.startParsing(filePath)
                         parsedFiles[filePath] = true
                     }
@@ -438,8 +437,6 @@ Rectangle {
             if (selectedFiles.length > 0) {
                 var fileUrlStr = selectedFiles[0];
                 vcfParser.startParsing(fileUrlStr);
-            } else {
-                console.log("No file selected");
             }
         }
     }
