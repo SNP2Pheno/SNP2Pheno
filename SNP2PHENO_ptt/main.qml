@@ -8,6 +8,7 @@ import Qt.labs.settings 1.0
 import MyApp 1.0
 import Qt.labs.folderlistmodel 2.1
 import Qt.labs.qmlmodels 1.0
+import QtWebEngine 1.15
 
 
 ApplicationWindow {
@@ -199,7 +200,8 @@ ApplicationWindow {
                             ListView {
                                 id: diseaseListView
                                 Layout.fillWidth: true
-                                Layout.fillHeight: true
+                                Layout.preferredHeight: 200  // give some initial height
+                                // OR use Layout.fillHeight: true if you want it flexible, but that competes with webview for height
                                 model: filteredModel
                                 clip: true
                                 delegate: Rectangle {
@@ -233,7 +235,15 @@ ApplicationWindow {
                                     }
                                 }
                             }
+
+                            WebEngineView {
+                                id: webview
+                                Layout.fillWidth: true
+                                Layout.fillHeight: true
+                                url: "http://localhost:8000"
+                            }
                         }
+
 
                         // right area: area with genetic markers
                         Rectangle {

@@ -6,7 +6,6 @@
 #include "headers/vcfparsercontroller.h"
 #include <QQmlContext>
 #include <QIcon>
-
 #include <QDebug>
 #include <QMessageLogContext>
 #include <QString>
@@ -48,7 +47,7 @@ int main(int argc, char* argv[])
 	VcfParserController* parserController = new VcfParserController();
 	engine.rootContext()->setContextProperty("vcfParser", parserController);
 
-	engine.load(QUrl::fromLocalFile("../../../main.qml"));
+	engine.load(QUrl::fromLocalFile("../main.qml"));
 	if (engine.rootObjects().isEmpty())
 		return -1;
 
