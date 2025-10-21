@@ -148,6 +148,8 @@ ApplicationWindow {
                     spacing: 5
                     Button {
                         id: appearanceBtn
+                        property bool isClicked: false
+
                         text: "Appearance"
                         background: Rectangle {
                             radius: 5
@@ -156,32 +158,45 @@ ApplicationWindow {
                             color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
-                            //TODO: Add action to onClick
+                            appearanceBtn.isClicked = true
+                            diseasesBtn.isClicked = false
+                            otherBtn.isClicked = false
                         }
                     }
+
                     Button {
                         id: diseasesBtn
+                        property bool isClicked: true
+                        
                         text: "Diseases"
                         background: Rectangle {
                             radius: 5
                             bottomLeftRadius: 0
                             bottomRightRadius: 0
-                            color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
+                            color: diseasesBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
+                            diseasesBtn.isClicked = true
+                            appearanceBtn.isClicked = false
+                            otherBtn.isClicked = false
                             //TODO: Add action to onClick
                         }
                     }
                     Button {
                         id: otherBtn
+                        property bool isClicked: false
+
                         text: "Other"
                         background: Rectangle {
                             radius: 5
                             bottomLeftRadius: 0
                             bottomRightRadius: 0
-                            color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
+                            color: otherBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
+                            otherBtn.isClicked = true
+                            appearanceBtn.isClicked = false
+                            diseasesBtn.isClicked = false
                             //TODO: Add action to onClick
                         }
                     }
