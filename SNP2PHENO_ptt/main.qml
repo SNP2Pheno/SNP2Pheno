@@ -43,7 +43,7 @@ ApplicationWindow {
             ]
         }
     ]
-    
+
     property var preExistingListAppearance: [
             {
                 name: "brown hair",
