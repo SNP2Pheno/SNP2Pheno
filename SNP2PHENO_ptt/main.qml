@@ -242,11 +242,14 @@ ApplicationWindow {
                                 Layout.fillWidth: true
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
                                 Layout.fillHeight: true
                                 Layout.margins: 5
 
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 <<<<<<< HEAD
@@ -258,6 +261,9 @@ ApplicationWindow {
 
 >>>>>>> 24ef0e7ca62b4aabf85db90af664bbd6d851c0c0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
