@@ -241,11 +241,14 @@ ApplicationWindow {
                                 id: diseaseListView
                                 Layout.fillWidth: true
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
                                 Layout.fillHeight: true
                                 Layout.margins: 5
 
 =======
+=======
+>>>>>>> Stashed changes
 <<<<<<< HEAD
                                 Layout.preferredHeight: 200  // give some initial height
                                 // OR use Layout.fillHeight: true if you want it flexible, but that competes with webview for height
@@ -254,6 +257,9 @@ ApplicationWindow {
                                 Layout.margins: 5
 
 >>>>>>> 24ef0e7ca62b4aabf85db90af664bbd6d851c0c0
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
                                 model: filteredModel
                                 clip: true
