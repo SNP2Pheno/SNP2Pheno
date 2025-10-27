@@ -240,10 +240,21 @@ ApplicationWindow {
                             ListView {
                                 id: diseaseListView
                                 Layout.fillWidth: true
+<<<<<<< Updated upstream
 
                                 Layout.fillHeight: true
                                 Layout.margins: 5
 
+=======
+<<<<<<< HEAD
+                                Layout.preferredHeight: 200  // give some initial height
+                                // OR use Layout.fillHeight: true if you want it flexible, but that competes with webview for height
+=======
+                                Layout.fillHeight: true
+                                Layout.margins: 5
+
+>>>>>>> 24ef0e7ca62b4aabf85db90af664bbd6d851c0c0
+>>>>>>> Stashed changes
                                 model: filteredModel
                                 clip: true
                                 delegate: Rectangle {
