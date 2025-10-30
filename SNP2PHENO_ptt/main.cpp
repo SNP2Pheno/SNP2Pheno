@@ -48,7 +48,8 @@ int main(int argc, char* argv[])
 	VcfParserController* parserController = new VcfParserController();
 	engine.rootContext()->setContextProperty("vcfParser", parserController);
 
-	engine.load(QUrl::fromLocalFile("../../../main.qml"));
+	//MAC-OS: engine.load(QUrl::fromLocalFile("../../../main.qml"));
+	engine.load(QUrl::fromLocalFile("../main.qml"));
 	if (engine.rootObjects().isEmpty())
 		return -1;
 
