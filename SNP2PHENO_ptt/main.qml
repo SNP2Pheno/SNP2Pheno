@@ -1,6 +1,7 @@
 import QtQuick 2.15
 import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
+
 import "components"
 
 ApplicationWindow {
@@ -21,14 +22,6 @@ ApplicationWindow {
         rows: 3
         rowSpacing: 2
         columnSpacing: 2
-
-        HeaderBar {
-            id: headerBar
-            Layout.columnSpan: 4
-            Layout.preferredHeight: 60
-            Layout.alignment: Qt.AlignTop | Qt.AlignHCenter
-            Layout.fillHeight: false
-        }
 
         TabBar {
             id: tabBar

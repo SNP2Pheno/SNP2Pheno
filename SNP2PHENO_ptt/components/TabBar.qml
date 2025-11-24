@@ -15,20 +15,18 @@ Rectangle {
 
         RowLayout {
             anchors.fill: parent
-            spacing: 2
-
-            Tab {
-                tabText: "Diseases"
-            }
-            Tab {
-                tabText: "Appearance"
-            }
-            Tab {
-
-            }
+            spacing: 0
 
             Item {
                 Layout.fillWidth: true
+            }
+            Tab {
+                tabText: "TableView"
+                sideTab: "left"
+            }
+            Tab {
+                tabText: "Visualization"
+                sideTab: "right"
             }
         }
     }

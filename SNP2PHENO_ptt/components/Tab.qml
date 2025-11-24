@@ -1,23 +1,33 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
+import QtQuick.Controls.Basic 2.15
 
 Rectangle {
     property string tabText: "undefined"
+    property string sideTab: "undefined"
+    property int radius: 5
 
     Layout.preferredWidth: 80
     Layout.preferredHeight: 40
     Layout.alignment: Qt.AlignLeft
     color: "transparent"
 
-    border.width: 1
-    border.color:"#081721"
-
-    Text {
+    Button {
+        id: button
         text: parent.tabText
-        color: "white"
         width: parent.width
         height: parent.height
-        horizontalAlignment: Text.AlignHCenter
-        verticalAlignment: Text.AlignVCenter
+
+        background: Rectangle {
+            topLeftRadius:     sideTab === "left"  ? parent.parent.radius : 0
+            bottomLeftRadius:  sideTab === "left"  ? parent.parent.radius : 0
+            topRightRadius:    sideTab === "right" ? parent.parent.radius : 0
+            bottomRightRadius: sideTab === "right" ? parent.parent.radius : 0
+
+            color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
+        }
+        onClicked: {
+            //TODO: Add action to onClick
+        }
     }
 }
