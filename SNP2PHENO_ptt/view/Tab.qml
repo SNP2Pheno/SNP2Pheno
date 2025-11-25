@@ -6,9 +6,10 @@ Rectangle {
     property string tabText: "undefined"
     property string sideTab: "undefined"
     property int radius: 5
+    property int index: 0
 
-    Layout.preferredWidth: 80
-    Layout.preferredHeight: 40
+    Layout.preferredWidth: 100
+    Layout.preferredHeight: parent.height
     Layout.alignment: Qt.AlignLeft
     color: "transparent"
 
@@ -27,7 +28,7 @@ Rectangle {
             color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
         }
         onClicked: {
-            //TODO: Add action to onClick
+            contentContainer.selectedIndex = index
         }
     }
 }

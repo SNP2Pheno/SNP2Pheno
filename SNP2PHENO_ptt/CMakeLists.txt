@@ -12,6 +12,8 @@ set(CMAKE_AUTOUIC ON)
 
 add_executable(SNP2PHENO_ptt
         main.cpp
+        controller/Controller.cpp
+        controller/Controller.h
 )
 
 target_link_libraries(SNP2PHENO_ptt
