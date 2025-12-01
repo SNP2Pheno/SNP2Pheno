@@ -20,15 +20,12 @@ Rectangle {
         TabBar {
             Layout.columnSpan: 2
             Layout.preferredHeight: 40
+            Layout.fillWidth: true
         }
 
-        ColumnLayout {
-            Layout.preferredWidth: 150
+        PhenotypeSelection {
             Layout.fillHeight: true
-
-            Text {
-                text: "Test"
-            }
+            Layout.preferredWidth: 150
         }
 
         StackLayout {

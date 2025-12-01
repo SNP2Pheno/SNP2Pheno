@@ -2,11 +2,9 @@ import QtQuick 2.15
 import QtQuick.Layouts 1.15
 
 Rectangle {
-    property color barColor: "transparent"
-
     Layout.fillWidth: true
 
-    color: barColor
+    color: "transparent"
 
     RowLayout {
         anchors.fill: parent
