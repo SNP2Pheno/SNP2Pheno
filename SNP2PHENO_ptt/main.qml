@@ -31,7 +31,7 @@ ApplicationWindow {
             Layout.preferredWidth: 200
         }
 
-        Rectangle {
+        Logo {
             Layout.preferredWidth: 200
             Layout.preferredHeight: 150
         }
