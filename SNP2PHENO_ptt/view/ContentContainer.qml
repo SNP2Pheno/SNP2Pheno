@@ -8,14 +8,27 @@ Rectangle {
 
     color: "transparent"
 
-    ColumnLayout{
+    GridLayout{
+        rows: 2
+        columns: 2
         id: contentContainer
         width: parent.width
         height: parent.height
 
         property int selectedIndex: 0
 
-        TabBar {}
+        TabBar {
+            Layout.columnSpan: 2
+        }
+
+        ColumnLayout {
+            Layout.preferredWidth: 150
+            Layout.fillHeight: true
+
+            Text {
+                text: "Test"
+            }
+        }
 
         StackLayout {
             currentIndex: contentContainer.selectedIndex

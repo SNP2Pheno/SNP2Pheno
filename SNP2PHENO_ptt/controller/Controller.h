@@ -4,10 +4,9 @@
 
 #ifndef SNP2PHENO_PTT_CONTROLLER_H
 #define SNP2PHENO_PTT_CONTROLLER_H
-#include <QObject>
+
 #include <QVariantList>
 #include <QProperty>
-
 
 class Controller : public QObject
 {
@@ -18,7 +17,7 @@ public:
     explicit Controller(QObject* parent = nullptr);
 
     //TODO: INVOKABLE for each query needed
-    Q_INVOKABLE void startQuery(const QString& queryString);
+    Q_INVOKABLE void startQuery();
 
     [[nodiscard]] QVariantList results() const { return m_results; }
 

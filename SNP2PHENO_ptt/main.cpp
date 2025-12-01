@@ -12,12 +12,10 @@ int main(int argc, char* argv[])
 
 	QQmlApplicationEngine engine;
 
-	engine.load(QUrl::fromLocalFile("../main.qml"));
-	if (engine.rootObjects().isEmpty())
-		return -1;
-
 	Controller controller;
 	engine.rootContext()->setContextProperty("controller", &controller);
+
+	engine.load(QUrl::fromLocalFile("../main.qml"));
 
 	return QGuiApplication::exec();
 }
