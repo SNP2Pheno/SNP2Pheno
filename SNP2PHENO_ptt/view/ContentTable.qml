@@ -3,6 +3,7 @@ import QtQuick.Controls 2.15
 import QtQuick.Layouts 1.15
 
 Rectangle {
+    id: contentRoot
     Layout.fillWidth: true
     Layout.fillHeight: true
     color: "#ffffff"
@@ -10,97 +11,112 @@ Rectangle {
     property var rows: controller ? controller.results : []
     property var headers: rows.length > 0 ? Object.keys(rows[0]) : []
 
+    property int headerHeight: 40
+    property int rowHeight: 40
+    property int columnWidth: Math.max(width / headers.length, 120) // <- 120px is minimum column width
+
     ColumnLayout {
         anchors.fill: parent
-        anchors.margins: 10
         spacing: 0
 
-        // Header Row
+        // Table header
         Rectangle {
             Layout.fillWidth: true
-            Layout.preferredHeight: 40
+            Layout.preferredHeight: contentRoot.headerHeight
             color: "#f0f0f0"
             border.color: "#cccccc"
             border.width: 1
 
-            Row {
+            Flickable {
+                id: headerFlick
                 anchors.fill: parent
-                spacing: 0
+                contentWidth: Math.max(contentRoot.width, contentRoot.headers.length * contentRoot.columnWidth)
+                contentHeight: contentRoot.headerHeight
+                interactive: false
+                clip: true
 
-                Repeater {
-                    model: headers.length
-                    Rectangle {
-                        width: tableContainer.width / headers.length
-                        height: 40
-                        color: "#f0f0f0"
-                        border.color: "#cccccc"
-                        border.width: 1
+                Row {
+                    width: headerFlick.contentWidth
+                    height: contentRoot.headerHeight
+                    spacing: 0
 
-                        Text {
-                            anchors.centerIn: parent
-                            text: headers[index] || ""
-                            font.bold: true
-                            font.pixelSize: 14
+                    Repeater {
+                        model: headers.length
+                        Rectangle {
+                            width: contentRoot.columnWidth
+                            height: contentRoot.headerHeight
+                            color: "#f0f0f0"
+                            border.color: "#cccccc"
+                            border.width: 1
+
+                            Text {
+                                anchors.centerIn: parent
+                                text: headers[index] || ""
+                                font.bold: true
+                                font.pixelSize: 14
+                                horizontalAlignment: Text.AlignHCenter
+                                elide: Text.ElideRight
+                                width: parent.width - 10
+                            }
                         }
                     }
                 }
             }
         }
 
-        // Scrollable Table Content
-        ScrollView {
-            id: tableContainer
+        // Table content
+        Flickable {
+            id: contentFlick
             Layout.fillWidth: true
             Layout.fillHeight: true
+            contentWidth: Math.max(contentRoot.width, contentRoot.headers.length * contentRoot.columnWidth)
+            contentHeight: contentRoot.rows.length * contentRoot.rowHeight
             clip: true
 
+            onContentXChanged: {
+                headerFlick.contentX = contentFlick.contentX
+            }
+
             Column {
-                width: tableContainer.width
+                width: contentFlick.contentWidth
                 spacing: 0
 
                 Repeater {
-                    model: rows.length
+                    model: rows
+                    Row {
+                        property var rowData: modelData
+                        width: contentFlick.contentWidth
+                        height: contentRoot.rowHeight
+                        spacing: 0
 
-                    Rectangle {
-                        property int rowIndex: index
-                        width: tableContainer.width
-                        height: 40
-                        color: "transparent"
+                        Repeater {
+                            model: headers.length
+                            Rectangle {
+                                width: contentRoot.columnWidth
+                                height: contentRoot.rowHeight
+                                color: (rows.indexOf(rowData)) % 2 === 0 ? "#ffffff" : "#f8f8f8"
+                                border.color: "#cccccc"
+                                border.width: 1
 
-                        Row {
-                            spacing: 0
-
-                            Repeater {
-                                model: headers.length
-
-                                Rectangle {
-                                    property int colIndex: index
-                                    width: tableContainer.width / headers.length
-                                    height: 40
-                                    color: rowIndex % 2 === 0 ? "#ffffff" : "#f8f8f8"
-                                    border.color: "#cccccc"
-                                    border.width: 1
-
-                                    Text {
-                                        anchors.centerIn: parent
-                                        text: {
-                                            if (rows[rowIndex] && headers[colIndex]) {
-                                                var value = rows[rowIndex][headers[colIndex]]
-                                                return value !== undefined && value !== null ? value.toString() : ""
-                                            }
-                                            return ""
-                                        }
-                                        font.pixelSize: 13
-                                        elide: Text.ElideRight
-                                        width: parent.width - 10
-                                        horizontalAlignment: Text.AlignHCenter
+                                Text {
+                                    anchors.centerIn: parent
+                                    text: {
+                                        var value = rowData[headers[index]]
+                                        return value !== undefined && value !== null ? value.toString() : ""
                                     }
+                                    font.pixelSize: 13
+                                    horizontalAlignment: Text.AlignHCenter
+                                    elide: Text.ElideRight
+                                    width: parent.width - 10
                                 }
                             }
                         }
                     }
                 }
             }
+
+            ScrollBar.vertical: ScrollBar { }
+            ScrollBar.horizontal: ScrollBar { }
         }
     }
 }
