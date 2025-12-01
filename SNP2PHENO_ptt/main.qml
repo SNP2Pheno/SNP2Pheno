@@ -25,15 +25,17 @@ ApplicationWindow {
 
         ContentContainer {
             Layout.fillWidth: true
+            Layout.fillHeight: true
         }
 
         FileSelection {
             Layout.preferredWidth: 200
+            Layout.fillHeight: true
         }
 
         Logo {
             Layout.preferredWidth: 200
-            Layout.preferredHeight: 150
+            Layout.preferredHeight: 100
         }
     }
 }

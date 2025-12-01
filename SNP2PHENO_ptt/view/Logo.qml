@@ -5,9 +5,9 @@ Rectangle {
     color: "transparent"
 
     Image {
-        width: 40
-        height: 40
-        anchors.cen
-        source: "images/LOGOV6.png"
+        width: Math.min(parent.width, parent.height)
+        height: Math.min(parent.width, parent.height)
+        anchors.centerIn: parent
+        source: "../images/LOGOV6.png"
     }
 }

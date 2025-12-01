@@ -5,7 +5,6 @@ Rectangle {
     property color barColor: "transparent"
 
     Layout.fillWidth: true
-    Layout.preferredHeight: 40
 
     color: barColor
 

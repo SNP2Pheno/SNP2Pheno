@@ -19,6 +19,7 @@ Rectangle {
 
         TabBar {
             Layout.columnSpan: 2
+            Layout.preferredHeight: 40
         }
 
         ColumnLayout {
