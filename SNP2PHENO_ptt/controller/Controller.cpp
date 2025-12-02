@@ -27,8 +27,15 @@ void Controller::invokeAction(const QString& actionName) {
     QMetaObject::invokeMethod(this, actionName.toLatin1().constData());
 }
 
-void Controller::setSelectedFiles (const QVariantList &files) {
-    m_selectedFiles = files;
+void Controller::addSelectedFiles (const QVariantList &files) {
+    for (const QVariant &v : files) {
+        m_selectedFiles.insert(v.toString());
+    }
+    emit selectedFilesChanged();
+}
+
+void Controller::clearSelectedFiles() {
+    m_selectedFiles.clear();
     emit selectedFilesChanged();
 }
 

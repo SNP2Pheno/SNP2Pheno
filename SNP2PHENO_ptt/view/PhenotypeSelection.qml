@@ -13,14 +13,10 @@ Rectangle {
 
         interactive: contentHeight > height
 
-        ScrollBar.vertical: ScrollBar {
-            policy: ScrollBar.AsNeeded
-        }
-
         ColumnLayout {
             id: buttonColumn
             width: parent.width
-            spacing: 0
+            spacing: mainLayout.rowSpacing
 
             Repeater {
                 model: controller.availableActions
