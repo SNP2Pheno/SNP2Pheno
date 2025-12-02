@@ -56,7 +56,7 @@ Rectangle {
                                 font.pixelSize: 14
                                 horizontalAlignment: Text.AlignHCenter
                                 elide: Text.ElideRight
-                                width: parent.width - 10
+                                width: parent.width
                             }
                         }
                     }
@@ -107,7 +107,7 @@ Rectangle {
                                     font.pixelSize: 13
                                     horizontalAlignment: Text.AlignHCenter
                                     elide: Text.ElideRight
-                                    width: parent.width - 10
+                                    width: parent.width
                                 }
                             }
                         }

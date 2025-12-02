@@ -8,6 +8,6 @@ Rectangle {
         width: Math.min(parent.width, parent.height)
         height: Math.min(parent.width, parent.height)
         anchors.centerIn: parent
-        source: "../images/LOGOV6.png"
+        source: "../images/LOGO_V3.png"
     }
 }

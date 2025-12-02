@@ -4,7 +4,7 @@ import QtQuick.Controls.Basic 2.15
 
 Rectangle {
     property string tabText: "undefined"
-    property string sideTab: "undefined"
+    property string sideTab: "undefined" // the sidetab property, tells the ab whether it's on one of the ends of the tabbar
     property int radius: 5
     property int index: 0
 

@@ -27,6 +27,11 @@ void Controller::invokeAction(const QString& actionName) {
     QMetaObject::invokeMethod(this, actionName.toLatin1().constData());
 }
 
+void Controller::setSelectedFiles (const QVariantList &files) {
+    m_selectedFiles = files;
+    emit selectedFilesChanged();
+}
+
 void Controller::onPlaceholderData() {
     QVariantList placeholderData;
 

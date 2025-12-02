@@ -5,26 +5,38 @@ import QtQuick.Controls.Basic 2.15
 Rectangle {
     color: "transparent"
 
-    ColumnLayout {
+    Flickable {
         anchors.fill: parent
+        contentHeight: buttonColumn.implicitHeight
+        contentWidth: width
+        clip: true
 
-        Repeater {
-            model: controller.availableActions
-            Button {
-                id: button
-                text: modelData.replace("on", "")
-                Layout.preferredHeight: 40
-                Layout.fillWidth: true
+        interactive: contentHeight > height
 
-                background: Rectangle {
-                    radius: 5
-                    color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
-                }
-                onClicked: controller.invokeAction(modelData)
-            }
+        ScrollBar.vertical: ScrollBar {
+            policy: ScrollBar.AsNeeded
         }
-        Item {
-            Layout.fillHeight: true
+
+        ColumnLayout {
+            id: buttonColumn
+            width: parent.width
+            spacing: 0
+
+            Repeater {
+                model: controller.availableActions
+                Button {
+                    id: button
+                    text: modelData.replace("on", "")
+                    Layout.preferredHeight: 40
+                    Layout.fillWidth: true
+
+                    background: Rectangle {
+                        radius: 5
+                        color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
+                    }
+                    onClicked: controller.invokeAction(modelData)
+                }
+            }
         }
     }
 }

@@ -11,6 +11,10 @@ Rectangle {
     GridLayout{
         rows: 2
         columns: 2
+
+        rowSpacing: mainLayout.rowSpacing
+        columnSpacing: mainLayout.columnSpacing
+
         id: contentContainer
         width: parent.width
         height: parent.height

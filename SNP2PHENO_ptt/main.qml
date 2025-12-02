@@ -16,12 +16,15 @@ ApplicationWindow {
 
     GridLayout {
         id: mainLayout
+
         anchors.fill: parent
-        anchors.margins: 2
+        anchors.margins: 4
+
         columns: 2
         rows: 2
-        rowSpacing: 2
-        columnSpacing: 2
+
+        rowSpacing: 4
+        columnSpacing: 4
 
         ContentContainer {
             Layout.fillWidth: true

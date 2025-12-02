@@ -19,16 +19,20 @@ public:
 
     [[nodiscard]] QVariantList results() const { return m_results; }
     [[nodiscard]] QStringList availableActions() const;
+    [[nodiscard]] QVariantList selectedFiles() const {return m_selectedFiles;}
 
     signals:
         void resultsChanged();
         void actionsChanged();
+        void selectedFilesChanged();
 
 private:
-    QVariantList m_results;
+    QVariantList m_results = QVariantList();
+    QVariantList m_selectedFiles = QVariantList();
 
 public slots:
     void invokeAction(const QString& actionName);
+    void setSelectedFiles(const QVariantList &files);
 
 private slots:
     void onPlaceholderData();
