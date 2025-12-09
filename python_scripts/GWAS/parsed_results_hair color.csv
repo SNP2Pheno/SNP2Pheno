@@ -1,0 +1,209 @@
+rsID;pValueExponent;pValueMantissa;orValue;betaNum;betaUnit;betaDirection;CIMax;CIMin;expression;traitName;type;NumOfIndividualsInStudy;strongestAllele
+rs12931267;-10;3;0.0;0.56;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-87;5;0.0;0.56;unit;increase;0.0;0.0;(red hair);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-82;2;0.0;4.2454;Unknown;decrease;4.68];[3.81;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12896399;-13;5;0.0;0.31;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs12931267;-10;3;0.0;0.56;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-87;5;0.0;0.56;unit;increase;0.0;0.0;(red hair);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-82;2;0.0;4.2454;Unknown;decrease;4.68];[3.81;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs291671;-15;2;0.0;0.22;unit;increase;0.0;0.0;(red hair);hair color;TYPE.APPEARANCE;9126;G
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs35096708;-10;9;0.0;1.41016;unit;increase;1.86];[0.96;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs35360258;-10;1;0.0;1.53023;unit;increase;1.99];[1.07;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs112142489;-9;9;0.0;1.74032;unit;increase;2.33];[1.15;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs4785699;-8;3;0.0;1.29874;unit;increase;1.76];[0.84;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs113849132;-9;2;0.0;2.17508;unit;increase;2.88];[1.47;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs115726381;-9;3;0.0;2.00568;unit;increase;2.67];[1.34;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs115981455;-9;2;0.0;1.84114;unit;increase;2.44];[1.24;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs528519891;-8;3;0.0;2.32247;unit;increase;3.15];[1.5;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs116192418;-10;8;0.0;2.53378;unit;increase;3.34];[1.73;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs545600541;-8;4;0.0;2.52677;unit;increase;3.43];[1.62;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs55637757;-15;5;0.0;2.19916;unit;increase;2.75];[1.65;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs57461245;-8;3;0.0;2.57058;unit;increase;3.48];[1.67;Unknown;hair color;TYPE.APPEARANCE;4979;GA
+rs57856222;-22;7;0.0;2.88863;unit;increase;3.48];[2.3;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs62095805;-10;9;0.0;2.15898;unit;increase;2.85];[1.47;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs17232812;-15;3;0.0;1.90023;unit;increase;2.37];[1.43;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs1805009;-16;8;0.0;2.67676;unit;increase;3.33];[2.03;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs258322;-23;2;0.0;0.36;hair color score;increase;0.44];[0.28; ;hair color;TYPE.APPEARANCE;2287;T
+rs258322;-19;6;0.0;2.42492;unit;increase;2.96];[1.89;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs74836292;-8;1;0.0;1.86553;unit;increase;2.51];[1.22;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs74944665;-9;1;0.0;2.32532;unit;increase;3.07];[1.58;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs751751320;-10;3;0.0;1.58379;unit;increase;2.08];[1.09;Unknown;hair color;TYPE.APPEARANCE;4979;GAA
+rs752469800;-18;4;0.0;2.97402;unit;increase;3.64];[2.3;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs75588262;-8;3;0.0;1.9616;unit;increase;2.65];[1.27;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs75746799;-14;5;0.0;2.90381;unit;increase;3.66];[2.15;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs757505521;-8;2;0.0;1.66756;unit;increase;2.25];[1.08;Unknown;hair color;TYPE.APPEARANCE;4979;TAC
+rs11955798;-14;8;0.0;0.468904;unit;decrease;0.59];[0.35;Unknown;hair color;TYPE.APPEARANCE;4702;A
+rs12202284;-8;1;0.0;0.380839;unit;decrease;0.51];[0.25;Unknown;hair color;TYPE.APPEARANCE;4702;A
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs12210050;-14;6;0.0;0.557927;unit;decrease;0.7];[0.41;Unknown;hair color;TYPE.APPEARANCE;4702;T
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs13177787;-17;5;0.0;0.612775;unit;decrease;0.76];[0.47;Unknown;hair color;TYPE.APPEARANCE;4702;T
+rs1491276502;-12;7;0.0;0.790624;unit;decrease;1.02];[0.56;Unknown;hair color;TYPE.APPEARANCE;4702;A
+rs1549283;-13;2;0.0;0.691845;unit;decrease;0.88];[0.51;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs28117;-26;1;0.0;0.818148;unit;decrease;0.97];[0.67;Unknown;hair color;TYPE.APPEARANCE;4702;G
+rs34872037;-9;8;0.0;0.330498;unit;increase;0.44];[0.22;Unknown;hair color;TYPE.APPEARANCE;4702;TTAAC
+rs35406;-17;2;0.0;0.800613;unit;decrease;0.99];[0.62;Unknown;hair color;TYPE.APPEARANCE;4702;G
+rs62009212;-12;5;0.0;0.433897;unit;decrease;0.56];[0.31;Unknown;hair color;TYPE.APPEARANCE;4702;G
+rs6414861;-13;2;0.0;0.909171;unit;decrease;1.15];[0.67;Unknown;hair color;TYPE.APPEARANCE;4702;A
+rs74445037;-12;3;0.0;0.604639;unit;decrease;0.77];[0.44;Unknown;hair color;TYPE.APPEARANCE;4702;G
+rs76632889;-9;5;0.0;0.79125;unit;decrease;1.06];[0.53;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs895829;-8;3;0.0;0.303052;unit;decrease;0.41];[0.2;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs916977;-72;1;0.0;0.997855;Unknown;decrease;1.11];[0.89;Unknown;hair color;TYPE.APPEARANCE;12398;T
+rs76137547;-8;1;0.0;2.38882;unit;increase;3.21];[1.57;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs776390794;-17;4;0.0;2.29156;unit;increase;2.83];[1.76;Unknown;hair color;TYPE.APPEARANCE;4979;CTT
+rs78115302;-9;4;0.0;2.26779;unit;increase;3.02];[1.52;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs78773669;-9;2;0.0;2.85004;unit;increase;3.78];[1.92;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs111433258;-10;1;0.0;0.963262;unit;decrease;1.26];[0.67;Unknown;hair color;TYPE.APPEARANCE;4945;G
+rs111458470;-16;4;0.0;0.959474;unit;decrease;1.19];[0.73;Unknown;hair color;TYPE.APPEARANCE;4945;A
+rs11636232;-21;4;0.0;0.990663;unit;increase;1.2];[0.78;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs138862869;-11;4;0.0;0.766308;unit;decrease;0.99];[0.54;Unknown;hair color;TYPE.APPEARANCE;4945;AAATG
+rs139814685;-8;3;0.0;0.792322;unit;decrease;1.07];[0.51;Unknown;hair color;TYPE.APPEARANCE;4945;GCAAACA
+rs140340602;-8;4;0.0;1.66616;unit;increase;2.26];[1.07;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs28784029;-20;6;0.0;1.06068;unit;increase;1.29];[0.83;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs373561014;-14;3;0.0;1.44935;unit;decrease;1.82];[1.08;Unknown;hair color;TYPE.APPEARANCE;4945;A
+rs4778137;-10;1;0.0;0.68088;unit;decrease;0.89];[0.47;Unknown;hair color;TYPE.APPEARANCE;4945;G
+rs4778138;-15;1;0.0;1.12776;unit;decrease;1.4];[0.85;Unknown;hair color;TYPE.APPEARANCE;4945;G
+rs4778241;-13;3;0.0;0.881468;unit;decrease;1.12];[0.64;Unknown;hair color;TYPE.APPEARANCE;4945;A
+rs62007489;-10;5;0.0;0.679388;unit;increase;0.89];[0.47;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs62007494;-9;3;0.0;1.23093;unit;decrease;1.64];[0.82;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs7174027;-11;3;0.0;1.10488;unit;decrease;1.43];[0.78;Unknown;hair color;TYPE.APPEARANCE;4945;A
+rs7494942;-20;2;0.0;1.10526;unit;decrease;1.34];[0.87;Unknown;hair color;TYPE.APPEARANCE;4945;A
+rs10565330;-9;5;0.0;1.03142;unit;decrease;1.38];[0.69;Unknown;hair color;TYPE.APPEARANCE;4702;CAT
+rs116074720;-9;5;0.0;0.321762;unit;increase;0.43];[0.21;Unknown;hair color;TYPE.APPEARANCE;4702;A
+rs11636232;-21;4;0.0;0.990663;unit;increase;1.2];[0.78;Unknown;hair color;TYPE.APPEARANCE;4945;T
+rs1184030188;-9;6;0.0;0.770117;unit;decrease;1.03];[0.51;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs34133162;-9;4;0.0;1.36718;unit;increase;1.82];[0.91;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs369230;-13;9;0.0;1.68459;unit;increase;2.15];[1.22;Unknown;hair color;TYPE.APPEARANCE;4979;G
+rs4248913;-18;5;0.0;2.49625;unit;increase;3.06];[1.93;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs113086426;-8;2;0.0;1.37441;unit;increase;1.86];[0.89;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs4785751;-9;3;0.0;1.56858;unit;increase;2.09];[1.05;Unknown;hair color;TYPE.APPEARANCE;4979;G
+rs4968049;-18;5;0.0;2.37468;unit;increase;2.91];[1.84;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs116061711;-8;2;0.0;2.37976;unit;increase;3.21];[1.55;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs532745854;-8;1;0.0;2.29135;unit;increase;3.08];[1.51;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs117480223;-8;2;0.0;2.51608;unit;increase;3.4];[1.64;Unknown;hair color;TYPE.APPEARANCE;4979;G
+rs1216246770;-15;5;0.0;2.42876;unit;increase;3.04];[1.82;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs12933774;-14;3;0.0;1.95544;unit;increase;2.46];[1.45;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs141103485;-8;2;0.0;2.45203;unit;increase;3.31];[1.59;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs143065297;-9;2;0.0;2.34221;unit;increase;3.1];[1.58;Unknown;hair color;TYPE.APPEARANCE;4979;T
+rs143512305;-8;4;0.0;1.56477;unit;increase;2.12];[1.01;Unknown;hair color;TYPE.APPEARANCE;4979;TC
+rs71134240;-9;2;0.0;1.51387;unit;increase;2.01];[1.02;Unknown;hair color;TYPE.APPEARANCE;4979;CA
+rs72840707;-9;1;0.0;2.4405;unit;increase;3.23];[1.66;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs74606487;-15;6;0.0;2.05387;unit;increase;2.57];[1.54;Unknown;hair color;TYPE.APPEARANCE;4979;G
+rs28431356;-14;3;0.0;2.04642;unit;increase;2.57];[1.52;Unknown;hair color;TYPE.APPEARANCE;4979;C
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12896399;-13;5;0.0;0.31;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs1667394;-77;3;0.0;1.01451;Unknown;decrease;1.12];[0.91;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs12896399;-13;5;0.0;0.31;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12896399;-13;5;0.0;0.31;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs11855019;-24;2;0.0;0.28;hair color score;decrease;0.34];[0.22; ;hair color;TYPE.APPEARANCE;2287;G
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs28777;-17;1;0.0;0.46;hair color score;decrease;0.56];[0.36; ;hair color;TYPE.APPEARANCE;2287;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs258322;-23;2;0.0;0.36;hair color score;increase;0.44];[0.28; ;hair color;TYPE.APPEARANCE;2287;T
+rs258322;-19;6;0.0;2.42492;unit;increase;2.96];[1.89;Unknown;hair color;TYPE.APPEARANCE;4979;A
+rs28777;-17;1;0.0;0.46;hair color score;decrease;0.56];[0.36; ;hair color;TYPE.APPEARANCE;2287;C
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs11855019;-24;2;0.0;0.28;hair color score;decrease;0.34];[0.22; ;hair color;TYPE.APPEARANCE;2287;G
+rs80030016;-8;2;0.0;1.76633;Unknown;decrease;2.38];[1.15;Unknown;hair color;TYPE.APPEARANCE;10450;A
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs116895175;-20;2;0.0;2.97502;Unknown;decrease;3.6];[2.35;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs72932523;-10;2;0.0;0.446379;Unknown;decrease;0.58];[0.31;Unknown;hair color;TYPE.APPEARANCE;12398;G
+rs117156175;-26;1;0.0;3.60952;Unknown;decrease;4.27];[2.95;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs74836424;-63;1;0.0;4.07171;Unknown;decrease;4.55];[3.6;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs4238492;-8;1;0.0;0.239853;Unknown;decrease;0.32];[0.16;Unknown;hair color;TYPE.APPEARANCE;12398;A
+rs35749174;-75;2;0.0;4.10374;Unknown;decrease;4.54];[3.67;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs12931267;-10;3;0.0;0.56;unit;decrease;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-87;5;0.0;0.56;unit;increase;0.0;0.0;(red hair);hair color;TYPE.APPEARANCE;9126;G
+rs12931267;-82;2;0.0;4.2454;Unknown;decrease;4.68];[3.81;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs1667394;-77;3;0.0;1.01451;Unknown;decrease;1.12];[0.91;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs118174802;-16;5;0.0;1.86465;Unknown;decrease;2.31];[1.41;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs35063026;-14;2;0.0;0.741063;Unknown;decrease;0.93];[0.55;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs75570604;-80;7;0.0;4.18798;Unknown;decrease;4.62];[3.75;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs74800773;-14;4;0.0;0.671198;Unknown;decrease;0.85];[0.5;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs12203592;-28;2;0.0;0.59;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;T
+rs12203592;-127;7;0.0;0.35;hair color score;decrease;0.37];[0.33; ;hair color;TYPE.APPEARANCE;2287;T
+rs12203592;-50;2;0.0;1.13807;Unknown;increase;1.29];[0.99;Unknown;hair color;TYPE.APPEARANCE;10990;C
+rs3940272;-20;4;0.0;0.638294;Unknown;decrease;0.77];[0.5;Unknown;hair color;TYPE.APPEARANCE;10990;T
+rs1667394;-77;3;0.0;1.01451;Unknown;decrease;1.12];[0.91;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs35391;-10;9;0.0;0.716239;Unknown;decrease;0.95];[0.49;Unknown;hair color;TYPE.APPEARANCE;12398;T
+rs79912986;-18;2;0.0;2.85844;Unknown;decrease;3.5];[2.22;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs6938671;-8;2;0.0;0.262299;Unknown;increase;0.35];[0.17;Unknown;hair color;TYPE.APPEARANCE;12398;G
+rs118010021;-24;5;0.0;3.40184;Unknown;decrease;4.06];[2.74;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs144104266;-31;5;0.0;3.49332;Unknown;decrease;4.08];[2.9;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs12896471;-30;1;0.0;0.476792;Unknown;decrease;0.56];[0.4;Unknown;hair color;TYPE.APPEARANCE;12398;C
+rs67689854;-37;1;0.0;2.22658;Unknown;decrease;2.57];[1.89;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs7170989;-10;7;0.0;0.29718;Unknown;decrease;0.39];[0.2;Unknown;hair color;TYPE.APPEARANCE;12398;T
+rs6497257;-17;3;0.0;0.417711;Unknown;increase;0.51];[0.32;Unknown;hair color;TYPE.APPEARANCE;12398;T
+rs75570604;-80;7;0.0;4.18798;Unknown;decrease;4.62];[3.75;Unknown;hair color;TYPE.APPEARANCE;10450;G
+rs916977;-72;1;0.0;0.997855;Unknown;decrease;1.11];[0.89;Unknown;hair color;TYPE.APPEARANCE;12398;T
+rs77381714;-77;5;0.0;4.09877;Unknown;decrease;4.53];[3.67;Unknown;hair color;TYPE.APPEARANCE;10450;T
+rs74836424;-63;1;0.0;4.07171;Unknown;decrease;4.55];[3.6;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs16891982;-20;4;0.0;1.1;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;C
+rs16891982;-44;2;0.0;0.969685;unit;decrease;1.11];[0.83;Unknown;hair color;TYPE.APPEARANCE;4702;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G
+rs1805007;-78;8;0.0;4.05294;Unknown;decrease;4.48];[3.63;Unknown;hair color;TYPE.APPEARANCE;10450;C
+rs12913832;-88;9;0.0;0.97;unit;increase;0.0;0.0;(hair color);hair color;TYPE.APPEARANCE;9126;A
+rs12913832;-103;4;0.0;0.44;hair color score;decrease;0.48];[0.40; ;hair color;TYPE.APPEARANCE;2287;A
+rs12913832;-167;1;0.0;0.39;unit;increase;0.41];[0.37;Unknown;hair color;TYPE.APPEARANCE;7070;G

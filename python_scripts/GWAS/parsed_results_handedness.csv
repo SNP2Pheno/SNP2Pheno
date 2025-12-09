@@ -1,0 +1,3 @@
+rsID;pValueExponent;pValueMantissa;orValue;betaNum;betaUnit;betaDirection;CIMax;CIMin;expression;traitName;type;NumOfIndividualsInStudy;strongestAllele
+rs7182874;-9;9;0.0;0.37;unit;decrease;0.50];[0.24;Unknown;handedness;TYPE.APPEARANCE;728;T
+rs11855415;-8;2;0.0;0.35;SD;increase;0.47];[0.23;Unknown;handedness;TYPE.APPEARANCE;192;A

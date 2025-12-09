@@ -1,0 +1,673 @@
+rsID;pValueExponent;pValueMantissa;orValue;betaNum;betaUnit;betaDirection;CIMax;CIMin;expression;traitName;type;NumOfIndividualsInStudy;strongestAllele
+rs2519093;-217;4;0.0;0.20180124;unit;decrease;0.22];[0.19;Unknown;B-cell antigen receptor complex-associated protein beta chain measurement;TYPE.APPEARANCE;47745;T
+rs2519093;-48;3;0.0;0.412802;unit;increase;0.47];[0.36;Unknown;blood protein amount;TYPE.APPEARANCE;5358;T
+rs2519093;-80;6;0.0;0.58;unit;decrease;0.0;0.0;Unknown;vascular endothelial growth factor receptor 3 amount;TYPE.APPEARANCE;3301;T
+rs2519093;-227;4;0.0;0.22773552;unit;decrease;0.24];[0.21;Unknown;level of protocadherin-12 in blood serum;TYPE.APPEARANCE;47745;T
+rs2519093;-83;3;0.0;0.54;unit;decrease;0.59];[0.49;Unknown;protein measurement;TYPE.APPEARANCE;3506;T
+rs2519093;-474;2;0.0;1.17;unit;decrease;0.0;0.0;Unknown;E-selectin amount;TYPE.APPEARANCE;3301;T
+rs2519093;-73;3;0.0;0.72;unit;decrease;0.8];[0.64;Unknown;insulin receptor measurement;TYPE.APPEARANCE;1852;?
+rs2519093;-12;2;0.0;1.029227;unit;decrease;1.26];[0.8;Unknown;cathepsin Z measurement;TYPE.APPEARANCE;199;T
+rs2519093;-78;1;0.0;0.58;unit;increase;0.64];[0.52;Unknown;D-glucuronyl C5-epimerase measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-198;8;0.0;0.86;unit;decrease;0.0;0.0;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-217;2;0.0;0.20634656;unit;decrease;0.22];[0.19;Unknown;level of prion-like protein doppel in blood;TYPE.APPEARANCE;47745;T
+rs2519093;-89;2;0.0;0.61;unit;increase;0.67];[0.55;Unknown;C1GALT1-specific chaperone 1 measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-11;3;0.0;0.2051;unit;decrease;0.27];[0.14;Unknown;cell surface glycoprotein CD200 receptor 1 amount;TYPE.APPEARANCE;2893;T
+rs2519093;-887;2;0.0;0.3104;unit;decrease;0.32];[0.3;Unknown;alkaline phosphatase measurement;TYPE.DISEASE;105030;?
+rs2519093;-224;1;0.0;0.22671439;unit;decrease;0.24];[0.21;Unknown;cathepsin E measurement;TYPE.APPEARANCE;47745;T
+rs2519093;-44;5;0.0;13.9;z-score;increase;0.0;0.0;Unknown;aspartate aminotransferase measurement;TYPE.APPEARANCE;389565;C
+rs2519093;-19;1;0.0;1.2354;unit;decrease;1.43];[1.04;Unknown;level of CUE domain-containing protein 1 in blood serum;TYPE.APPEARANCE;195;T
+rs2519093;-23;4;0.0;0.31;unit;increase;0.37];[0.25;Unknown;n-acetyllactosaminide beta-1,3-N-acetylglucosaminyltransferase 2 measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-12;3;0.0;1.025394;unit;decrease;1.22];[0.83;Unknown;level of chymotrypsin-like protease CTRL-1 in blood serum;TYPE.APPEARANCE;200;T
+rs2519093;-213;8;0.0;0.22556038;unit;decrease;0.24];[0.21;Unknown;level of mucin-13 in blood;TYPE.APPEARANCE;47745;T
+rs2519093;-19;3;0.0;0.29;unit;decrease;0.0;0.0;Unknown;thrombospondin type-1 domain-containing protein 1 measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-48;7;0.0;0.352;unit;decrease;0.0;0.0;Unknown;icam-1 measurement;TYPE.APPEARANCE;5284;T
+rs2519093;-211;6;0.0;0.22588946;unit;decrease;0.24];[0.21;Unknown;semaphorin-4C measurement;TYPE.APPEARANCE;47745;T
+rs2519093;-12;6;0.0;0.923463;unit;decrease;1.15];[0.69;Unknown;phosphoglycerate mutase 1 measurement;TYPE.APPEARANCE;199;T
+rs2519093;-221;1;0.0;0.21189879;unit;decrease;0.23];[0.2;Unknown;angiotensin-converting enzyme measurement;TYPE.APPEARANCE;47745;T
+rs2519093;-284;1;0.0;0.22129282;unit;decrease;0.23];[0.21;Unknown;tissue factor measurement;TYPE.APPEARANCE;47745;T
+rs2519093;-155;1;0.0;0.78;unit;decrease;0.0;0.0;Unknown;adhesion G protein-coupled receptor F5 measurement;TYPE.APPEARANCE;3301;T
+rs2519093;-12;3;0.0;0.962255;unit;decrease;1.19];[0.73;Unknown;level of transmembrane emp24 domain-containing protein 2 in blood serum;TYPE.APPEARANCE;194;T
+rs10901252;-66;2;0.0;0.448;unit;increase;0.5];[0.4;Unknown;multiple inositol polyphosphate phosphatase 1 measurement;TYPE.APPEARANCE;10708;C
+rs10901252;-55;3;0.0;0.36;%;increase;0.41];[0.32;Unknown;erythrocyte volume;TYPE.APPEARANCE;362595;G
+rs10901252;-14;2;0.0;1.87016;unit;increase;2.41];[1.33;Unknown;angiopoietin-1 receptor measurement;TYPE.APPEARANCE;953;?
+rs10901252;-143;2;0.0;0.26990312;unit;increase;0.29];[0.25;Unknown;thrombomodulin measurement;TYPE.APPEARANCE;47745;C
+rs8176693;-71;2;0.0;0.72;unit;increase;0.8];[0.64;Unknown;semaphorin-6B measurement;TYPE.APPEARANCE;1852;?
+rs8176693;-180;1;0.0;1.13;unit;increase;1.21];[1.05;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;1852;?
+rs8176693;-30;1;0.0;0.56;unit;increase;0.66];[0.46;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;3301;T
+rs8176693;-57;2;0.0;0.414;unit;increase;0.46];[0.36;Unknown;basal cell adhesion molecule amount;TYPE.APPEARANCE;10708;T
+rs8176693;-16;2;0.0;0.27;unit;decrease;0.0;0.0;(thrombomodulin);thrombomodulin measurement;TYPE.APPEARANCE;3394;C
+rs8176693;-29;1;0.0;0.460428;unit;increase;0.54];[0.38;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;2935;T
+rs8176693;-581;2;0.0;1.25;unit;increase;1.3];[1.2;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;10708;T
+rs8176693;-12;2;0.0;0.69;unit;increase;0.89];[0.49;Unknown;level of cadherin-17 in blood serum;TYPE.APPEARANCE;466;T
+rs8176693;-32;1;0.0;0.58;unit;increase;0.68];[0.48;Unknown;platelet glycoprotein 4 level;TYPE.APPEARANCE;3301;T
+rs8176693;-47;8;0.0;0.375;unit;increase;0.43];[0.32;Unknown;protein measurement;TYPE.APPEARANCE;10708;T
+rs8176685;-12;8;0.0;0.218;unit;decrease;0.28];[0.16;Unknown;P-Selectin measurement;TYPE.APPEARANCE;2923;?
+rs8176743;-17;2;0.0;0.582;unit;decrease;0.72];[0.45;(vWF);von Willebrand factor quality;TYPE.APPEARANCE;2100;C
+rs8176743;-11;3;0.0;0.261;mm Hg;increase;0.34];[0.18;Unknown;intraocular pressure measurement;TYPE.APPEARANCE;27558;T
+rs8176743;-16;4;0.0;0.4;unit;increase;0.5];[0.3;Unknown;platelet endothelial aggregation receptor 1 measurement;TYPE.APPEARANCE;3301;T
+rs8176743;-24;4;0.0;0.49;unit;increase;0.59];[0.39;Unknown;interleukin-27 receptor subunit alpha measurement;TYPE.APPEARANCE;3301;T
+rs8176743;-21;6;0.0;0.46;unit;increase;0.56];[0.36;Unknown;semaphorin-6A measurement;TYPE.APPEARANCE;3301;T
+rs8176743;-132;3;0.0;1.11;unit;increase;1.21];[1.01;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;3301;T
+rs8176743;-99;3;0.0;0.8;unit;increase;0.88];[0.72;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;1852;?
+rs8176743;-13;4;0.0;0.36;unit;increase;0.46];[0.26;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;3301;T
+rs8176743;-434;5;0.0;0.6811;unit;increase;0.0;0.0;Unknown;angiopoietin-1 receptor measurement;TYPE.APPEARANCE;21758;T
+rs8176743;-41;6;0.0;0.7345;unit;increase;0.84];[0.63;Unknown;protein measurement;TYPE.APPEARANCE;2721;T
+rs8176746;-43;4;0.0;0.375;unit;increase;0.43];[0.32;Unknown;angiotensin-converting enzyme measurement;TYPE.APPEARANCE;10708;T
+rs8176746;-153;1;0.0;1.19;unit;increase;1.29];[1.09;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;3301;T
+rs8176746;-71;3;0.0;0.20876448;unit;increase;0.23];[0.18;Unknown;level of protocadherin-1 in blood;TYPE.APPEARANCE;47745;T
+rs8176746;-138;7;0.0;0.2610647;unit;increase;0.28];[0.24;Unknown;level of protogenin in blood;TYPE.APPEARANCE;47745;T
+rs8176746;-43;7;0.0;0.369;unit;increase;0.42];[0.32;Unknown;GDNF family receptor alpha-like measurement;TYPE.APPEARANCE;10708;T
+rs8176746;-81;2;0.0;0.512;unit;increase;0.56];[0.46;Unknown;platelet glycoprotein 4 level;TYPE.APPEARANCE;10708;T
+rs505922;-57;5;0.0;0.561;unit;decrease;0.63];[0.49;(vWF);von Willebrand factor quality;TYPE.APPEARANCE;2100;T
+rs505922;-4064;1;0.0;0.902164;Unknown;increase;0.91];[0.89;Unknown;CD209/ICAM2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-28;7;0.0;0.234791;unit;increase;0.28];[0.19;Unknown;blood protein amount;TYPE.APPEARANCE;5368;C
+rs505922;-482;4;0.0;0.335282;Unknown;decrease;0.35];[0.32;Unknown;CD58/IFNGR1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-339;3;0.0;0.276473;Unknown;decrease;0.29];[0.26;Unknown;ENG/NOTCH1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-30;2;0.0;0.3315;unit;decrease;0.39];[0.28;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;1931;C
+rs505922;-407;3;0.0;0.312546;Unknown;decrease;0.33];[0.3;Unknown;NRCAM/PCDH17 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-1828;1;0.0;1.3;unit;increase;1.32];[1.28;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;3301;C
+rs505922;-224;5;0.0;0.232702;Unknown;decrease;0.25];[0.22;Unknown;ICAM1/REG1A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-88;2;0.0;2.059;unit;decrease;2.26];[1.86;Unknown;metabolite measurement;TYPE.APPEARANCE;1595;C
+rs505922;-392;6;0.0;0.308231;Unknown;increase;0.32];[0.29;Unknown;CLEC4G/SEMA3F protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-1355;3;0.0;1.362;unit;increase;1.38];[1.34;Unknown;protein measurement;TYPE.APPEARANCE;3506;C
+rs505922;-216;3;0.0;0.228946;Unknown;decrease;0.24];[0.21;Unknown;ICAM1/REG1B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-2164;2;0.0;0.698621;Unknown;increase;0.71];[0.69;Unknown;GP2/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-555;2;0.0;0.369351;Unknown;increase;0.38];[0.36;Unknown;PCDH17/PTPRM protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-301;1;0.0;0.83;unit;increase;0.87];[0.79;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;3301;C
+rs505922;-514;4;0.0;0.349968;Unknown;decrease;0.36];[0.34;Unknown;DKK3/VWF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-1514;2;0.0;0.582012;Unknown;increase;0.6];[0.57;Unknown;EPS8L2/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-406;1;0.0;0.313718;Unknown;increase;0.33];[0.3;Unknown;CA4/PECAM1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-1841;5;0.0;0.635557;Unknown;increase;0.65];[0.62;Unknown;CA4/SELE protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-2420;2;0.0;0.736249;Unknown;increase;0.75];[0.72;Unknown;GP2/SELE protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-1605;1;0.0;0.592428;Unknown;increase;0.61];[0.58;Unknown;CLEC4G/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-284;3;0.0;0.265138;Unknown;decrease;0.28];[0.25;Unknown;DKK4/REG1B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs505922;-286;3;0.0;0.268519;Unknown;decrease;0.28];[0.25;Unknown;DKK4/REG1A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs687289;-98;4;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - A1);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs687289;-128;1;0.0;0.33;lU/dL;increase;0.36];[0.30;Unknown;blood coagulation trait;TYPE.APPEARANCE;212;T
+rs687289;-138;2;0.0;0.34;lU/dL;decrease;0.0;0.0;(ABO allele - O);blood coagulation trait;TYPE.APPEARANCE;212;G
+rs687289;-50;7;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - B);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs687289;-12;1;0.0;0.27;unit;increase;0.0;0.0;(4.2375, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;G
+rs687289;-12;2;0.0;0.27;unit;decrease;0.0;0.0;(5.1625, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;G
+rs687289;-10;8;0.0;0.2817;unit;increase;0.37];[0.19;(EA);mannose-binding protein C measurement;TYPE.APPEARANCE;997;A
+rs687289;-36;6;0.0;0.4338;unit;increase;0.0;0.0;(VWF);blood protein amount;TYPE.APPEARANCE;1340;?
+rs687289;-22;4;0.0;0.5283;unit;increase;0.0;0.0;(FAS);blood protein amount;TYPE.APPEARANCE;1340;?
+rs687289;-40;1;0.0;0.7384;unit;increase;0.0;0.0;(HGF);blood protein amount;TYPE.APPEARANCE;1340;?
+rs687289;-11;3;0.0;6.662;(zscore);increase;0.0;0.0;Unknown;ornithine measurement;TYPE.APPEARANCE;30920;G
+rs687289;-80;4;0.0;0.299637;unit;increase;0.33];[0.27;Unknown;deep vein thrombosis;TYPE.APPEARANCE;394626;A
+rs507666;-29;5;0.0;17.73;umol/L;decrease;0.0;0.0; ;icam-1 measurement;TYPE.APPEARANCE;4570;G
+rs507666;-91;3;0.0;17.3;ng/mL;decrease;0.0;0.0;Unknown;icam-1 measurement;TYPE.APPEARANCE;22435;A
+rs507666;-410;4;0.0;0.38487;Unknown;increase;0.4];[0.37;Unknown;BCAM/ICAM4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-820;1;0.0;0.535566;Unknown;decrease;0.55];[0.52;Unknown;CDH17/ITGB7 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-2460;5;0.0;0.874118;Unknown;increase;0.89];[0.86;Unknown;CD209/CLEC14A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-528;2;0.0;0.407578;Unknown;decrease;0.42];[0.39;Unknown;CLEC14A/PTPRS protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-579;2;0.0;0.42902;Unknown;decrease;0.45];[0.41;Unknown;CLEC14A/TNFRSF21 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-633;1;0.0;0.462538;Unknown;increase;0.48];[0.45;Unknown;BCAM/CLEC14A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-377;3;0.0;0.356184;Unknown;decrease;0.37];[0.34;Unknown;CD200/CLEC4G protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-242;1;0.0;0.278161;Unknown;increase;0.29];[0.26;Unknown;CA4/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-153;5;0.0;0.229847;Unknown;decrease;0.25];[0.21;Unknown;CD300LG/DSG2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-258;4;0.0;0.863222;unit;decrease;0.91];[0.81;Unknown;blood protein amount;TYPE.APPEARANCE;5359;A
+rs507666;-1767;2;0.0;0.757358;Unknown;decrease;0.77];[0.74;Unknown;LGALS8/TXNDC5 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-21;2;0.0;0.258943;unit;decrease;0.31];[0.21;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;5350;A
+rs507666;-342;2;0.0;0.34297;Unknown;increase;0.36];[0.33;Unknown;CLEC4G/NELL2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-79;1;0.0;0.533946;unit;decrease;0.59];[0.48;Unknown;intercellular adhesion molecule 5 measurement;TYPE.APPEARANCE;5368;A
+rs507666;-301;4;0.0;0.315314;Unknown;decrease;0.33];[0.3;Unknown;CD79B/FCRL1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-213;2;0.0;0.275795;Unknown;increase;0.29];[0.26;Unknown;GALNT10/IGSF3 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-793;5;0.0;0.523235;Unknown;increase;0.54];[0.51;Unknown;LGALS1/LGALS8 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-54;1;0.0;0.251;unit;decrease;0.28];[0.22;Unknown;ephrin type-B receptor 4 amount;TYPE.APPEARANCE;10708;A
+rs507666;-103;4;0.0;0.358;unit;decrease;0.39];[0.32;Unknown;OX-2 membrane glycoprotein amount;TYPE.APPEARANCE;10708;A
+rs507666;-770;6;0.0;0.525932;Unknown;increase;0.54];[0.51;Unknown;CLEC4G/KEL protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-61;2;0.0;0.275;unit;decrease;0.31];[0.24;Unknown;CD109 antigen measurement;TYPE.APPEARANCE;10708;A
+rs507666;-12;5;0.0;0.52713;unit;decrease;0.68];[0.38;(gal-8);blood protein amount;TYPE.APPEARANCE;750;A
+rs507666;-1792;1;0.0;0.761;Unknown;decrease;0.78];[0.75;Unknown;LGALS8/RWDD1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-17;2;0.0;0.27;unit;decrease;0.0;0.0;Unknown;intercellular adhesion molecule 1 measurement;TYPE.APPEARANCE;3301;A
+rs507666;-405;6;0.0;0.380874;Unknown;increase;0.4];[0.36;Unknown;BST2/CXADR protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-1249;2;0.0;0.65194;Unknown;increase;0.67];[0.64;Unknown;CLEC4G/KDR protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-271;2;0.0;0.307031;Unknown;increase;0.32];[0.29;Unknown;GALNT10/TNFSF12 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-15;5;0.0;0.3397;unit;decrease;0.0;0.0;(CDH1);blood protein amount;TYPE.APPEARANCE;1340;?
+rs507666;-58;1;0.0;0.641;unit;decrease;0.0;0.0;(PECAM1);blood protein amount;TYPE.APPEARANCE;1340;?
+rs507666;-104;2;0.0;0.9406;unit;decrease;0.0;0.0;(SELE);blood protein amount;TYPE.APPEARANCE;1340;?
+rs507666;-193;4;0.0;0.26177;Unknown;decrease;0.28];[0.24;Unknown;CD109/CNTN4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-511;4;0.0;0.697;unit;decrease;0.72];[0.67;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;10708;A
+rs507666;-54;2;0.0;0.427486;unit;decrease;0.48];[0.37;Unknown;kin of IRRE-like protein 3 measurement;TYPE.APPEARANCE;5358;A
+rs507666;-496;6;0.0;0.428118;Unknown;increase;0.45];[0.41;Unknown;CD55/CDH1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-355;9;0.0;0.352245;Unknown;increase;0.37];[0.34;Unknown;GOLM2/ITGA5 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-138;5;0.0;0.218145;Unknown;increase;0.24];[0.2;Unknown;BCAM/NOTCH1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-603;2;0.0;0.459334;Unknown;increase;0.48];[0.44;Unknown;BCAM/CDH5 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-235;3;0.0;0.287673;Unknown;increase;0.3];[0.27;Unknown;GP1BA/SELP protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-54;4;0.0;0.63;unit;decrease;0.71];[0.55;Unknown;P-Selectin measurement;TYPE.APPEARANCE;1852;?
+rs507666;-38;9;0.0;0.368046;unit;decrease;0.42];[0.31;Unknown;angiotensin-converting enzyme measurement;TYPE.APPEARANCE;5362;A
+rs507666;-638;9;0.0;0.474185;Unknown;increase;0.49];[0.46;Unknown;CD93/CLEC14A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-762;4;0.0;0.516226;Unknown;increase;0.53];[0.5;Unknown;GP6/LGALS8 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-2062;2;0.0;0.816565;Unknown;decrease;0.83];[0.8;Unknown;LGALS8/SERPINB6 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-46;1;0.0;0.231;unit;decrease;0.26];[0.2;Unknown;toll-like receptor 4:Lymphocyte antigen 96 complex amount;TYPE.APPEARANCE;10708;A
+rs507666;-1540;9;0.0;1.085;unit;decrease;1.11];[1.06;Unknown;E-selectin amount;TYPE.APPEARANCE;10708;A
+rs507666;-167;1;0.0;0.242099;Unknown;increase;0.26];[0.22;Unknown;JAM2/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-237;1;0.0;0.287304;Unknown;decrease;0.3];[0.27;Unknown;CD79B/ICAM3 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-648;2;0.0;0.5304;unit;decrease;0.0;0.0;Unknown;platelet endothelial cell adhesion molecule measurement;TYPE.APPEARANCE;21758;A
+rs507666;-2658;5;0.0;0.3372;unit;decrease;0.34];[0.33;Unknown;alkaline phosphatase measurement;TYPE.DISEASE;7337;A
+rs507666;-170;6;0.0;0.238336;Unknown;increase;0.26];[0.22;Unknown;FGFR2/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-1018;4;0.0;0.598555;Unknown;decrease;0.62];[0.58;Unknown;CDH17/GALNT3 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-1033;6;0.0;0.590028;Unknown;increase;0.61];[0.57;Unknown;LBR/LGALS8 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-63;1;0.0;0.28;unit;decrease;0.31];[0.25;Unknown;intercellular adhesion molecule 4 measurement;TYPE.APPEARANCE;10708;A
+rs507666;-525;2;0.0;0.422532;Unknown;decrease;0.44];[0.41;Unknown;CLEC14A/PIK3IP1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-866;8;0.0;0.543211;Unknown;decrease;0.56];[0.53;Unknown;LGALS8/SOD2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-847;1;0.0;0.545965;Unknown;decrease;0.56];[0.53;Unknown;CDH17/DSG2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-299;3;0.0;0.311081;Unknown;increase;0.33];[0.29;Unknown;CD22/CD79B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-3709;3;0.0;1.03239;Unknown;increase;1.05];[1.02;Unknown;ITGA5/SELE protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-99;2;0.0;0.337;unit;decrease;0.37];[0.31;Unknown;vascular endothelial growth factor receptor 3 amount;TYPE.APPEARANCE;10708;A
+rs507666;-546;3;0.0;0.434671;Unknown;decrease;0.45];[0.42;Unknown;CD200R1/CLEC4G protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-167;1;0.0;0.245494;Unknown;increase;0.26];[0.23;Unknown;BCAM/SEMA7A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-173;1;0.0;0.234181;Unknown;increase;0.25];[0.22;Unknown;CLMP/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-293;3;0.0;0.325039;Unknown;increase;0.34];[0.31;Unknown;GALNT10/SEMA7A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-204;2;0.0;0.267888;Unknown;decrease;0.29];[0.25;Unknown;CD79B/TNFRSF4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-165;1;0.0;0.229427;Unknown;increase;0.25];[0.21;Unknown;NECTIN4/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-171;3;0.0;0.243672;Unknown;increase;0.26];[0.23;Unknown;NTRK2/TYRO3 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-153;2;0.0;0.416;unit;decrease;0.45];[0.38;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;10708;A
+rs507666;-934;8;0.0;0.56506;Unknown;decrease;0.58];[0.55;Unknown;LGALS8/VWF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-169;6;0.0;0.238167;Unknown;increase;0.25];[0.22;Unknown;SCARA5/SCARF2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-151;3;0.0;0.231273;Unknown;increase;0.25];[0.21;Unknown;CD46/SELP protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-173;5;0.0;0.249239;Unknown;decrease;0.27];[0.23;Unknown;SELP/VSIR protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-241;5;0.0;0.283649;Unknown;decrease;0.3];[0.27;Unknown;TGFBR2/THBD protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-736;2;0.0;0.849;unit;decrease;0.88];[0.82;Unknown;protein measurement;TYPE.APPEARANCE;10708;A
+rs507666;-391;8;0.0;0.378721;Unknown;decrease;0.4];[0.36;Unknown;CDH1/HSPG2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-301;2;0.0;0.576;unit;decrease;0.61];[0.54;Unknown;thrombospondin type-1 domain-containing protein 1 measurement;TYPE.APPEARANCE;10708;A
+rs507666;-17;3;0.0;0.3;unit;decrease;0.38];[0.22;Unknown;carbohydrate sulfotransferase 15 measurement;TYPE.APPEARANCE;1852;?
+rs507666;-414;3;0.0;0.378172;Unknown;increase;0.4];[0.36;Unknown;CD300C/CLEC14A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-4604;7;0.0;1.12932;Unknown;increase;1.14];[1.12;Unknown;CD209/SELE protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-425;9;0.0;0.394049;Unknown;decrease;0.41];[0.38;Unknown;CDH1/VASN protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-220;1;0.0;0.281079;Unknown;increase;0.3];[0.26;Unknown;CD27/CD79B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-456;7;0.0;0.397094;Unknown;increase;0.41];[0.38;Unknown;CLEC4G/MERTK protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-137;1;0.0;0.216254;Unknown;increase;0.23];[0.2;Unknown;NBL1/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-186;5;0.0;0.255169;Unknown;decrease;0.27];[0.24;Unknown;CGREF1/FAM3C protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-365;3;0.0;0.362637;Unknown;increase;0.38];[0.35;Unknown;ANPEP/CXADR protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-159;3;0.0;0.237541;Unknown;increase;0.25];[0.22;Unknown;SDC4/SELP protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-80;5;0.0;0.58;unit;decrease;0.0;0.0;Unknown;insulin receptor measurement;TYPE.APPEARANCE;3301;A
+rs507666;-186;7;0.0;0.25688;Unknown;increase;0.27];[0.24;Unknown;COLEC12/TGFBR2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-142;2;0.0;0.222332;Unknown;increase;0.24];[0.21;Unknown;CA4/TNFSF12 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-102;3;0.0;0.344;unit;increase;0.38];[0.31;Unknown;protein-tyrosine sulfotransferase 2 measurement;TYPE.APPEARANCE;10708;A
+rs507666;-223;2;0.0;0.505;unit;decrease;0.54];[0.47;Unknown;vascular endothelial growth factor receptor 2 amount;TYPE.APPEARANCE;10708;A
+rs507666;-62;2;0.0;0.277;unit;decrease;0.31];[0.24;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;10708;A
+rs507666;-293;4;0.0;0.322609;Unknown;increase;0.34];[0.31;Unknown;CD163/ICAM1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-3911;1;0.0;1.06843;Unknown;increase;1.08];[1.05;Unknown;PRCP/SELE protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-196;5;0.0;0.262865;Unknown;decrease;0.28];[0.25;Unknown;CD79B/CKAP4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-744;1;0.0;0.50459;Unknown;decrease;0.52];[0.49;Unknown;CD34/ITGAV protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-120;9;0.0;0.203952;Unknown;decrease;0.22];[0.19;Unknown;CPB1/REG1B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-141;1;0.0;0.21958;Unknown;decrease;0.24];[0.2;Unknown;TGFBR2/TNFRSF19 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-383;1;0.0;0.368792;Unknown;decrease;0.39];[0.35;Unknown;CDH5/PCDH17 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs507666;-82;2;0.0;0.314;unit;increase;0.35];[0.28;Unknown;n-acetyllactosaminide beta-1,3-N-acetylglucosaminyltransferase 2 measurement;TYPE.APPEARANCE;10708;A
+rs8176749;-98;4;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - A1);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs8176749;-138;2;0.0;0.34;lU/dL;decrease;0.0;0.0;(ABO allele - O);blood coagulation trait;TYPE.APPEARANCE;212;G
+rs8176749;-50;7;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - B);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs8176749;-105;7;0.0;0.205;ng/ml;increase;0.23];[0.18;(CEA);cancer biomarker measurement;TYPE.APPEARANCE;3451;T
+rs8176749;-12;4;0.0;0.48;unit;increase;0.0;0.0;(5.2625, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;C
+rs8176749;-11;8;0.0;0.4916;unit;increase;0.64];[0.34;(EA);interleukin 27 receptor subunit alpha measurement;TYPE.APPEARANCE;997;T
+rs8176749;-10;6;0.0;0.4484;unit;increase;0.59];[0.31;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;997;T
+rs8176749;-48;5;0.0;0.377;unit;increase;0.43];[0.33;Unknown;interleukin-27 receptor subunit alpha measurement;TYPE.APPEARANCE;10708;T
+rs8176749;-16;3;0.0;0.215;unit;increase;0.27];[0.16;Unknown;protein measurement;TYPE.APPEARANCE;10708;T
+rs8176749;-17;6;0.0;0.6285;unit;increase;0.77];[0.48;(EA);endoglin measurement;TYPE.APPEARANCE;997;T
+rs8176749;-11;2;0.0;0.5058;unit;increase;0.65];[0.36;(EA);basal cell adhesion molecule amount;TYPE.APPEARANCE;997;T
+rs8176749;-53;6;0.0;1.108;unit;increase;1.24];[0.97;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;997;T
+rs8176749;-11;8;0.0;0.4921;unit;increase;0.64];[0.35;(EA);vascular endothelial growth factor receptor 3 amount;TYPE.APPEARANCE;997;T
+rs8176749;-35;1;0.0;0.9056;unit;increase;1.04];[0.77;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;997;T
+rs8176749;-20;1;0.0;0.287;unit;decrease;0.35];[0.23;Unknown;Pulmonary Infarction;TYPE.APPEARANCE;120880;C
+rs8176749;-11;2;0.0;0.5088;unit;increase;0.66];[0.36;(EA);CD109 antigen measurement;TYPE.APPEARANCE;997;T
+rs8176749;-51;2;0.0;1.099;unit;increase;1.23];[0.96;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;997;T
+rs8176749;-21;7;0.0;0.2866;unit;decrease;0.35];[0.23;Unknown;heart disease;TYPE.DISEASE;120829;C
+rs8176741;-38;1;0.0;0.46;unit;increase;0.54];[0.38;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;1852;?
+rs8176741;-161;2;0.0;0.916622;unit;increase;0.98];[0.85;Unknown;blood protein amount;TYPE.APPEARANCE;5359;A
+rs8176741;-92;1;0.0;0.543;unit;increase;0.6];[0.49;Unknown;CD109 antigen measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-176;1;0.0;0.7;unit;increase;0.75];[0.65;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-31;5;0.0;0.293;unit;increase;0.34];[0.24;Unknown;tolloid-like protein 1 measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-31;6;0.0;0.301;unit;increase;0.35];[0.25;Unknown;disintegrin and metalloproteinase domain-containing protein 23 measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-85;1;0.0;0.21046333;unit;increase;0.23];[0.19;Unknown;junctional adhesion molecule B measurement;TYPE.APPEARANCE;47745;A
+rs8176741;-85;2;0.0;0.496;unit;increase;0.55];[0.45;Unknown;endoglin measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-128;2;0.0;0.618;unit;increase;0.67];[0.57;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-18;3;0.0;0.236;unit;increase;0.29];[0.18;Unknown;semaphorin-3G measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-248;2;0.0;0.862;unit;increase;0.91];[0.81;Unknown;protein measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-34;2;0.0;0.323;unit;increase;0.37];[0.27;Unknown;thrombospondin type-1 domain-containing protein 1 measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-78;2;0.0;0.61;unit;decrease;0.0;0.0;(angiopoietin-1 receptor);angiopoietin-1 receptor measurement;TYPE.APPEARANCE;3394;G
+rs8176741;-49;3;0.0;0.52;unit;increase;0.6];[0.44;Unknown;basal cell adhesion molecule amount;TYPE.APPEARANCE;1852;?
+rs8176741;-23;1;0.0;0.26;unit;increase;0.31];[0.21;Unknown;semaphorin-6A measurement;TYPE.APPEARANCE;10708;A
+rs8176741;-247;2;0.0;0.36345917;unit;increase;0.39];[0.34;Unknown;desmoglein-2 measurement;TYPE.APPEARANCE;47745;A
+rs643434;-49;1;0.0;0.51;unit;decrease;0.58];[0.44;(vWF);von Willebrand factor quality;TYPE.APPEARANCE;2100;G
+rs643434;-48;1;0.0;0.257;unit;decrease;0.29];[0.22;Unknown;interleukin-6 measurement;TYPE.APPEARANCE;8296;?
+rs529565;-51;5;0.0;0.202;unit;decrease;0.23];[0.18;Unknown;protein measurement;TYPE.APPEARANCE;10708;T
+rs529565;-49;9;0.0;0.3893;unit;decrease;0.44];[0.34;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;2923;?
+rs529565;-52;1;0.0;0.216;unit;decrease;0.24];[0.19;Unknown;mannose-binding protein C measurement;TYPE.APPEARANCE;10708;T
+rs587611953;-31;1;0.0;0.2223;unit;decrease;0.26];[0.18;Unknown;blood coagulation disease;TYPE.APPEARANCE;439483;C
+rs587611953;-255;8;0.0;1.1;unit;increase;1.16];[1.04;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;3301;A
+rs587611953;-246;2;0.0;0.644;unit;increase;0.68];[0.61;Unknown;sulfhydryl oxidase 2 measurement;TYPE.APPEARANCE;10708;A
+rs587611953;-34;1;0.0;0.45;unit;increase;0.53];[0.37;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;3301;A
+rs587611953;-291;4;0.0;0.693;unit;decrease;0.73];[0.66;Unknown;E-selectin amount;TYPE.APPEARANCE;10708;A
+rs587611953;-58;2;0.0;0.3769;unit;decrease;0.42];[0.33;Unknown;deep vein thrombosis;TYPE.APPEARANCE;315668;C
+rs587611953;-133;6;0.0;0.479;unit;increase;0.52];[0.44;Unknown;Golgi membrane protein 1 measurement;TYPE.APPEARANCE;10708;A
+rs587611953;-156;1;0.0;0.91;unit;increase;0.97];[0.85;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;3301;A
+rs587611953;-61;6;0.0;0.313;unit;increase;0.35];[0.28;Unknown;desmoglein-2 measurement;TYPE.APPEARANCE;10708;A
+rs587611953;-57;3;0.0;0.58;unit;increase;0.66];[0.5;Unknown;factor VIII measurement;TYPE.APPEARANCE;3301;A
+rs8176644;-23;1;0.0;0.365133;unit;increase;0.44];[0.29;Unknown;blood protein amount;TYPE.APPEARANCE;5361;T
+rs10793962;-19;2;0.0;0.362001;unit;increase;0.44];[0.28;Unknown;CD109 antigen measurement;TYPE.APPEARANCE;2935;T
+rs10793962;-41;9;0.0;0.65;unit;increase;0.75];[0.55;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;3301;T
+rs10793962;-33;4;0.0;0.45;unit;increase;0.53];[0.37;Unknown;interleukin 27 receptor subunit alpha measurement;TYPE.APPEARANCE;1852;?
+rs10793962;-45;2;0.0;0.6534;unit;decrease;0.74];[0.56;Unknown;level of cadherin-17 in blood serum;TYPE.APPEARANCE;2917;A
+rs10793962;-60;1;0.0;0.429;unit;decrease;0.48];[0.38;Unknown;platelet endothelial aggregation receptor 1 measurement;TYPE.APPEARANCE;10708;A
+rs10793962;-193;3;0.0;0.31594577;unit;increase;0.34];[0.29;Unknown;level of meprin A subunit alpha in blood;TYPE.APPEARANCE;47745;T
+rs10793962;-135;2;0.0;1.0605;unit;decrease;1.14];[0.98;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;2923;?
+rs10793962;-216;7;0.0;0.819;unit;decrease;0.87];[0.77;Unknown;adhesion G protein-coupled receptor F5 measurement;TYPE.APPEARANCE;10708;A
+rs10793962;-85;2;0.0;0.788961;unit;increase;0.87];[0.71;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;2935;T
+rs550057;-14;1;0.0;0.963655;unit;increase;1.14];[0.79;Unknown;level of ER membrane protein complex subunit 1 in blood serum;TYPE.APPEARANCE;198;T
+rs550057;-61;5;0.0;0.238;unit;decrease;0.27];[0.21;Unknown;protein FAM177A1 measurement;TYPE.APPEARANCE;10708;T
+rs550057;-208;4;0.0;0.658008;unit;increase;0.7];[0.62;Unknown;blood protein amount;TYPE.APPEARANCE;5354;T
+rs550057;-415;5;0.0;0.606;unit;decrease;0.63];[0.58;Unknown;intestinal-type alkaline phosphatase measurement;TYPE.APPEARANCE;10708;T
+rs550057;-141;4;0.0;0.6547;unit;increase;0.7];[0.61;Unknown;protein measurement;TYPE.APPEARANCE;3506;T
+rs550057;-750;2;0.0;0.763;unit;increase;0.79];[0.74;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;10708;T
+rs550057;-122;9;0.0;0.341;unit;decrease;0.37];[0.31;Unknown;carbohydrate sulfotransferase 15 measurement;TYPE.APPEARANCE;10708;T
+rs550057;-218;5;0.0;0.20029221;unit;decrease;0.21];[0.19;Unknown;level of hephaestin in blood;TYPE.APPEARANCE;47745;T
+rs550057;-26;9;0.0;0.2;unit;increase;0.24];[0.16;Unknown;serum creatinine amount;TYPE.APPEARANCE;7270;T
+rs550057;-16;3;0.0;1.023615;unit;increase;1.27];[0.77;Unknown;rhophilin-2 measurement;TYPE.APPEARANCE;195;T
+rs550057;-499;4;0.0;0.641;unit;increase;0.67];[0.62;Unknown;Golgi membrane protein 1 measurement;TYPE.APPEARANCE;10708;T
+rs550057;-14;8;0.0;0.21;unit;decrease;0.0;0.0;Unknown;protein jagged-1 measurement;TYPE.APPEARANCE;3301;T
+rs550057;-43;1;0.0;0.204;unit;increase;0.23];[0.17;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;10708;T
+rs550057;-15;7;0.0;0.989745;unit;increase;1.17];[0.81;Unknown;level of caspase-7 in blood serum;TYPE.APPEARANCE;193;T
+rs550057;-43;4;0.0;0.201;unit;increase;0.23];[0.17;Unknown;beta-1,4-galactosyltransferase 2 measurement;TYPE.APPEARANCE;10708;T
+rs550057;-28;1;0.0;1.266765;unit;increase;1.45];[1.08;Unknown;level of docking protein 2 in blood serum;TYPE.APPEARANCE;200;T
+rs550057;-16;2;0.0;1.034718;unit;increase;1.32];[0.75;Unknown;azurocidin measurement;TYPE.APPEARANCE;194;T
+rs550057;-28;4;0.0;1.23133;unit;increase;1.52];[0.95;Unknown;level of V(D)J recombination-activating protein 1 in blood serum;TYPE.APPEARANCE;198;T
+rs550057;-13;5;0.0;0.829981;unit;decrease;1];[0.66;Unknown;level of deoxyhypusine hydroxylase in blood serum;TYPE.APPEARANCE;191;T
+rs550057;-191;7;0.0;0.399;unit;increase;0.43];[0.37;Unknown;protein CASC4 measurement;TYPE.APPEARANCE;10708;T
+rs8176759;-17;2;0.0;0.3648;unit;increase;0.45];[0.28;Unknown;protein measurement;TYPE.APPEARANCE;3334;A
+rs8176759;-54;2;0.0;0.7092;unit;increase;0.8];[0.62;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;2917;A
+rs8176759;-41;2;0.0;0.52;unit;increase;0.6];[0.44;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;1852;?
+rs8176759;-20;2;0.0;0.4344;unit;increase;0.53];[0.34;Unknown;platelet endothelial cell adhesion molecule measurement;TYPE.APPEARANCE;2923;?
+rs657152;-13;9;0.0;8.0;%;increase;0.0;0.0;(campesterol);phytosterol measurement;TYPE.APPEARANCE;1495;T
+rs657152;-19;1;0.0;0.34;unit;increase;0.0;0.0;(1.2975, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;C
+rs9411378;-38;1;0.0;0.310809;unit;decrease;0.36];[0.26;Unknown;blood protein amount;TYPE.APPEARANCE;5366;A
+rs9411378;-13;1;0.0;0.37367752;unit;increase;0.0;0.0;Unknown;urinary metabolite measurement;TYPE.APPEARANCE;996;A
+rs9411378;-13;4;0.0;0.21;unit;decrease;0.0;0.0;Unknown;C-C motif chemokine 25 measurement;TYPE.APPEARANCE;3301;A
+rs8176747;-12;9;0.0;0.34;unit;increase;0.44];[0.24;Unknown;basal cell adhesion molecule amount;TYPE.APPEARANCE;3301;G
+rs8176747;-26;2;0.0;0.52;unit;increase;0.62];[0.42;Unknown;tolloid-like protein 1 measurement;TYPE.APPEARANCE;3301;G
+rs8176747;-260;3;0.0;0.3909052;unit;increase;0.41];[0.37;Unknown;platelet endothelial aggregation receptor 1 measurement;TYPE.APPEARANCE;47745;G
+rs8176747;-28;3;0.0;0.5045;unit;decrease;0.59];[0.41;Unknown;level of kin of IRRE-like protein 2 in blood serum;TYPE.APPEARANCE;2917;C
+rs8176747;-300;2;0.0;0.3793975;unit;increase;0.4];[0.36;Unknown;level of pancreatic triacylglycerol lipase in blood;TYPE.APPEARANCE;47745;G
+rs8176747;-124;2;0.0;0.20128566;unit;increase;0.22];[0.18;Unknown;tumor-associated calcium signal transducer 2 measurement;TYPE.APPEARANCE;47745;G
+rs8176747;-36;2;0.0;0.5561;unit;decrease;0.64];[0.47;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;2917;C
+rs8176747;-107;5;0.0;0.23848774;unit;increase;0.26];[0.22;Unknown;amount of OX-2 membrane glycoprotein (human) in blood;TYPE.APPEARANCE;47745;G
+rs8176747;-170;6;0.0;0.3033832;unit;increase;0.33];[0.28;Unknown;interferon gamma receptor 1 measurement;TYPE.APPEARANCE;47745;G
+rs8176747;-161;4;0.0;0.71;unit;decrease;0.76];[0.66;Unknown;protein measurement;TYPE.APPEARANCE;10708;C
+rs8176747;-17;1;0.0;0.3989;unit;decrease;0.49];[0.31;Unknown;level of disintegrin and metalloproteinase domain-containing protein 15 in blood;TYPE.APPEARANCE;2917;C
+rs8176643;-24;4;0.0;0.33;unit;decrease;0.0;0.0;Unknown;toll-like receptor 4:Lymphocyte antigen 96 complex amount;TYPE.APPEARANCE;3301;A
+rs8176643;-12;6;0.0;0.23;unit;increase;0.29];[0.17;Unknown;mannosyl-oligosaccharide 1,2-alpha-mannosidase IB measurement;TYPE.APPEARANCE;3301;A
+rs8176643;-36;8;0.0;0.9222;unit;decrease;1.06];[0.79;Unknown;E-selectin amount;TYPE.APPEARANCE;496;A
+rs8176643;-162;1;0.0;0.81;unit;increase;0.87];[0.75;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;3301;A
+rs8176643;-64;2;0.0;0.54;unit;increase;0.6];[0.48;Unknown;factor VIII measurement;TYPE.APPEARANCE;3301;A
+rs8176671;-19;6;0.0;0.24;unit;decrease;0.29];[0.19;Unknown;interleukin-6 receptor subunit beta amount;TYPE.APPEARANCE;10708;A
+rs8176671;-12;8;0.0;0.3242;unit;decrease;0.42];[0.23;Unknown;tyrosine-protein kinase receptor TYRO3 measurement;TYPE.APPEARANCE;2906;?
+rs149037075;-66;7;0.0;0.83;unit;increase;0.93];[0.73;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;3301;T
+rs149037075;-56;3;0.0;0.77;unit;increase;0.87];[0.67;Unknown;adhesion G protein-coupled receptor F5 measurement;TYPE.APPEARANCE;3301;T
+rs532436;-12;7;0.0;0.201295;unit;decrease;0.26];[0.14;Unknown;CCL25 measurement;TYPE.APPEARANCE;5366;A
+rs532436;-18;1;0.0;0.32;unit;decrease;0.4];[0.24;Unknown;insulin-like growth factor 1 receptor amount;TYPE.APPEARANCE;1852;?
+rs532436;-18;2;0.0;0.3134;unit;increase;0.0;0.0;Unknown;social deprivation;TYPE.APPEARANCE;89939;A
+rs532436;-246;1;0.0;0.22480197;unit;increase;0.24];[0.21;Unknown;polypeptide N-acetylgalactosaminyltransferase 10 measurement;TYPE.APPEARANCE;47745;A
+rs532436;-40;3;0.0;0.371668;unit;decrease;0.43];[0.32;Unknown;blood protein amount;TYPE.APPEARANCE;5363;A
+rs532436;-12;2;0.0;0.34;unit;decrease;0.44];[0.24;Unknown;interleukin-6 receptor measurement;TYPE.APPEARANCE;1852;?
+rs532436;-32;2;0.0;0.49;unit;decrease;0.57];[0.41;Unknown;vascular endothelial growth factor receptor 3 amount;TYPE.APPEARANCE;1852;?
+rs532436;-152;5;0.0;0.9;unit;increase;0.96];[0.84;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;1852;?
+rs532436;-44;5;0.0;0.385482;unit;decrease;0.44];[0.33;Unknown;leukemia inhibitory factor receptor measurement;TYPE.APPEARANCE;5355;A
+rs532436;-65;7;0.0;0.275;unit;decrease;0.31];[0.24;Unknown;intercellular adhesion molecule 5 measurement;TYPE.APPEARANCE;10708;A
+rs532436;-33;2;0.0;0.43;unit;decrease;0.51];[0.35;Unknown;hepatocyte growth factor receptor amount;TYPE.APPEARANCE;1852;?
+rs532436;-98;1;0.0;0.5772;unit;decrease;0.63];[0.52;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;2917;A
+rs532436;-20;7;0.0;0.259876;unit;decrease;0.32];[0.2;Unknown;CD109 antigen measurement;TYPE.APPEARANCE;5363;A
+rs532436;-210;1;0.0;0.484;unit;decrease;0.52];[0.45;Unknown;insulin receptor measurement;TYPE.APPEARANCE;10708;A
+rs532436;-28;1;0.0;0.3413;unit;decrease;0.4];[0.28;Unknown;galectin-4 measurement;TYPE.APPEARANCE;2923;?
+rs532436;-109;4;0.0;0.636;unit;decrease;0.69];[0.58;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;2917;A
+rs532436;-11;2;0.0;0.7216;unit;decrease;0.0;0.0;Unknown;anxiety measurement;TYPE.APPEARANCE;3464;A
+rs532436;-20;1;0.0;0.2494;unit;decrease;0.3];[0.2;Unknown;diastolic blood pressure;TYPE.APPEARANCE;526001;A
+rs532436;-15;6;0.0;0.204;z score;increase;0.25];[0.15;Unknown;circulating alpha-Klotho measurement;TYPE.APPEARANCE;4376;G
+rs532436;-51;6;0.0;0.4415;unit;decrease;0.5];[0.38;Unknown;level of dipeptidase 2 in blood serum;TYPE.APPEARANCE;2917;A
+rs8176672;-14;9;0.0;0.37;unit;increase;0.47];[0.27;Unknown;GDNF family receptor alpha-like measurement;TYPE.APPEARANCE;3301;T
+rs8176672;-85;2;0.0;0.505;unit;increase;0.56];[0.45;Unknown;semaphorin-6B measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-131;1;0.0;0.638;unit;increase;0.69];[0.59;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-51;2;0.0;0.39;unit;increase;0.44];[0.34;Unknown;kin of IRRE-like protein 2 measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-20;7;0.0;0.236;unit;increase;0.29];[0.19;Unknown;protein jagged-1 measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-445;1;0.0;1.107;unit;increase;1.16];[1.06;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-59;8;0.0;0.413;unit;increase;0.46];[0.36;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-79;3;0.0;0.508;unit;increase;0.56];[0.46;Unknown;protein measurement;TYPE.APPEARANCE;10708;T
+rs8176672;-23;2;0.0;0.406;z score;increase;0.49];[0.33;Unknown;circulating alpha-Klotho measurement;TYPE.APPEARANCE;4376;T
+rs8176672;-58;1;0.0;0.426;unit;increase;0.48];[0.38;Unknown;delta-like protein 4 measurement;TYPE.APPEARANCE;10708;T
+rs8176645;-14;6;0.0;0.2539486;unit;decrease;0.32];[0.19;Unknown;gut microbiome measurement;TYPE.APPEARANCE;7738;A
+rs115478735;-184;7;0.0;0.3903;unit;decrease;0.41];[0.37;Unknown;deep vein thrombosis;TYPE.APPEARANCE;59236;A
+rs115478735;-146;1;0.0;0.429;unit;increase;0.46];[0.4;Unknown;angiotensin-converting enzyme measurement;TYPE.APPEARANCE;10708;A
+rs115478735;-85;4;0.0;0.3056;unit;decrease;0.33];[0.28;Unknown;heart disease;TYPE.DISEASE;59595;A
+rs115478735;-48;6;0.0;0.4427;unit;decrease;0.48];[0.41;Unknown;thrombophilia;TYPE.DISEASE;59765;A
+rs115478735;-46;1;0.0;0.45;unit;decrease;0.0;0.0;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;3301;T
+rs115478735;-43;8;0.0;0.3461;unit;decrease;0.38];[0.31;Unknown;phlebitis;TYPE.APPEARANCE;59215;A
+rs115478735;-85;1;0.0;0.3085;unit;decrease;0.33];[0.29;Unknown;Pulmonary Infarction;TYPE.APPEARANCE;59613;A
+rs115478735;-166;3;0.0;0.449;unit;increase;0.48];[0.42;Unknown;galectin-8 measurement;TYPE.APPEARANCE;10708;A
+rs115478735;-47;1;0.0;0.236;unit;increase;0.27];[0.2;Unknown;platelet endothelial aggregation receptor 1 measurement;TYPE.APPEARANCE;10708;A
+rs115478735;-21;4;0.0;0.2263;unit;decrease;0.27];[0.18;Unknown;blood coagulation disease;TYPE.APPEARANCE;446034;A
+rs115478735;-24;8;0.0;0.32;unit;increase;0.38];[0.26;Unknown;protein-tyrosine sulfotransferase 2 measurement;TYPE.APPEARANCE;3301;T
+rs115478735;-215;1;0.0;0.3294;unit;decrease;0.35];[0.31;Unknown;Thromboembolism;TYPE.APPEARANCE;438632;A
+rs8176720;-10;6;0.0;0.2767;unit;decrease;0.36];[0.19;(EA);a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement;TYPE.APPEARANCE;997;C
+rs8176720;-10;7;0.0;0.2796;unit;increase;0.37];[0.19;Unknown;insulin receptor measurement;TYPE.APPEARANCE;997;C
+rs8176720;-13;6;0.0;0.3128;unit;increase;0.4];[0.23;(EA);E-selectin amount;TYPE.APPEARANCE;997;C
+rs12216891;-30;8;0.0;0.8764;unit;increase;1.02];[0.73;Unknown;chymotrypsin-C measurement;TYPE.APPEARANCE;497;T
+rs75949790;-12;4;0.0;15744.726;unit;decrease;0.0;0.0;Unknown;soluble triggering receptor expressed on myeloid cells 2 measurement;TYPE.DISEASE;1001;?
+rs9411377;-480;2;0.0;0.633;unit;increase;0.66];[0.61;Unknown;protein measurement;TYPE.APPEARANCE;10708;A
+rs9411377;-58;5;0.0;0.236;unit;increase;0.27];[0.21;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;10708;A
+rs9411377;-43;1;0.0;0.35276112;unit;increase;0.4];[0.3;Unknown;pulmonary embolism;TYPE.APPEARANCE;394626;A
+rs9411377;-80;3;0.0;0.51;unit;increase;0.57];[0.45;Unknown;factor VIII measurement;TYPE.APPEARANCE;3301;A
+rs1633513;-300;1;0.0;38.2;z-score;increase;0.0;0.0;Unknown;alkaline phosphatase measurement;TYPE.DISEASE;390964;C
+rs612169;-40;9;0.0;0.202;unit;increase;0.0;0.0;(SM-8 + 3 other traits);metabolite measurement;TYPE.APPEARANCE;2820;G
+rs612169;-288;1;0.0;0.264872;Unknown;increase;0.28];[0.25;Unknown;PCDH17/SEMA7A protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1425;4;0.0;0.572155;Unknown;increase;0.59];[0.56;Unknown;GUCA2A/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1529;3;0.0;0.583209;Unknown;decrease;0.6];[0.57;Unknown;LGALS4/PCDH17 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1681;4;0.0;0.611151;Unknown;increase;0.62];[0.6;Unknown;BCAM/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1781;1;0.0;0.621632;Unknown;decrease;0.63];[0.61;Unknown;LGALS4/TIE1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-329;1;0.0;0.282752;Unknown;increase;0.3];[0.27;Unknown;PEAR1/PECAM1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-313;4;0.0;0.27275;Unknown;increase;0.29];[0.26;Unknown;CDH5/ENG protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-224;1;0.0;0.232738;Unknown;decrease;0.25];[0.22;Unknown;CX3CL1/DSG2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1616;3;0.0;0.610166;Unknown;increase;0.62];[0.6;Unknown;GP2/LGALS8 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-1342;2;0.0;0.543835;Unknown;increase;0.56];[0.53;Unknown;CDH5/LGALS4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-649;4;0.0;0.389888;Unknown;decrease;0.4];[0.38;Unknown;KDR/VWF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-20;1;0.0;0.417;unit;increase;0.5];[0.33;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;997;G
+rs612169;-10;1;0.0;6.419;(zscore);increase;0.0;0.0;Unknown;citrulline measurement;TYPE.APPEARANCE;30940;A
+rs612169;-304;2;0.0;0.265123;Unknown;decrease;0.28];[0.25;Unknown;PECAM1/SOD2 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-377;6;0.0;0.302961;Unknown;increase;0.32];[0.29;Unknown;CDH5/PTPRM protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-469;1;0.0;0.334445;Unknown;increase;0.35];[0.32;Unknown;DKK1/LGALS8 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs612169;-688;2;0.0;0.402216;Unknown;decrease;0.42];[0.39;Unknown;NOTCH1/TIE1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs182267720;-8;1;0.0;0.327;unit;decrease;0.44];[0.22;(Sub-Saharan African);complement factor D measurement;TYPE.APPEARANCE;1510;T
+rs687621;-100;9;0.0;0.817;unit;increase;0.90];[0.73;Unknown;blood coagulation trait;TYPE.APPEARANCE;9240;A
+rs687621;-78;1;0.0;0.382969;unit;increase;0.42];[0.34;Unknown;blood protein amount;TYPE.APPEARANCE;5364;G
+rs687621;-68;7;0.0;0.238;unit;decrease;0.27];[0.21;Unknown;carbohydrate sulfotransferase 11 measurement;TYPE.APPEARANCE;10708;A
+rs687621;-190;2;0.0;0.21642;Unknown;decrease;0.23];[0.2;Unknown;CDH17/SPINT1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs687621;-324;5;0.0;24.1;unit;increase;26.8];[21.4;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;23608;?
+rs687621;-178;1;0.0;0.209919;Unknown;increase;0.22];[0.2;Unknown;CA9/CBLIF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs687621;-17;4;0.0;0.22;unit;increase;0.28];[0.16;Unknown;desmoglein-2 measurement;TYPE.APPEARANCE;3301;G
+rs687621;-491;6;0.0;0.345624;Unknown;decrease;0.36];[0.33;Unknown;TINAGL1/VWF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs687621;-558;2;0.0;0.366967;Unknown;decrease;0.38];[0.35;Unknown;C1QTNF1/VWF protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-64;2;0.0;0.202004;Unknown;increase;0.23];[0.18;Unknown;ESAM/LAMA4 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-290;3;0.0;0.434687;Unknown;increase;0.46];[0.41;Unknown;CELA3A/CPB1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-820;2;0.0;0.748333;Unknown;increase;0.77];[0.72;Unknown;CTRC/PLA2G1B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-1483;7;0.0;0.924281;Unknown;decrease;0.95];[0.9;Unknown;ALCAM/CDH5 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-90;3;0.0;0.250693;Unknown;decrease;0.28];[0.23;Unknown;SCG2/TMPRSS15 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-14;2;0.0;0.28;unit;increase;0.36];[0.2;Unknown;semaphorin-6A measurement;TYPE.APPEARANCE;1852;?
+rs7853989;-55;1;0.0;0.623426;unit;increase;0.7];[0.55;Unknown;semaphorin-6B measurement;TYPE.APPEARANCE;2935;C
+rs7853989;-700;1;0.0;0.675401;Unknown;decrease;0.7];[0.65;Unknown;CPB1/CTRC protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-68;4;0.0;0.213646;Unknown;increase;0.24];[0.19;Unknown;JAM2/TNFRSF19 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-69;4;0.0;0.213785;Unknown;increase;0.24];[0.19;Unknown;MCAM/NTRK3 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-17;2;0.0;0.32;unit;increase;0.4];[0.24;Unknown;CD109 antigen measurement;TYPE.APPEARANCE;1852;?
+rs7853989;-119;2;0.0;0.287271;Unknown;increase;0.31];[0.26;Unknown;CD79B/TNFRSF13B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-243;6;0.0;0.408824;Unknown;increase;0.43];[0.38;Unknown;CELA3A/PLA2G1B protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs7853989;-36;1;0.0;0.502013;unit;increase;0.58];[0.42;Unknown;endoglin measurement;TYPE.APPEARANCE;2935;C
+rs7853989;-211;1;0.0;0.384634;Unknown;increase;0.41];[0.36;Unknown;CELA3A/CTRB1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs1053878;-69;2;0.0;0.236468;Unknown;decrease;0.26];[0.21;Unknown;CDH17/PECAM1 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs1053878;-80;9;0.0;0.252685;Unknown;decrease;0.28];[0.23;Unknown;CDH17/PTPRM protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs1053878;-72;1;0.0;0.244493;Unknown;increase;0.27];[0.22;Unknown;CDH1/CDH17 protein level ratio in blood;TYPE.APPEARANCE;43509;?
+rs1053878;-21;3;0.0;0.37928;unit;increase;0.46];[0.3;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;5368;A
+rs8176719;-19;1;0.0;0.223;unit;increase;0.27];[0.17;(additive);malaria;TYPE.DISEASE;776;?
+rs8176719;-21;9;0.0;0.305;unit;increase;0.41];[0.2;(dominant);malaria;TYPE.DISEASE;776;?
+rs8176719;-11;9;0.0;0.211;unit;increase;0.27];[0.15;(heterogeneous);malaria;TYPE.DISEASE;776;?
+rs8176719;-237;1;0.0;0.8;unit;increase;0.84];[0.76;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;1852;?
+rs8176719;-141;4;0.0;0.238;unit;decrease;0.26];[0.22;Unknown;E-selectin amount;TYPE.APPEARANCE;2932;TC
+rs8176719;-63;2;0.0;0.469748;unit;increase;0.52];[0.41;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;2935;TC
+rs8176719;-157;7;0.0;1.2;unit;increase;1.28];[1.12;Unknown;level of histo-blood group ABO system transferase in blood serum;TYPE.APPEARANCE;466;TC
+rs8176719;-14;5;0.0;0.209029;unit;increase;0.26];[0.15;Unknown;delta-like protein 4 measurement;TYPE.APPEARANCE;2935;TC
+rs8176719;-19;1;0.0;0.6;unit;increase;0.74];[0.46;Unknown;level of coagulation factor VIII in blood serum;TYPE.APPEARANCE;466;TC
+rs8176722;-80;3;0.0;0.7;unit;increase;0.78];[0.62;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;1852;?
+rs8176722;-21;5;0.0;0.81;unit;increase;0.99];[0.63;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;466;A
+rs8176722;-62;6;0.0;0.61;unit;increase;0.69];[0.53;Unknown;endoglin measurement;TYPE.APPEARANCE;1852;?
+rs8176722;-46;6;0.0;0.571604;unit;increase;0.65];[0.49;Unknown;basal cell adhesion molecule amount;TYPE.APPEARANCE;2935;A
+rs8176722;-25;5;0.0;0.37;unit;increase;0.45];[0.29;Unknown;leukemia inhibitory factor receptor measurement;TYPE.APPEARANCE;1852;?
+rs8176722;-28;7;0.0;0.92;unit;increase;1.08];[0.76;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;466;A
+rs8176722;-42;9;0.0;0.3109;unit;decrease;0.36];[0.27;Unknown;Thromboembolism;TYPE.APPEARANCE;118315;C
+rs8176722;-19;4;0.0;0.209;unit;decrease;0.25];[0.16;Unknown;encounter with health service;TYPE.DISEASE;119585;C
+rs8176722;-36;9;0.0;0.3628;unit;decrease;0.42];[0.31;Unknown;deep vein thrombosis;TYPE.APPEARANCE;119901;C
+rs8176722;-14;3;0.0;0.68;unit;increase;0.86];[0.5;Unknown;semaphorin-6B measurement;TYPE.APPEARANCE;466;A
+rs8176722;-15;5;0.0;0.69;unit;increase;0.87];[0.51;Unknown;level of ephrin type-A receptor 4 in blood serum;TYPE.APPEARANCE;466;A
+rs8176722;-13;1;0.0;0.66;unit;increase;0.84];[0.48;Unknown;level of plexin-D1 in blood serum;TYPE.APPEARANCE;466;A
+rs8176722;-47;4;0.0;1.13;unit;increase;1.29];[0.97;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;466;A
+rs8176722;-17;1;0.0;0.75;unit;increase;0.93];[0.57;Unknown;level of protocadherin-17 in blood serum;TYPE.APPEARANCE;466;A
+rs8176722;-18;2;0.0;0.76;unit;increase;0.94];[0.58;Unknown;delta-like protein 4 measurement;TYPE.APPEARANCE;466;A
+rs8176722;-139;3;0.0;1.01039;unit;increase;1.09];[0.93;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;2935;A
+rs8176722;-63;7;0.0;1.24;unit;increase;1.38];[1.1;Unknown;level of roundabout homolog 4 in blood serum;TYPE.APPEARANCE;466;A
+rs2769071;-61;9;0.0;0.342479;unit;increase;0.38];[0.3;Unknown;blood protein amount;TYPE.APPEARANCE;5365;G
+rs494242;-14;6;0.0;0.727565;unit;increase;0.95];[0.51;Unknown;level of protocadherin alpha-C1 in blood serum;TYPE.APPEARANCE;192;T
+rs587729126;-14;7;0.0;0.24;unit;decrease;0.0;0.0;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;3301;G
+rs587729126;-14;4;0.0;0.24;unit;increase;0.3];[0.18;Unknown;beta-1,4-galactosyltransferase 1 measurement;TYPE.APPEARANCE;3301;G
+rs587729126;-17;7;0.0;0.27;unit;increase;0.33];[0.21;Unknown;glycosaminoglycan xylosylkinase measurement;TYPE.APPEARANCE;3301;G
+rs587729126;-12;2;0.0;0.23;unit;decrease;0.0;0.0;Unknown;dipeptidase 2 measurement;TYPE.APPEARANCE;3301;G
+rs514659;-51;7;0.0;0.307266;unit;increase;0.35];[0.27;Unknown;von Willebrand factor quality;TYPE.APPEARANCE;5356;C
+rs8176704;-34;4;0.0;0.34;lU/dL;decrease;0.0;0.0;(Conditioned on rs687289);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs8176704;-98;4;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - A1);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs8176704;-138;2;0.0;0.34;lU/dL;decrease;0.0;0.0;(ABO allele - O);blood coagulation trait;TYPE.APPEARANCE;212;G
+rs8176704;-50;7;0.0;0.36;lU/dL;increase;0.0;0.0;(ABO allele - B);blood coagulation trait;TYPE.APPEARANCE;212;A
+rs79343853;-126;2;0.0;0.876537;unit;increase;0.95];[0.8;Unknown;blood protein amount;TYPE.APPEARANCE;5368;C
+rs79343853;-18;3;0.0;0.33918;unit;increase;0.0;0.0;Unknown;serum carcinoembryonic antigen measurement;TYPE.APPEARANCE;1916;C
+rs79343853;-9;3;0.0;2.15115;unit;decrease;0.0;0.0;Unknown;platelet quantity;TYPE.APPEARANCE;76345;?
+rs492488;-1201;6;0.0;1.4569663;unit;decrease;1.48];[1.43;(ABO, 9253_52_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-274;2;0.0;0.9099696;unit;decrease;0.96];[0.86;(CD209, 3029_52_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-142;6;0.0;0.67299074;unit;increase;0.72];[0.62;(SELE, 3470_1_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-104;1;0.0;0.59559816;unit;decrease;0.65];[0.54;(QSOX2, 8397_147_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-97;1;0.0;0.56377953;unit;decrease;0.61];[0.51;(FAM3D, 13102_1_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-53;2;0.0;0.4247729;unit;increase;0.48];[0.37;(ICAM2, 14756_29_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-49;7;0.0;0.4007433;unit;decrease;0.45];[0.35;(GOLM1, 8983_7_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-45;1;0.0;0.3788475;unit;decrease;0.43];[0.33;(F8, 13499_30_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-43;3;0.0;0.37941295;unit;decrease;0.43];[0.33;(TIE1, 2844_53_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-42;6;0.0;0.3690613;unit;increase;0.42];[0.32;(INSR, 3448_13_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-36;3;0.0;0.34248224;unit;decrease;0.4];[0.29;(SHANK3, 13242_134_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-36;4;0.0;0.3458666;unit;increase;0.4];[0.29;(KDR, 3651_50_5);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-36;6;0.0;0.35516945;unit;increase;0.41];[0.3;(ADGRF5, 6409_57_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-35;2;0.0;0.34451154;unit;increase;0.4];[0.29;(ICAM5, 8245_27_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-34;1;0.0;0.33593914;unit;decrease;0.39];[0.28;(VWF, 3050_7_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-26;4;0.0;0.29720503;unit;increase;0.35];[0.24;(FLT4, 2358_19_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-25;7;0.0;0.2708515;unit;increase;0.32];[0.22;(IL3RA, 13744_37_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-23;7;0.0;0.27884126;unit;increase;0.33];[0.22;(MET, 2837_3_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-22;1;0.0;0.2682045;unit;increase;0.32];[0.22;(KIN, 14643_27_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-22;4;0.0;0.26445553;unit;increase;0.32];[0.21;(CHST15, 4469_78_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-21;2;0.0;0.26736942;unit;decrease;0.32];[0.21;(GLCE, 7808_5_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-21;3;0.0;0.27160877;unit;decrease;0.33];[0.22;(CASC4, 8838_10_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-19;2;0.0;0.24702941;unit;increase;0.3];[0.19;(CHST15, 14097_86_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-18;3;0.0;0.23257637;unit;decrease;0.28];[0.18;(CD36, 2973_15_2);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-18;5;0.0;0.23043685;unit;decrease;0.28];[0.18;(LRRC32, 7551_33_4);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-18;6;0.0;0.24369547;unit;decrease;0.3];[0.19;(C1GALT1C1, 5735_54_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-17;1;0.0;0.23597662;unit;decrease;0.29];[0.18;(MBL2, 3000_66_1);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-16;3;0.0;0.22626564;unit;increase;0.28];[0.17;(ICAM5, 5124_62_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-13;1;0.0;0.2001459;unit;increase;0.25];[0.15;(EPHA4, 7190_50_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-13;2;0.0;0.20858467;unit;decrease;0.26];[0.15;(CASC4, 10613_33_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs492488;-13;2;0.0;0.20470446;unit;increase;0.26];[0.15;(PNPLA2, 9802_27_3);blood protein amount;TYPE.APPEARANCE;3200;G
+rs9411476;-15;1;0.0;0.747246;unit;increase;0.93];[0.56;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;2935;A
+rs9411476;-13;9;0.0;0.665726;unit;decrease;0.85];[0.48;Unknown;E-selectin amount;TYPE.APPEARANCE;2935;A
+rs9411476;-11;5;0.0;0.4512;unit;increase;0.59];[0.31;Unknown;diastolic blood pressure;TYPE.APPEARANCE;100453;G
+rs9411476;-8;2;0.0;0.4544;unit;increase;0.62];[0.29;Unknown;mean arterial pressure;TYPE.APPEARANCE;100453;G
+rs75179845;-57;8;0.0;0.7454;unit;decrease;0.84];[0.65;Unknown;level of chymotrypsin-C in blood serum;TYPE.APPEARANCE;2858;?
+rs75179845;-50;1;0.0;0.556713;unit;increase;0.63];[0.48;Unknown;blood protein amount;TYPE.APPEARANCE;5362;C
+rs597974;-1101;3;0.0;0.832;unit;decrease;0.86];[0.81;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;10708;A
+rs78755596;-11;1;0.0;0.570094;unit;increase;0.73];[0.41;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;2935;A
+rs78755596;-158;4;0.0;0.3813908;unit;decrease;0.41];[0.35;Unknown;galectin-4 measurement;TYPE.APPEARANCE;47745;A
+rs144275764;-14;2;0.0;0.40787125;unit;increase;0.52];[0.29;Unknown;B-cell antigen receptor complex-associated protein beta chain measurement;TYPE.APPEARANCE;47745;T
+rs144275764;-35;8;0.0;0.6429783;unit;increase;0.76];[0.53;Unknown;basal cell adhesion molecule amount;TYPE.APPEARANCE;47745;T
+rs144275764;-19;1;0.0;0.33947727;unit;increase;0.42];[0.25;Unknown;level of disintegrin and metalloproteinase domain-containing protein 15 in blood;TYPE.APPEARANCE;47745;T
+rs144275764;-15;1;0.0;0.3033735;unit;increase;0.39];[0.22;Unknown;level of mucin-2 in blood;TYPE.APPEARANCE;47745;T
+rs144275764;-47;9;0.0;0.794313;unit;increase;0.91];[0.68;Unknown;level of protocadherin-17 in blood serum;TYPE.APPEARANCE;47745;T
+rs142956930;-54;7;0.0;0.45778108;unit;decrease;0.53];[0.39;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-23;1;0.0;0.5418421;unit;decrease;0.66];[0.43;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-44;5;0.0;0.27048516;unit;decrease;0.31];[0.23;Unknown;alkaline phosphatase measurement;TYPE.DISEASE;394642;G
+rs142956930;-16;4;0.0;0.4186919;unit;decrease;0.53];[0.31;Unknown;kell blood group glycoprotein measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-15;1;0.0;0.4440395;unit;decrease;0.56];[0.33;Unknown;lymphocyte function-associated antigen 3 measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-20;9;0.0;0.46353677;unit;decrease;0.57];[0.36;Unknown;vascular endothelial growth factor receptor 2 amount;TYPE.APPEARANCE;47745;G
+rs142956930;-19;2;0.0;0.5136281;unit;decrease;0.63];[0.4;Unknown;galectin-8 measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-20;1;0.0;0.5319259;unit;decrease;0.65];[0.41;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-57;5;0.0;0.46422523;unit;increase;0.55];[0.38;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-16;3;0.0;0.49384207;unit;decrease;0.62];[0.37;Unknown;level of roundabout homolog 4 in blood serum;TYPE.APPEARANCE;47745;G
+rs142956930;-31;1;0.0;0.2971513;unit;decrease;0.36];[0.24;Unknown;interleukin 7 receptor subunit alpha measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-27;2;0.0;0.53110456;unit;decrease;0.64];[0.42;Unknown;galectin-4 measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-17;2;0.0;0.31810862;unit;increase;0.4];[0.23;Unknown;level of mucin-2 in blood;TYPE.APPEARANCE;47745;G
+rs142956930;-18;5;0.0;0.482438;unit;decrease;0.6];[0.36;Unknown;podocalyxin measurement;TYPE.APPEARANCE;47745;G
+rs142956930;-26;2;0.0;0.5856155;unit;decrease;0.7];[0.47;Unknown;level of receptor-type tyrosine-protein phosphatase mu in blood;TYPE.APPEARANCE;47745;G
+rs142956930;-55;3;0.0;0.42304608;unit;decrease;0.5];[0.35;Unknown;E-selectin amount;TYPE.APPEARANCE;47745;G
+rs112134200;-12;3;0.0;0.45356297;unit;increase;0.59];[0.32;Unknown;level of roundabout homolog 4 in blood serum;TYPE.APPEARANCE;47745;G
+rs112134200;-14;1;0.0;0.4930026;unit;increase;0.62];[0.36;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;47745;G
+rs8176688;-15;6;0.0;0.68998355;unit;increase;0.87];[0.51;Unknown;neurogenic locus notch homolog protein 1 measurement;TYPE.APPEARANCE;47745;T
+rs28850884;-54;3;0.0;1.30432;unit;increase;1.48];[1.13;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;47745;C
+rs28850884;-13;4;0.0;0.65045094;unit;increase;0.84];[0.46;Unknown;level of roundabout homolog 4 in blood serum;TYPE.APPEARANCE;47745;C
+rs28850884;-14;2;0.0;0.6363378;unit;increase;0.81];[0.46;Unknown;platelet endothelial cell adhesion molecule measurement;TYPE.APPEARANCE;47745;C
+rs28850884;-22;1;0.0;0.6948071;unit;increase;0.85];[0.54;Unknown;level of cadherin-17 in blood serum;TYPE.APPEARANCE;47745;C
+rs7469199;-62;2;0.0;0.46254522;unit;increase;0.52];[0.4;Unknown;odorant-binding protein 2b measurement;TYPE.APPEARANCE;47745;G
+rs528127806;-19;4;0.0;0.5307902;unit;decrease;0.65];[0.41;Unknown;odorant-binding protein 2b measurement;TYPE.APPEARANCE;47745;GGCTGCAGTCGTGTGTCTGA
+rs73660468;-21;6;0.0;1.13033;unit;increase;1.37];[0.89;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;2935;A
+rs73660468;-12;7;0.0;0.5546673;unit;increase;0.72];[0.39;Unknown;level of receptor-type tyrosine-protein phosphatase beta in blood;TYPE.APPEARANCE;47745;A
+rs73660468;-55;4;0.0;1.2725594;unit;increase;1.45];[1.1;Unknown;level of receptor-type tyrosine-protein phosphatase mu in blood;TYPE.APPEARANCE;47745;A
+rs73660468;-20;1;0.0;1.11908;unit;increase;1.35];[0.88;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;2935;A
+rs73660468;-15;3;0.0;0.947173;unit;increase;1.18];[0.71;Unknown;angiopoietin-1 receptor, soluble measurement;TYPE.APPEARANCE;2935;A
+rs782095625;-306;2;0.0;0.21619795;unit;decrease;0.23];[0.2;Unknown;level of receptor-type tyrosine-protein phosphatase mu in blood;TYPE.APPEARANCE;47745;C
+rs782095625;-15;2;0.0;7.923;z score;increase;0.0;0.0;Unknown;peak expiratory flow;TYPE.APPEARANCE;2798;CA
+rs1137827;-119;3;0.0;0.599;unit;increase;0.65];[0.55;Unknown;protein measurement;TYPE.APPEARANCE;10708;T
+rs1137827;-35;4;0.0;0.5814;unit;increase;0.67];[0.49;Unknown;angiopoietin-1 receptor measurement;TYPE.APPEARANCE;2858;?
+rs139840563;-19;5;0.0;0.24;unit;increase;0.3];[0.18;Unknown;mannose-binding protein C measurement;TYPE.APPEARANCE;3301;T
+rs35230453;-44;8;0.0;0.37;unit;increase;0.43];[0.31;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;3301;C
+rs140032935;-39;5;0.0;0.85;unit;increase;0.99];[0.71;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;3301;G
+rs977371848;-14;1;0.0;0.2;unit;increase;0.26];[0.14;Unknown;hematocrit;TYPE.DISEASE;14035;C
+rs977371848;-12;2;0.0;0.253;unit;increase;0.32];[0.18;Unknown;level of Ser-Leu in blood;TYPE.APPEARANCE;2830;C
+rs977371848;-24;1;0.0;0.32;unit;decrease;0.0;0.0;Unknown;X-26054 measurement;TYPE.APPEARANCE;6136;C
+rs7857390;-11;6;0.0;0.2949;unit;decrease;0.38];[0.21;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;997;A
+rs879055593;-13;1;0.0;0.61;unit;decrease;0.77];[0.45;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;466;C
+rs879055593;-22;3;0.0;0.77;unit;decrease;0.93];[0.61;Unknown;level of beta-1,4-mannosyl-glycoprotein 4-beta-N-acetylglucosaminyltransferase in blood serum;TYPE.APPEARANCE;466;C
+rs879055593;-16;5;0.0;0.66;unit;increase;0.82];[0.5;Unknown;level of intestinal alkaline phosphatase in blood serum;TYPE.APPEARANCE;466;C
+rs879055593;-14;9;0.0;0.61;unit;decrease;0.77];[0.45;Unknown;level of protein GOLM2 in blood serum;TYPE.APPEARANCE;466;C
+rs879055593;-27;1;0.0;0.85;unit;decrease;1.01];[0.69;Unknown;level of sulfhydryl oxidase 2 in blood serum;TYPE.APPEARANCE;466;C
+rs879055593;-45;3;0.0;0.322;unit;decrease;0.37];[0.28;Unknown;blood metabolite level;TYPE.APPEARANCE;5658;C
+rs12554580;-14;9;0.0;0.238759;unit;increase;0.0;0.0;Unknown;serum carcinoembryonic antigen measurement;TYPE.APPEARANCE;1916;C
+rs992108547;-17;7;0.0;0.86;unit;increase;1.06];[0.66;Unknown;E-selectin amount;TYPE.APPEARANCE;466;G
+rs992108547;-13;3;0.0;0.261;unit;increase;0.33];[0.19;Unknown;aspartylphenylalanine measurement;TYPE.APPEARANCE;2836;G
+rs920065566;-194;3;0.0;0.2801;unit;decrease;0.3];[0.26;Unknown;venous thromboembolism;TYPE.APPEARANCE;915868;T
+rs13292932;-13;2;0.0;7.35;z score;increase;0.0;0.0;Unknown;cortical thickness;TYPE.DISEASE;33748;A
+rs566529676;-67;2;0.0;0.4108517;unit;increase;0.46];[0.36;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;47745;CA
+rs566529676;-80;1;0.0;0.3988485;unit;decrease;0.45];[0.35;Unknown;intestinal-type alkaline phosphatase measurement;TYPE.APPEARANCE;47745;CA
+rs8176761;-14;3;0.0;0.24336362;unit;decrease;0.32];[0.17;Unknown;intestinal-type alkaline phosphatase measurement;TYPE.APPEARANCE;47745;C
+rs112565602;-17;2;0.0;0.4514931;unit;decrease;0.56];[0.34;Unknown;a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement;TYPE.APPEARANCE;47745;A
+rs149899707;-18;8;0.0;0.41020435;unit;increase;0.54];[0.28;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;47745;T
+rs191325486;-41;3;0.0;0.49017087;unit;increase;0.59];[0.39;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;47745;A
+rs191325486;-26;1;0.0;0.6363419;unit;increase;0.77];[0.51;Unknown;level of cadherin-17 in blood serum;TYPE.APPEARANCE;47745;A
+rs947073006;-262;2;0.0;0.422;unit;increase;0.45];[0.4;Unknown;E-selectin amount;TYPE.APPEARANCE;2932;G
+rs947073006;-20;6;0.0;3.137361;mg/dL;decrease;3.81];[2.47;Unknown;total cholesterol measurement;TYPE.APPEARANCE;1182;?
+rs779860630;-146;3;0.0;0.398;unit;decrease;0.43];[0.37;Unknown;dipeptidase 2 measurement;TYPE.APPEARANCE;10708;?
+rs779860630;-45;9;0.0;0.234;unit;decrease;0.27];[0.2;Unknown;interleukin-6 receptor subunit beta amount;TYPE.APPEARANCE;10708;?
+rs779860630;-122;3;0.0;0.37;unit;decrease;0.4];[0.34;Unknown;endoglin measurement;TYPE.APPEARANCE;10708;?
+rs779860630;-53;2;0.0;0.261;unit;decrease;0.29];[0.23;Unknown;intercellular adhesion molecule 1 measurement;TYPE.APPEARANCE;10708;?
+rs779860630;-112;1;0.0;0.369;unit;decrease;0.4];[0.34;Unknown;hepatocyte growth factor receptor amount;TYPE.APPEARANCE;10708;?
+rs779860630;-52;1;0.0;0.248;unit;decrease;0.28];[0.22;Unknown;leukemia inhibitory factor receptor measurement;TYPE.APPEARANCE;10708;?
+rs779860630;-44;1;0.0;0.237;unit;decrease;0.27];[0.2;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;10708;?
+rs630510;-15;2;0.0;0.3499;unit;decrease;0.43];[0.27;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;997;A
+rs60585338;-13;1;0.0;0.606847;unit;increase;0.77];[0.45;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;2935;T
+rs7045111;-14;2;0.0;0.241565;unit;increase;0.3];[0.18;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;2935;A
+rs8176694;-13;4;0.0;0.237476;unit;decrease;0.3];[0.17;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;2935;C
+rs188658949;-11;3;0.0;0.76376;unit;increase;0.99];[0.54;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;2935;T
+rs8176725;-12;8;0.0;0.26803;unit;increase;0.34];[0.19;Unknown;junctional adhesion molecule B measurement;TYPE.APPEARANCE;2935;A
+rs60563410;-32;1;0.0;0.369909;unit;increase;0.43];[0.31;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;2935;CCT
+rs8176690;-26;5;0.0;0.291627;unit;decrease;0.35];[0.24;Unknown;tyrosine-protein kinase receptor Tie-1, soluble measurement;TYPE.APPEARANCE;2935;G
+rs7873635;-18;2;0.0;0.24347;unit;increase;0.3];[0.19;Unknown;E-selectin amount;TYPE.APPEARANCE;2935;T
+rs2073824;-15;7;0.0;0.215512;unit;increase;0.27];[0.16;Unknown;insulin receptor measurement;TYPE.APPEARANCE;2935;G
+rs576125;-83;2;0.0;0.254;unit;increase;0.28];[0.23;Unknown;protein measurement;TYPE.APPEARANCE;10708;A
+rs576125;-5248;4;0.0;1.228;unit;increase;1.24];[1.21;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;10708;A
+rs59602812;-126;1;0.0;0.319;unit;decrease;0.34];[0.29;Unknown;protein CASC4 measurement;TYPE.APPEARANCE;10708;?
+rs199718999;-47;2;0.0;0.369;unit;increase;0.42];[0.32;Unknown;protein measurement;TYPE.APPEARANCE;10708;?
+rs8176730;-15;9;0.0;0.29;unit;increase;0.37];[0.21;Unknown;endothelial cell-selective adhesion molecule measurement;TYPE.APPEARANCE;1852;?
+rs635634;-33;3;0.0;0.38;unit;decrease;0.0;0.0;Unknown;hepatocyte growth factor receptor amount;TYPE.APPEARANCE;3301;T
+rs635634;-13;5;0.0;0.23;unit;decrease;0.0;0.0;Unknown;interleukin-6 receptor subunit beta amount;TYPE.APPEARANCE;3301;T
+rs635634;-13;4;0.0;7.26;(zscore);increase;0.0;0.0;Unknown;histidine measurement;TYPE.APPEARANCE;80809;C
+rs635634;-50;2;0.0;0.248;unit;decrease;0.28];[0.21;Unknown;C-C motif chemokine 25 measurement;TYPE.APPEARANCE;14736;T
+rs635634;-13;1;0.0;0.24;unit;decrease;0.0;0.0;Unknown;endoglin measurement;TYPE.APPEARANCE;3301;T
+rs635634;-18;1;0.0;0.256131;unit;decrease;0.31];[0.2;Unknown;CCL28 measurement;TYPE.APPEARANCE;5367;T
+rs635634;-8;1;0.0;5.72;z score;increase;0.0;0.0;Unknown;cardioembolic stroke;TYPE.APPEARANCE;362661;T
+rs635634;-158;4;0.0;0.715114;unit;decrease;0.77];[0.66;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;5358;T
+rs635634;-33;2;0.0;0.231;unit;decrease;0.27];[0.19;(EA);diastolic blood pressure;TYPE.APPEARANCE;1028980;T
+rs635634;-19;2;0.0;0.29;unit;decrease;0.0;0.0;Unknown;semaphorin-6A measurement;TYPE.APPEARANCE;3301;T
+rs635634;-107;1;0.0;0.241;unit;decrease;0.0;0.0;Unknown;tissue factor measurement;TYPE.APPEARANCE;21758;T
+rs635634;-11;1;0.0;0.22;unit;decrease;0.0;0.0;Unknown;insulin-like growth factor 1 receptor amount;TYPE.APPEARANCE;3301;T
+rs635634;-79;3;0.0;0.288;unit;decrease;0.32];[0.26;Unknown;leukemia inhibitory factor receptor measurement;TYPE.APPEARANCE;11784;T
+rs635634;-15;3;0.0;0.2448;unit;decrease;0.31];[0.18;Unknown;ephrin type-B receptor 4 amount;TYPE.APPEARANCE;2922;?
+rs635634;-40;3;0.0;0.42;unit;decrease;0.0;0.0;Unknown;intercellular adhesion molecule 5 measurement;TYPE.APPEARANCE;3301;T
+rs635634;-80;4;0.0;0.58;unit;decrease;0.0;0.0;Unknown;vascular endothelial growth factor receptor 2 amount;TYPE.APPEARANCE;3301;T
+rs635634;-256;1;0.0;0.86;unit;decrease;0.0;0.0;(e-selectin);E-selectin amount;TYPE.APPEARANCE;3394;T
+rs635634;-125;7;0.0;0.41;unit;decrease;0.0;0.0;(platelet endothelial cell adhesion molecule);platelet endothelial cell adhesion molecule measurement;TYPE.APPEARANCE;3394;T
+rs635634;-19;3;0.0;0.29;unit;decrease;0.0;0.0;Unknown;thrombospondin type-1 domain-containing protein 1 measurement;TYPE.APPEARANCE;3301;T
+rs579459;-41;2;0.0;14.0;%;increase;15.96];[12.04;(P-Selectin);soluble p-selectin measurement;TYPE.APPEARANCE;9813;T
+rs579459;-123;3;0.0;8.8;%;increase;10.2];[7.40;Unknown;alkaline phosphatase measurement;TYPE.DISEASE;8739;T
+rs579459;-28;1;0.0;0.49;unit;increase;0.0;0.0;(2.0525, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;T
+rs579459;-32;2;0.0;0.53;unit;increase;0.0;0.0;(5.1825, Unknown);urinary metabolite measurement;TYPE.APPEARANCE;835;T
+rs579459;-23;2;0.0;0.406697;unit;decrease;0.49];[0.33;Unknown;platelet glycoprotein 4 level;TYPE.APPEARANCE;2935;C
+rs495828;-8;3;0.0;4.9;Unknown;Unknown;0.0;0.0;Unknown;angiotensin converting enzyme activity attribute;TYPE.APPEARANCE;400;A
+rs495828;-59;4;0.0;0.308;unit;decrease;0.35];[0.27;(ALP);alkaline phosphatase measurement;TYPE.DISEASE;14402;T
+rs495828;-10;3;0.0;0.44528;unit;decrease;0.58];[0.31;(gal-8);blood protein amount;TYPE.APPEARANCE;750;T
+rs495828;-36;2;0.0;2.645;unit;increase;0.0;0.0;(EA);low density lipoprotein cholesterol measurement;TYPE.DISEASE;2224;T
+rs495828;-47;8;0.0;2.453;unit;increase;0.0;0.0;Unknown;low density lipoprotein cholesterol measurement;TYPE.DISEASE;2224;T
+rs495828;-29;4;0.0;0.3343;unit;decrease;0.39];[0.28;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;2923;?
+rs495828;-40;9;0.0;0.5;unit;decrease;0.58];[0.42;(sE-Selectin);protein measurement;TYPE.APPEARANCE;494;?
+rs495828;-9;3;0.0;0.2708;percentage;decrease;0.36];[0.18;(Asian);hematocrit;TYPE.DISEASE;16128;T
+rs600038;-21;9;0.0;0.385787;unit;decrease;0.47];[0.3;Unknown;OX-2 membrane glycoprotein amount;TYPE.APPEARANCE;2935;C
+rs600038;-23;7;0.0;0.216682;unit;increase;0.0;0.0;Unknown;hematocrit;TYPE.DISEASE;76452;?
+rs649129;-15;1;0.0;3.95;%;decrease;4.91];[2.99;(ICAM);icam-1 measurement;TYPE.APPEARANCE;9813;T
+rs649129;-16;3;0.0;8.183;(zscore);increase;0.0;0.0;Unknown;sphingomyelin measurement;TYPE.APPEARANCE;31023;T
+rs176694;-406;1;0.0;0.542;unit;increase;0.0;0.0;Unknown;E-selectin amount;TYPE.APPEARANCE;21758;T
+rs651007;-96;1;0.0;0.9436;unit;decrease;1.02];[0.86;Unknown;E-selectin amount;TYPE.APPEARANCE;997;T
+rs651007;-25;2;0.0;0.461;unit;decrease;0.55];[0.37;(FVIII);factor VIII measurement;TYPE.APPEARANCE;2100;C
+rs651007;-9;6;0.0;2.2778;mg/dL;increase;3.05];[1.51;(LDL);low density lipoprotein cholesterol measurement;TYPE.DISEASE;12545;A
+rs651007;-15;7;0.0;0.4016;unit;decrease;0.5];[0.3;(EA);intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;997;T
+rs651007;-11;8;0.0;0.3283;unit;decrease;0.43];[0.23;Unknown;OX-2 membrane glycoprotein amount;TYPE.APPEARANCE;997;T
+rs651007;-13;7;0.0;0.3649;unit;decrease;0.46];[0.27;(EA);carbohydrate sulfotransferase 15 measurement;TYPE.APPEARANCE;997;T
+rs651007;-26;6;0.0;0.5364;unit;decrease;0.63];[0.44;(EA);endoglin measurement;TYPE.APPEARANCE;997;T
+rs651007;-44;4;0.0;0.6958;unit;decrease;0.79];[0.6;Unknown;insulin receptor measurement;TYPE.APPEARANCE;997;T
+rs651007;-11;5;0.0;0.3358;unit;decrease;0.43];[0.24;(EA);protein jagged-1 measurement;TYPE.APPEARANCE;997;T
+rs651007;-12;3;0.0;0.3638;unit;decrease;0.46];[0.26;(EA);toll-like receptor 4:Lymphocyte antigen 96 complex amount;TYPE.APPEARANCE;997;T
+rs651007;-12;5;0.0;0.3587;unit;decrease;0.46];[0.26;(EA);cadherin-5 measurement;TYPE.APPEARANCE;997;T
+rs651007;-19;3;0.0;0.4365;unit;decrease;0.53];[0.34;Unknown;hepatocyte growth factor receptor amount;TYPE.APPEARANCE;997;T
+rs651007;-31;1;0.0;0.5933;unit;decrease;0.69];[0.5;Unknown;vascular endothelial growth factor receptor 3 amount;TYPE.APPEARANCE;997;T
+rs651007;-29;1;0.0;0.5352;unit;decrease;0.63];[0.45;(EA);platelet glycoprotein 4 level;TYPE.APPEARANCE;997;T
+rs651007;-9;8;0.0;0.2995;unit;decrease;0.4];[0.2;(EA);CD109 antigen measurement;TYPE.APPEARANCE;997;T
+rs651007;-13;7;0.0;0.3726;unit;decrease;0.47];[0.27;Unknown;P-Selectin measurement;TYPE.APPEARANCE;997;T
+rs651007;-13;3;0.0;0.367;unit;decrease;0.46];[0.27;(EA);vascular endothelial growth factor receptor 2 amount;TYPE.APPEARANCE;997;T
+rs633862;-28;6;0.0;0.290717;unit;increase;0.34];[0.24;Unknown;E-selectin amount;TYPE.APPEARANCE;2935;C
+rs11244061;-204;5;0.0;0.25873166;unit;decrease;0.28];[0.24;Unknown;level of C-type lectin domain family 1 member A in blood;TYPE.APPEARANCE;47745;T
+rs558240;-14;4;0.0;0.211486;unit;decrease;0.27];[0.16;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;2935;A
+rs78590974;-27;1;0.0;0.24443081;unit;increase;0.29];[0.2;Unknown;endothelin-converting enzyme 1 measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-37;3;0.0;0.27207017;unit;increase;0.32];[0.23;Unknown;level of protocadherin-12 in blood serum;TYPE.APPEARANCE;47745;T
+rs78590974;-41;1;0.0;0.26168212;unit;increase;0.3];[0.22;Unknown;B-cell antigen receptor complex-associated protein beta chain measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-42;2;0.0;0.2624631;unit;increase;0.3];[0.22;Unknown;C-type lectin domain family 14 member A measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-36;2;0.0;0.2716318;unit;increase;0.32];[0.23;Unknown;level of hephaestin in blood;TYPE.APPEARANCE;47745;T
+rs78590974;-35;3;0.0;0.23567529;unit;increase;0.28];[0.2;Unknown;level of carcinoembryonic antigen-related cell adhesion molecule 5 in blood;TYPE.APPEARANCE;47745;T
+rs78590974;-46;7;0.0;0.2830328;unit;increase;0.32];[0.24;Unknown;insulin-like growth factor 1 receptor amount;TYPE.APPEARANCE;47745;T
+rs78590974;-26;5;0.0;0.20883669;unit;increase;0.25];[0.17;Unknown;level of prion-like protein doppel in blood;TYPE.APPEARANCE;47745;T
+rs78590974;-39;5;0.0;0.25230274;unit;increase;0.29];[0.21;Unknown;ephrin type-B receptor 4 amount;TYPE.APPEARANCE;47745;T
+rs78590974;-36;2;0.0;0.2679703;unit;increase;0.31];[0.22;Unknown;enteropeptidase measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-55;4;0.0;0.31559557;unit;increase;0.36];[0.27;Unknown;protein HEG homolog 1 measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-50;3;0.0;0.28482497;unit;increase;0.33];[0.24;Unknown;cadherin-1 measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-41;8;0.0;0.2832092;unit;increase;0.33];[0.24;Unknown;leukemia inhibitory factor receptor measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-34;3;0.0;0.23251936;unit;increase;0.27];[0.19;Unknown;tgf-beta receptor type-2 measurement;TYPE.APPEARANCE;47745;T
+rs78590974;-52;6;0.0;0.2807067;unit;increase;0.32];[0.24;Unknown;tissue factor measurement;TYPE.APPEARANCE;47745;T
+rs116851371;-36;3;0.0;0.39416364;unit;increase;0.47];[0.32;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;47745;C
+rs116851371;-16;4;0.0;0.31416723;unit;decrease;0.4];[0.23;Unknown;intercellular adhesion molecule 5 measurement;TYPE.APPEARANCE;47745;C
+rs116851371;-30;1;0.0;0.3161387;unit;increase;0.39];[0.24;Unknown;C-type lectin domain family 4 member M amount;TYPE.APPEARANCE;47745;C
+rs116851371;-23;2;0.0;0.4379819;unit;increase;0.54];[0.34;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;47745;C
+rs116851371;-29;3;0.0;0.43688917;unit;decrease;0.53];[0.35;Unknown;intestinal-type alkaline phosphatase measurement;TYPE.APPEARANCE;47745;C
+rs116851371;-17;5;0.0;0.41443518;unit;decrease;0.52];[0.31;Unknown;amount of neural cell adhesion molecule L1 (human) in blood;TYPE.APPEARANCE;47745;C
+rs587600964;-151;9;0.0;0.23333554;unit;increase;0.25];[0.21;Unknown;CUB and zona pellucida-like domain-containing protein 1 measurement;TYPE.APPEARANCE;47745;G
+rs138683771;-70;5;0.0;0.31929728;unit;increase;0.36];[0.28;Unknown;level of pancreatic secretory granule membrane major glycoprotein GP2 in blood;TYPE.APPEARANCE;47745;C
+rs138683771;-66;2;0.0;0.3590551;unit;decrease;0.4];[0.31;Unknown;immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement;TYPE.APPEARANCE;47745;C
+rs138683771;-46;5;0.0;0.31166783;unit;decrease;0.36];[0.27;Unknown;endoglin measurement;TYPE.APPEARANCE;47745;C
+rs138683771;-78;1;0.0;0.41299105;unit;decrease;0.46];[0.37;Unknown;interleukin-3 receptor subunit alpha measurement;TYPE.APPEARANCE;47745;C
+rs138683771;-49;3;0.0;0.34265804;unit;decrease;0.39];[0.29;Unknown;level of roundabout homolog 4 in blood serum;TYPE.APPEARANCE;47745;C
+rs138683771;-57;8;0.0;0.22855236;unit;increase;0.26];[0.2;Unknown;level of mucin-2 in blood;TYPE.APPEARANCE;47745;C
+rs138683771;-49;1;0.0;0.32998517;unit;decrease;0.38];[0.28;Unknown;level of ephrin type-A receptor 4 in blood serum;TYPE.APPEARANCE;47745;C
+rs138683771;-75;2;0.0;0.39578784;unit;decrease;0.44];[0.35;Unknown;platelet endothelial cell adhesion molecule measurement;TYPE.APPEARANCE;47745;C
+rs138683771;-58;2;0.0;0.29645666;unit;decrease;0.34];[0.26;Unknown;level of cadherin-17 in blood serum;TYPE.APPEARANCE;47745;C
+rs138683771;-18;4;0.0;0.20278753;unit;increase;0.25];[0.15;Unknown;CUB and zona pellucida-like domain-containing protein 1 measurement;TYPE.APPEARANCE;47745;C
+rs10901257;-22;4;0.0;0.289324;unit;increase;0.35];[0.23;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;2935;A
+rs587660387;-17;3;0.0;0.49680042;unit;decrease;0.62];[0.37;Unknown;odorant-binding protein 2b measurement;TYPE.APPEARANCE;47745;G
+rs141638449;-17;5;0.0;0.29524553;unit;increase;0.38];[0.21;Unknown;intercellular adhesion molecule 2 measurement;TYPE.APPEARANCE;47745;T
+rs141638449;-38;1;0.0;0.954945;unit;increase;1.1];[0.81;Unknown;CD209 antigen measurement;TYPE.APPEARANCE;2935;T
+rs141638449;-77;2;0.0;1.2204552;unit;increase;1.36];[1.08;Unknown;level of receptor-type tyrosine-protein phosphatase mu in blood;TYPE.APPEARANCE;47745;T
+rs150593209;-22;4;0.0;0.4149957;unit;increase;0.53];[0.3;Unknown;histo-blood group ABO system transferase measurement;TYPE.APPEARANCE;47745;T
+rs147278971;-11;2;0.0;0.688694;unit;decrease;0.89];[0.49;Unknown;E-selectin amount;TYPE.APPEARANCE;2935;C
+rs11244065;-11;5;0.0;0.4473;unit;decrease;0.58];[0.32;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;496;T
+rs176696;-13;1;0.0;0.209808;unit;decrease;0.27];[0.15;Unknown;cadherin-5 measurement;TYPE.APPEARANCE;2935;C
+rs12683493;-13;1;0.0;0.229128;unit;decrease;0.29];[0.17;Unknown;protein FAM3D measurement;TYPE.APPEARANCE;2935;T
+rs1927311;-22;1;0.0;0.276621;unit;decrease;0.33];[0.22;Unknown;a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement;TYPE.APPEARANCE;2935;T
