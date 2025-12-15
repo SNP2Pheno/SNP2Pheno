@@ -132,7 +132,7 @@ con.execute("CREATE TABLE if not exists MODEL_TABLE (                       \
             )")
 
 try:
-    con.execute('DROP TABLE RELEVANT_SNPS_CLUST_CLASS')
+    con.execute('DROP TABLE RELEVANT_SNPS_CLUST_CLASS_TABLE')
 except OperationalError as OE:
     if OE.sqlite_errorcode == 1:
         pass
@@ -153,7 +153,7 @@ except OperationalError as OE:
         pass
     else:
         raise OE
-con.execute("CREATE TABLE if not exists PHANTOM_PIC_IDENTIFIERS (          \
+con.execute("CREATE TABLE if not exists PHANTOM_PIC_IDENTIFIERS_TABLE (          \
             ID integer primary key autoincrement,                           \
             Path_Identifier TEXT NOT NULL,                                        \
             Identifier_Value TEXT NOT NULL,                                   \
