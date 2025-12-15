@@ -128,8 +128,6 @@ con.execute("CREATE TABLE if not exists MODEL_TABLE (                       \
             ID integer primary key autoincrement,                           \
             Path_To_Model text NOT NULL,                                    \
             Appearance_ID integer,                                          \
-            Identifier_Phantom_Pic  text,                                   \
-            Phantom_Pic_Identifier_Path text,                               \
             FOREIGN KEY (Appearance_ID) REFERENCES APPEARANCE_TABLE(ID)      \
             )")
 
