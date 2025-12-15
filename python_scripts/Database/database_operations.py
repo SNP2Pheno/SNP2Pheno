@@ -68,5 +68,35 @@ class Database:
             [rsID, "NA", "NA"])
         return self.cur.lastrowid
 
+    def insert_model(self, pathToModel, association):
+        self.cur.execute("SELECT ID FROM APPEARANCE_TABLE WHERE Phenotype = ?", [association.traitName])
+        appearance_id = self.cur.fetchone()[0]
+        self.cur.execute("INSERT INTO MODEL_TABLE \
+                         (Path_To_Model, Appearance_ID) \
+                         VALUES (?, ?)", [pathToModel, appearance_id])
+        return self.cur.lastrowid
+
+    def insert_relevant_snps_clust_class(self, relevantSNPs, pathToModel):
+        self.cur.execute("SELECT ID FROM MODEL_TABLE WHERE Path_To_Model = ?", [pathToModel])
+        model_id = self.cur.fetchone()[0]
+        placeholders = ",".join("?" * len(relevantSNPs))
+        sql = f"SELECT rs_ID FROM SNP_TABLE WHERE rs_ID IN ({placeholders})"
+        self.cur.execute(sql, relevantSNPs)
+        relevant_snp_ids = self.cur.fetchall()
+        for rs in relevant_snp_ids:
+            self.cur.execute("INSERT INTO RELEVANT_SNPS_CLUST_CLASS_TABLE   \
+                         (MODEL_ID, SNP_ID)         \
+                         VALUES (?, ?)", [model_id, rs[0]])
+        return self.cur.lastrowid
+
+    def insert_phantom_pic_identifier(self, pathToIdentifier, identifierValue, pathToModel):
+        self.cur.execute("SELECT ID FROM MODEL_TABLE WHERE Path_To_Model = ?", [pathToModel])
+        model_id = self.cur.fetchone()[0]
+        self.cur.execute("INSERT INTO PHANTOM_PIC_IDENTIFIERS_TABLE \
+                          (Path_Identifier, Identifier_Value, Model_ID) \
+                         VALUES(?, ?, ?)", [pathToIdentifier, identifierValue, model_id])
+        return self.cur.lastrowid
+
+
     def commit(self):
         self.db.commit()
