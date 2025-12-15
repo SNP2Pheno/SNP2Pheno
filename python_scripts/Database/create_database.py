@@ -90,6 +90,7 @@ except OperationalError as OE:
     else:
         raise OE
 con.execute("CREATE TABLE if not exists APPEARANCE_TABLE (          \
+            ID integer primary key autoincrement,                   \
             Allele_ID integer,                                      \
             GWAS_ID integer,                                        \
             Phenotype text,                                         \
