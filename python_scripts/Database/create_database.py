@@ -116,3 +116,51 @@ con.execute("CREATE TABLE if not exists DISEASE_TABLE (             \
             FOREIGN KEY (GWAS_ID) REFERENCES GWAS_TABLE(ID)         \
             )")
 
+
+try:
+    con.execute('DROP TABLE MODEL_TABLE')
+except OperationalError as OE:
+    if OE.sqlite_errorcode == 1:
+        pass
+    else:
+        raise OE
+con.execute("CREATE TABLE if not exists MODEL_TABLE (                       \
+            ID integer primary key autoincrement,                           \
+            Path_To_Model text NOT NULL,                                    \
+            Appearance_ID integer,                                          \
+            Identifier_Phantom_Pic  text,                                   \
+            Phantom_Pic_Identifier_Path text,                               \
+            FOREIGN KEY (Appearance_ID) REFERENCES APPEARANCE_TABLE(ID)      \
+            )")
+
+try:
+    con.execute('DROP TABLE RELEVANT_SNPS_CLUST_CLASS')
+except OperationalError as OE:
+    if OE.sqlite_errorcode == 1:
+        pass
+    else:
+        raise OE
+con.execute("CREATE TABLE if not exists RELEVANT_SNPS_CLUST_CLASS_TABLE (         \
+            MODEL_ID integer,                                               \
+            SNP_ID integer,                                                 \
+            PRIMARY KEY (MODEL_ID, SNP_ID),                                 \
+            FOREIGN KEY (MODEL_ID) REFERENCES MODEL_TABLE(ID),              \
+            FOREIGN KEY (SNP_ID) REFERENCES SNP_TABLE(rs_ID)                \
+            )")
+
+try:
+    con.execute('DROP TABLE PHANTOM_PIC_IDENTIFIERS_TABLE')
+except OperationalError as OE:
+    if OE.sqlite_errorcode == 1:
+        pass
+    else:
+        raise OE
+con.execute("CREATE TABLE if not exists PHANTOM_PIC_IDENTIFIERS (          \
+            ID integer primary key autoincrement,                           \
+            Path_Identifier TEXT NOT NULL,                                        \
+            Identifier_Value TEXT NOT NULL,                                   \
+            Model_ID integer,                                               \
+            FOREIGN KEY (Model_ID) REFERENCES MODEL_TABLE(ID)               \
+            )")
+
+con.close()
