@@ -25,7 +25,7 @@ Rectangle {
             topRightRadius:    sideTab === "right" ? parent.parent.radius : 0
             bottomRightRadius: sideTab === "right" ? parent.parent.radius : 0
 
-            color: button.pressed || button.hovered || contentContainer.selectedIndex === index ? "#AED2DC" : "#26515D"
+            color: button.pressed || button.hovered || contentContainer.selectedIndex === index ? "#AED2DC" : "#1D5586"
         }
         onClicked: {
             contentContainer.selectedIndex = index

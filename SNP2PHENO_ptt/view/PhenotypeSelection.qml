@@ -28,7 +28,7 @@ Rectangle {
 
                     background: Rectangle {
                         radius: 5
-                        color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
+                        color: button.pressed || button.hovered ? "#AED2DC" : "#1D5586"
                     }
                     onClicked: controller.invokeAction(modelData)
                 }

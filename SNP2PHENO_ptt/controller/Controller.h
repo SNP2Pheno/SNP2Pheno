@@ -20,13 +20,7 @@ public:
 
     [[nodiscard]] QVariantList results() const { return m_results; }
     [[nodiscard]] QStringList availableActions() const;
-    [[nodiscard]] QVariantList selectedFiles() const
-    {   QVariantList out;
-        out.reserve(m_selectedFiles.size());
-        for (const auto &s : m_selectedFiles)
-            out << s;
-        return out;
-    }
+    [[nodiscard]] QVariantList selectedFiles() const;
 
     signals:
         void resultsChanged();

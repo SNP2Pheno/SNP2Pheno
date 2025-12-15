@@ -23,6 +23,19 @@ QStringList Controller::availableActions() const {
     return actions;
 }
 
+QVariantList Controller::selectedFiles() const
+{
+    QStringList list = QStringList(m_selectedFiles.cbegin(), m_selectedFiles.cend());
+    list.sort();
+
+    QVariantList out;
+    out.reserve(list.size());
+    for (const auto &s : list)
+        out << s;
+
+    return out;
+}
+
 void Controller::invokeAction(const QString& actionName) {
     QMetaObject::invokeMethod(this, actionName.toLatin1().constData());
 }

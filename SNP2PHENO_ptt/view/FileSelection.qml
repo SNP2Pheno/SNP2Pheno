@@ -33,7 +33,7 @@ Rectangle {
 
             background: Rectangle {
                 radius: 5
-                color: button.pressed || button.hovered ? "#AED2DC" : "#26515D"
+                color: button.pressed || button.hovered ? "#AED2DC" : "#1D5586"
             }
             onClicked: fileDialog.open()
         }
@@ -88,17 +88,28 @@ Rectangle {
                                     id: textContainer
                                     Layout.fillWidth: true
                                     Layout.alignment: Qt.AlignVCenter
+                                    implicitHeight: buttonText.implicitHeight
 
-                                    implicitHeight: contentRectangle.contentHeight
+                                    Flickable {
+                                        id: flick
+                                        anchors.fill: parent
+                                        clip: true
 
-                                    Text {
-                                        anchors.centerIn: parent
-                                        width: parent.width
-                                        text: button.fileName
-                                        font: button.font
-                                        color: "black"
-                                        elide: Text.ElideRight
-                                        horizontalAlignment: Text.AlignHCenter
+                                        contentWidth: buttonText.implicitWidth
+                                        contentHeight: height
+                                        interactive: contentWidth > width
+
+                                        contentX: (contentWidth > width ? (contentWidth - width) / 2 : 0)
+
+                                        Text {
+                                            id: buttonText
+                                            anchors.verticalCenter: parent.verticalCenter
+                                            width: flick.contentWidth
+                                            text: button.fileName
+                                            font: button.font
+                                            color: "black"
+                                            horizontalAlignment: Text.AlignHCenter
+                                        }
                                     }
                                 }
                             }

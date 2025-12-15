@@ -6,7 +6,7 @@ Rectangle {
     id: contentRoot
     Layout.fillWidth: true
     Layout.fillHeight: true
-    color: "#ffffff"
+    color: "white"
 
     property var rows: controller ? controller.results : []
     property var headers: rows.length > 0 ? Object.keys(rows[0]) : []
@@ -23,7 +23,7 @@ Rectangle {
         Rectangle {
             Layout.fillWidth: true
             Layout.preferredHeight: contentRoot.headerHeight
-            color: "#f0f0f0"
+            color: "white"
             border.color: "#cccccc"
             border.width: 1
 
@@ -45,7 +45,7 @@ Rectangle {
                         Rectangle {
                             width: contentRoot.columnWidth
                             height: contentRoot.headerHeight
-                            color: "#f0f0f0"
+                            color: "white"
                             border.color: "#cccccc"
                             border.width: 1
 
@@ -94,7 +94,7 @@ Rectangle {
                             Rectangle {
                                 width: contentRoot.columnWidth
                                 height: contentRoot.rowHeight
-                                color: (rows.indexOf(rowData)) % 2 === 0 ? "#ffffff" : "#f8f8f8"
+                                color: (rows.indexOf(rowData)) % 2 === 0 ? "white" : "#f8f8f8"
                                 border.color: "#cccccc"
                                 border.width: 1
 
