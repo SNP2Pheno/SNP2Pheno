@@ -40,7 +40,8 @@ class Database:
 
     def __insert_GWAS(self, association):
         self.cur.execute("INSERT INTO GWAS_TABLE \
-            (PValueMantissa,\
+            (RiskAllele,\
+            PValueMantissa,\
             PValueExponent,\
             OR_value,\
             betaNum,\
@@ -49,7 +50,9 @@ class Database:
             CI_min,\
             CI_max) \
             VALUES (?,?,?,?,?,?,?,?)",
-            [association.pValueMantissa,
+            [
+            association.riskAllele,
+            association.pValueMantissa,
             association.pValueExponent,
             association.orValue,
             association.betaNum,

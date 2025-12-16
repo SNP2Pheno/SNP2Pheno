@@ -6,6 +6,7 @@ class TYPE(Enum):
 
 class Association:
     def __init__(self):
+        self.riskAllele = "Unknown"
         self.pValueExponent = 0
         self.pValueMantissa = 0
         self.orValue = 0.0
@@ -19,6 +20,14 @@ class Association:
         self.type = TYPE.DISEASE
         self.NumOfIndividualsInStudy = 0
 
+    # Getter and Setter for riskAllele
+    @property
+    def riskAllele(self):
+        return self._riskAllele
+
+    @riskAllele.setter
+    def riskAllele(self, value):
+        self._riskAllele = value
 
     # Getter and Setter for pValueExponent
     @property
