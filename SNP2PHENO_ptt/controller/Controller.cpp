@@ -8,6 +8,10 @@
 #include <QtConcurrent/QtConcurrentRun>
 #include <QFuture>
 #include <QFutureWatcher>
+#include <iostream>
+#include <qurl.h>
+
+using std::cout;
 
 Controller::Controller(QObject* parent) : QObject(parent) {}
 
@@ -37,6 +41,7 @@ QVariantList Controller::selectedFiles() const {
 
 fileParsedState Controller::requestFileStatus(const QString &fileName) {
     if (m_selectedFiles.contains(fileName)) {
+        cout << "Status requested for " + fileName.toStdString() + "\n";
         return m_selectedFiles[fileName].state;
     }
     return parsedError;
@@ -66,23 +71,30 @@ void Controller::startParsing(const QString &fileName) {
         m_selectedFiles[fileName] = fileData();
     }
 
-    if (!fileName.endsWith(".vcf") && !fileName.endsWith(".txt")) {
+    const QString localPath = QUrl(fileName).toLocalFile();
+
+    QString ext;
+    if (fileName.endsWith(".vcf")) {
+        ext = "vcf";
+    } else if (fileName.endsWith(".txt")) {
+        ext = "txt";
+    } else {
         m_selectedFiles[fileName].state = parsedError;
         emit fileStatusChanged(fileName);
         return;
     }
 
-    // mark as parsing and notify QML
     m_selectedFiles[fileName].state = parsing;
     emit fileStatusChanged(fileName);
 
-    auto future = QtConcurrent::run([this, fileName]() -> std::vector<vcf::VCFRecord> {
-        try {
-            vcf::VCFParser parser{fileName.toStdString()};
-            return parser.parseAll();          // heavy work off the UI thread
-        } catch (...) {
-            return {};
+    auto future = QtConcurrent::run([this, localPath, ext]() -> std::vector<vcf::VCFRecord> {
+        if (ext == "vcf") {
+            return parseVCF(localPath);
         }
+        if (ext == "txt") {
+            return parseTXT(localPath);
+        }
+        return {};
     });
 
     auto *watcher = new QFutureWatcher<std::vector<vcf::VCFRecord>>(this);
@@ -99,25 +111,32 @@ void Controller::startParsing(const QString &fileName) {
             return;
         }
 
-        // Convert std::vector<VCFRecord> -> QVariantList
-        QVariantList list;
-        list.reserve(static_cast<int>(records.size()));
-        for (const auto &rec : records) {
-            QVariantMap m;
-            // TODO: fill m with what you need from rec, e.g.:
-            // m["chrom"] = QString::fromStdString(rec.chrom());
-            // m["pos"]   = rec.pos();
-            // m["id"]    = QString::fromStdString(rec.id());
-            list.append(m);
-        }
-
-        m_results = list;
         m_selectedFiles[fileName].state = parsedSuccessfully;
         emit fileStatusChanged(fileName);
         emit resultsChanged();
+        cout << "Parsing finished successfully\n";
     });
 
     watcher->setFuture(future);
+}
+
+std::vector<vcf::VCFRecord> Controller::parseVCF(const QString &fileName) {
+    try {
+        vcf::VCFParser parser{fileName.toStdString()};
+        return parser.parseAll();
+    } catch (...) {
+        return {};
+    }
+}
+
+std::vector<vcf::VCFRecord> Controller::parseTXT(const QString &fileName) {
+    try {
+        // Your 23andMe / TXT parser logic here
+        // For now, just return empty; implement your TXT parser
+        return {};
+    } catch (...) {
+        return {};
+    }
 }
 
 
