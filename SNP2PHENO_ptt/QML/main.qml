@@ -18,7 +18,7 @@ ApplicationWindow {
     title: "SNP2PHENO"
 
     // new sample data
-    property var preExistingList: [
+    property var preExistingListDisease: [
         {
             name: "Diabetes",
             markers: [
@@ -37,12 +37,39 @@ ApplicationWindow {
         },
         {
             name: "Hypertension",
-            markers: [
+            markers: [ 
                 { snp: "rs6789", effect: "Decreases risk (better vasodilation)", severity: 1 },
                 { snp: "rs7890", effect: "Increases risk (vascular stiffness)", severity: 2 }
             ]
         }
     ]
+
+    property var preExistingListAppearance: [
+            {
+                name: "brown hair",
+                markers: [
+                    { snp: "rs1234, rs2345", effect: "Increases risk (insulin resistance)", severity: 2 },
+                    { snp: "rs3456", effect: "Decreases risk (improves metabolism)", severity: 1 },
+                    { snp: "rs6789", effect: "Decreases risk (better vasodilation)", severity: 1 },
+                    { snp: "rs7890", effect: "Increases risk (vascular stiffness)", severity: 2 }
+                ]
+            },
+            {
+                name: "blue eyes",
+                markers: [
+                    { snp: "rs4567", effect: "No significant effect", severity: 0 },
+                    { snp: "rs5678", effect: "Increases risk (amyloid plaque buildup)", severity: 2 }
+                ]
+            },
+            {
+                name: "brown eyes",
+                markers: [
+                    { snp: "rs6789", effect: "Decreases risk (better vasodilation)", severity: 1 },
+                    { snp: "rs7890", effect: "Increases risk (vascular stiffness)", severity: 2 }
+                ]
+            }
+    ]
+
     property var fileItems: []
     property bool infoVisible: false
     property var selectedInfo: []
@@ -67,7 +94,7 @@ ApplicationWindow {
         anchors.left: parent.left
         anchors.right: parent.right
         height: 60
-        color: "#17415D"
+        color: "#102F4A"
         Row {
             anchors.centerIn: parent
             spacing: 10
@@ -105,10 +132,10 @@ ApplicationWindow {
         // left area: only contains tabContentBox
         Rectangle {
             id: leftBox
-            width: parent.width * 0.6 - 10
+            width: parent.width * 0.7 - 10
             anchors.top: parent.top
             anchors.bottom: parent.bottom
-            color: "#5f9eb3"
+            color: "#5F9EB3"
             Column {
                 id: leftColumn
                 anchors.fill: parent
@@ -125,7 +152,7 @@ ApplicationWindow {
                             radius: 5
                             bottomLeftRadius: 0
                             bottomRightRadius: 0
-                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                            color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
                             //TODO: Add action to onClick
@@ -138,7 +165,7 @@ ApplicationWindow {
                             radius: 5
                             bottomLeftRadius: 0
                             bottomRightRadius: 0
-                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                            color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
                             //TODO: Add action to onClick
@@ -151,7 +178,7 @@ ApplicationWindow {
                             radius: 5
                             bottomLeftRadius: 0
                             bottomRightRadius: 0
-                            color: appearanceBtn.isClicked ? "#9cccd9" : "#bff4f5"
+                            color: appearanceBtn.isClicked ? "#AED2DC" : "#26515D"
                         }
                         onClicked: {
                             //TODO: Add action to onClick
@@ -167,7 +194,9 @@ ApplicationWindow {
                         right: parent.right
                         bottom: parent.bottom
                     }
-                    color: "#dfe6e9"
+                    color: "#AED2DC"
+                    radius: 5
+                    topLeftRadius: 0
                     RowLayout {
                         id: mainRowContent
                         anchors.fill: parent
@@ -184,10 +213,21 @@ ApplicationWindow {
                                 id: searchBar
                                 placeholderText: "Search diseases..."
                                 Layout.fillWidth: true
+                                Layout.margins: 5
+                                Layout.topMargin: 15
+
+                                background: Rectangle {
+                                    radius: 2
+                                    implicitWidth: 100
+                                    implicitHeight: 24
+                                    border.color: "#333"
+                                    border.width: 1
+                                }
+                                
                                 onTextChanged: {
                                     filteredModel.clear();
-                                    for (var i = 0; i < preExistingList.length; i++) {
-                                        var disease = preExistingList[i];
+                                    for (var i = 0; i < preExistingListDisease.length; i++) {
+                                        var disease = preExistingListDisease[i];
                                         if (disease.name.toLowerCase().includes(searchBar.text.toLowerCase())) {
                                             filteredModel.append({ "name": disease.name, "index": i });
                                         }
@@ -199,19 +239,22 @@ ApplicationWindow {
                                 id: diseaseListView
                                 Layout.fillWidth: true
                                 Layout.fillHeight: true
+                                Layout.margins: 5
+
                                 model: filteredModel
                                 clip: true
                                 delegate: Rectangle {
+                                    radius: 5                                    
                                     width: diseaseListView.width
                                     height: 40
-                                    color: ListView.isCurrentItem ? "blue" : (mouseArea.containsMouse ? "lightblue" : "white")
+                                    color: ListView.isCurrentItem ? "#102F4A" : (mouseArea.containsMouse ? "#D0E6EC" : "white")
                                     border.color: "darkgray"
                                     border.width: 2
 
                                     Text {
                                         text: name
                                         anchors.centerIn: parent
-                                        color: ListView.isCurrentItem ? "white" : "black"
+                                        color: diseaseListView.currentIndex === index ? "white" : (mouseArea.containsMouse ? "#535353" : "black")
                                         font.pixelSize: 16
                                     }
 
@@ -222,7 +265,7 @@ ApplicationWindow {
                                         onClicked: {
                                             diseaseListView.currentIndex = index;
                                             selectedName = name;
-                                            selectedInfo = preExistingList[index].markers;
+                                            selectedInfo = preExistingListDisease[index].markers;
                                             infoVisible = true;
                                             infoModel.clear();
                                             for (var i = 0; i < selectedInfo.length; i++) {
@@ -238,11 +281,14 @@ ApplicationWindow {
                         Rectangle {
                             id: infoBox
                             visible: infoVisible
-                            Layout.preferredWidth: parent.width / 2
+                            Layout.preferredWidth: parent.width / 1.5
                             Layout.fillHeight: true
-                            color: "white"
-                            border.color: "black"
-                            border.width: 2
+                            color: "#487E9B"
+                            border.color: "#AED2DC"
+                            border.width: 4
+                            radius: 5
+                            topLeftRadius: 2
+                            bottomLeftRadius: 2
 
                             ColumnLayout {
                                 anchors.fill: parent
@@ -365,7 +411,7 @@ ApplicationWindow {
         // right area: VCF File Viewer and SNP list
 Rectangle {
     id: rightBox
-    width: parent.width * 0.4 - 10
+    width: parent.width * 0.3 - 10
     anchors.top: parent.top
     anchors.bottom: parent.bottom
     color: "#9cccd9"
@@ -374,7 +420,7 @@ Rectangle {
         id: topHalf
         width: rightBox.width
         height: rightBox.height
-        color: "lightgrey"
+        color: "#102F4A"
 
         Button {
 			id: vcfSelectFileButton
@@ -498,8 +544,8 @@ property var parsedFiles: ({})
     ListModel {
         id: filteredModel
         Component.onCompleted: {
-            for (var i = 0; i < preExistingList.length; i++) {
-                filteredModel.append({ "name": preExistingList[i].name, "index": i });
+            for (var i = 0; i < preExistingListDisease.length; i++) {
+                filteredModel.append({ "name": preExistingListDisease[i].name, "index": i });
             }
         }
     }
