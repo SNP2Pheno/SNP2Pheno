@@ -62,7 +62,6 @@ con.execute("CREATE TABLE if not exists ALLELE_TABLE (              \
             FOREIGN KEY (rs_ID) REFERENCES SNP_TABLE (rs_ID)        \
             )")
 
-# TODO: add alleles to GWAS table
 try:
     con.execute('DROP TABLE GWAS_TABLE')
 except OperationalError as OE:
