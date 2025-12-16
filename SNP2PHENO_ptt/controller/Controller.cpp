@@ -3,7 +3,11 @@
 //
 
 #include "Controller.h"
+#include <VCFParser.h>
 #include <qmetaobject.h>
+#include <QtConcurrent/QtConcurrentRun>
+#include <QFuture>
+#include <QFutureWatcher>
 
 Controller::Controller(QObject* parent) : QObject(parent) {}
 
@@ -23,26 +27,31 @@ QStringList Controller::availableActions() const {
     return actions;
 }
 
-QVariantList Controller::selectedFiles() const
-{
-    QStringList list = QStringList(m_selectedFiles.cbegin(), m_selectedFiles.cend());
-    list.sort();
-
+QVariantList Controller::selectedFiles() const {
     QVariantList out;
-    out.reserve(list.size());
-    for (const auto &s : list)
-        out << s;
-
+    for (const QString& filePath : m_selectedFiles.keys()) {
+        out.append(filePath);
+    }
     return out;
+}
+
+fileParsedState Controller::requestFileStatus(const QString &fileName) {
+    if (m_selectedFiles.contains(fileName)) {
+        return m_selectedFiles[fileName].state;
+    }
+    return parsedError;
 }
 
 void Controller::invokeAction(const QString& actionName) {
     QMetaObject::invokeMethod(this, actionName.toLatin1().constData());
 }
 
-void Controller::addSelectedFiles (const QVariantList &files) {
+void Controller::addSelectedFiles(const QVariantList &files) {
     for (const QVariant &v : files) {
-        m_selectedFiles.insert(v.toString());
+        QString filePath = v.toString();
+        if (!m_selectedFiles.contains(filePath)) {
+            m_selectedFiles[filePath] = fileData();
+        }
     }
     emit selectedFilesChanged();
 }
@@ -51,6 +60,66 @@ void Controller::clearSelectedFiles() {
     m_selectedFiles.clear();
     emit selectedFilesChanged();
 }
+
+void Controller::startParsing(const QString &fileName) {
+    if (!m_selectedFiles.contains(fileName)) {
+        m_selectedFiles[fileName] = fileData();
+    }
+
+    if (!fileName.endsWith(".vcf") && !fileName.endsWith(".txt")) {
+        m_selectedFiles[fileName].state = parsedError;
+        emit fileStatusChanged(fileName);
+        return;
+    }
+
+    // mark as parsing and notify QML
+    m_selectedFiles[fileName].state = parsing;
+    emit fileStatusChanged(fileName);
+
+    auto future = QtConcurrent::run([this, fileName]() -> std::vector<vcf::VCFRecord> {
+        try {
+            vcf::VCFParser parser{fileName.toStdString()};
+            return parser.parseAll();          // heavy work off the UI thread
+        } catch (...) {
+            return {};
+        }
+    });
+
+    auto *watcher = new QFutureWatcher<std::vector<vcf::VCFRecord>>(this);
+
+    connect(watcher, &QFutureWatcher<std::vector<vcf::VCFRecord>>::finished,
+            this, [this, watcher, fileName]() {
+        auto future = watcher->future();
+        std::vector<vcf::VCFRecord> records = future.result();
+        watcher->deleteLater();
+
+        if (records.empty()) {
+            m_selectedFiles[fileName].state = parsedError;
+            emit fileStatusChanged(fileName);
+            return;
+        }
+
+        // Convert std::vector<VCFRecord> -> QVariantList
+        QVariantList list;
+        list.reserve(static_cast<int>(records.size()));
+        for (const auto &rec : records) {
+            QVariantMap m;
+            // TODO: fill m with what you need from rec, e.g.:
+            // m["chrom"] = QString::fromStdString(rec.chrom());
+            // m["pos"]   = rec.pos();
+            // m["id"]    = QString::fromStdString(rec.id());
+            list.append(m);
+        }
+
+        m_results = list;
+        m_selectedFiles[fileName].state = parsedSuccessfully;
+        emit fileStatusChanged(fileName);
+        emit resultsChanged();
+    });
+
+    watcher->setFuture(future);
+}
+
 
 void Controller::onPlaceholderData() {
     QVariantList placeholderData;
@@ -178,5 +247,3 @@ void Controller::onPlaceholderData() {
     m_results = placeholderData;
     emit resultsChanged();
 }
-
-//TODO: implementation of each query

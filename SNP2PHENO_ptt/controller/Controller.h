@@ -7,6 +7,8 @@
 
 #include <QVariantList>
 #include <QProperty>
+#include <VCFRecord.h>
+#include "headers/FileData.h"
 
 class Controller : public QObject
 {
@@ -22,19 +24,25 @@ public:
     [[nodiscard]] QStringList availableActions() const;
     [[nodiscard]] QVariantList selectedFiles() const;
 
+    Q_INVOKABLE fileParsedState requestFileStatus(const QString& fileName);
+
     signals:
         void resultsChanged();
         void actionsChanged();
         void selectedFilesChanged();
+        void fileStatusChanged(const QString& fileName);
 
 private:
     QVariantList m_results = QVariantList();
-    QSet<QString> m_selectedFiles = QSet<QString>();
+    QMap<QString, fileData> m_selectedFiles = QMap<QString, fileData>();
+    std::vector<vcf::VCFRecord> parseVCF(const QString &fileName);
+    std::vector<vcf::VCFRecord> parseTXT(const QString &fileName);
 
 public slots:
     void invokeAction(const QString& actionName);
     void addSelectedFiles(const QVariantList &files);
     void clearSelectedFiles();
+    void startParsing(QString const& fileName);
 
 private slots:
     void onPlaceholderData();

@@ -119,8 +119,38 @@ Rectangle {
                         Layout.fillWidth: true
 
                         background: Rectangle {
+                            id: bg
                             radius: 5
-                            color: button.pressed || button.hovered ? "#AED2DC" : "white"
+                            color: "white"
+                        }
+
+                        function colorForStatus(status) {
+                            switch (status) {
+                                case 0:  // idle
+                                    return "white"
+                                case 1:  // parsing
+                                    return "lightgrey"
+                                case 2:  // parsed successfully
+                                    return "green"
+                                case 3:  // parsed error
+                                    return "#E72326"
+                                default:
+                                    return "white"
+                            }
+                        }
+
+                        Connections {
+                            target: controller
+                            function onFileStatusChanged(fileName) {
+                                if (fileName === modelData.toString()) {
+                                    let status = controller.requestFileStatus(modelData.toString());
+                                    bg.color = colorForStatus(status)
+                                }
+                            }
+                        }
+
+                        onDoubleClicked: {
+                            controller.startParsing(modelData.toString())
                         }
                     }
                 }
