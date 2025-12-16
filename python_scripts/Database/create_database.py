@@ -162,4 +162,20 @@ con.execute("CREATE TABLE if not exists PHANTOM_PIC_IDENTIFIERS_TABLE (         
             FOREIGN KEY (Model_ID) REFERENCES MODEL_TABLE(ID)               \
             )")
 
+try:
+    con.execute('DROP TABLE CLUST_CLASS_VARIANT_TABLE')
+except OperationalError as OE:
+    if OE.sqlite_errorcode == 1:
+        pass
+    else:
+        raise OE
+
+con.execute("CREATE TABLE if not exists MODEL_ALLELE_MAPPING (          \
+            MODEL_ID integer, \
+            Allele TEXT, \
+            MappedValue integer, \
+            PRIMARY KEY (MODEL_ID, Allele), \
+            FOREIGN KEY (MODEL_ID) REFERENCES MODEL_TABLE(ID)               \
+            )")
+
 con.close()
