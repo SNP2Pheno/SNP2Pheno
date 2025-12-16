@@ -10,6 +10,7 @@
 #include <QFutureWatcher>
 #include <iostream>
 #include <qurl.h>
+#include <ranges>
 
 using std::cout;
 
@@ -41,7 +42,6 @@ QVariantList Controller::selectedFiles() const {
 
 fileParsedState Controller::requestFileStatus(const QString &fileName) {
     if (m_selectedFiles.contains(fileName)) {
-        cout << "Status requested for " + fileName.toStdString() + "\n";
         return m_selectedFiles[fileName].state;
     }
     return parsedError;
@@ -69,6 +69,9 @@ void Controller::clearSelectedFiles() {
 void Controller::startParsing(const QString &fileName) {
     if (!m_selectedFiles.contains(fileName)) {
         m_selectedFiles[fileName] = fileData();
+    }
+    if (!m_selectedFiles[fileName].rsIDs.empty()) {
+        return;
     }
 
     const QString localPath = QUrl(fileName).toLocalFile();
@@ -112,12 +115,25 @@ void Controller::startParsing(const QString &fileName) {
         }
 
         m_selectedFiles[fileName].state = parsedSuccessfully;
+        std::map<std::string, std::string>& rsIDs = m_selectedFiles[fileName].rsIDs;
+        for (const vcf::VCFRecord &record : records) {
+            auto [id, allele] = record.decodeAlleles();
+            if (id.length() >= 3) {
+                rsIDs[id] = allele;
+            }
+        }
+
         emit fileStatusChanged(fileName);
         emit resultsChanged();
-        cout << "Parsing finished successfully\n";
     });
 
     watcher->setFuture(future);
+}
+
+void Controller::showResult(QString const &fileName) {
+    m_results.clear();
+    m_results = m_selectedFiles[fileName].results;
+    emit resultsChanged();
 }
 
 std::vector<vcf::VCFRecord> Controller::parseVCF(const QString &fileName) {
@@ -131,8 +147,7 @@ std::vector<vcf::VCFRecord> Controller::parseVCF(const QString &fileName) {
 
 std::vector<vcf::VCFRecord> Controller::parseTXT(const QString &fileName) {
     try {
-        // Your 23andMe / TXT parser logic here
-        // For now, just return empty; implement your TXT parser
+        // TODO: Implement 23andMe parser here
         return {};
     } catch (...) {
         return {};

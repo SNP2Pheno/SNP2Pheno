@@ -43,6 +43,7 @@ public slots:
     void addSelectedFiles(const QVariantList &files);
     void clearSelectedFiles();
     void startParsing(QString const& fileName);
+    void showResult(QString const& fileName);
 
 private slots:
     void onPlaceholderData();

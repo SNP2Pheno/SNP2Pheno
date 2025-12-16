@@ -9,7 +9,12 @@
 
 struct fileData {
     fileParsedState state = idle;
-
+    std::map<std::string, std::string> rsIDs {};
+    QVariantList results{
+        QVariantMap{
+            {"No data available", QVariant()}
+        }
+    };
 };
 
 #endif //SNP2PHENO_PTT_FILEDATA_H

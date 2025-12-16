@@ -16,7 +16,7 @@ include(FetchContent)
 FetchContent_Declare(
         snp2pheno_vcfparser
         GIT_REPOSITORY https://github.com/SNP2Pheno/vcfParser.git
-        GIT_TAG        254f178  # Change this commit hash if a newer version of the parser is available
+        GIT_TAG 33925b3 # Change this commit hash if a newer version of the parser is available
 )
 
 FetchContent_MakeAvailable(snp2pheno_vcfparser)

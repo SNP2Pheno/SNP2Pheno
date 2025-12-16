@@ -152,6 +152,10 @@ Rectangle {
                         onDoubleClicked: {
                             controller.startParsing(modelData.toString())
                         }
+
+                        onClicked: {
+                            controller.showResult(modelData.toString())
+                        }
                     }
                 }
             }
