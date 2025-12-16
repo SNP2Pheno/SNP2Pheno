@@ -1,5 +1,5 @@
-from parse_GWAS import parseSNP
-from Association import Association, TYPE
+from GWAS.parse_GWAS import parseSNP
+from Association import TYPE
 from Database.database_operations import Database
 
 class GwasToDb:

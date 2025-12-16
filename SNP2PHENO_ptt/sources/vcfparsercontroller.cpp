@@ -1,7 +1,6 @@
 #include "../headers/vcfparsercontroller.h"
 #include "../headers/vcfworker.h"
 #include <QThread>
-#include <QDebug>
 
 VcfParserController::VcfParserController(QObject* parent)
     : QObject(parent)
@@ -18,8 +17,7 @@ void VcfParserController::startParsing(const QString& fileUrl)
 
     connect(worker, &VcfWorker::finished, this, [=](const QStringList& result) {
         m_snpList = result;
-        emit snpListChanged();  // Signal, damit QML die �nderung mitbekommt
-        qDebug() << "VCF parsing finished. Total SNP tokens:" << result.size();
+        emit snpListChanged();
         });
 
     connect(worker, &VcfWorker::finished, thread, &QThread::quit);

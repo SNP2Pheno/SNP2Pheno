@@ -83,7 +83,6 @@ ApplicationWindow {
     Connections {
         target: vcfParser
         onSnpListChanged: {
-            console.log("snpListChanged ausgelöst: " + vcfParser.snpList);
             fileItems = vcfParser.snpList;
         }
     }
@@ -424,7 +423,8 @@ Rectangle {
         color: "#102F4A"
 
         Button {
-            text: "Ordner mit VCF-Dateien auswählen"
+			id: vcfSelectFileButton
+            text: "select folder with VCF-files"
             anchors.top: parent.top
             anchors.left: parent.left
             anchors.right: parent.right
@@ -434,39 +434,81 @@ Rectangle {
 
         ListView {
             id: vcfListView
-            anchors.top: parent.bottom
+            anchors.top: vcfSelectFileButton.bottom
             anchors.left: parent.left
             anchors.right: parent.right
             anchors.bottom: parent.bottom
             model: folderModel
+property var parsedFiles: ({})
             delegate: Rectangle {
-                id: fileDelegate
-                width: vcfListView.width
-                height: 40
-                border.width: 1
-                border.color: "gray"
-                color: parsedFiles[filePath] ? "lightgreen" : (mouseArea.containsMouse ? "lightgray" : "white")
+                        id: fileDelegate
+                        width: vcfListView.width
+                        height: 40
+                        border.width: 1
+                        border.color: "gray"
+                        color: (vcfListView.parsedFiles[filePath] === true) ? "lightgreen" : (mouseAreaVcfListView.containsMouse ? "lightgray" : "white")
 
-                Text {
-                    anchors.centerIn: parent
-                    text: fileName
-                    font.pixelSize: 16
-                    color: "black"
-                    width: parent.width - 10
-                    elide: Text.ElideRight
-                }
+                        RowLayout {
+                            anchors.fill: parent
+                            spacing: 10
+                            anchors.margins: 5
 
-                MouseArea {
-                    id: mouseAreaVcfListView
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onClicked: vcfListView.currentIndex = index
-                    onDoubleClicked: {
-                        console.log("Parsing file:", filePath)
-                        vcfParser.startParsing(filePath)
-                        parsedFiles[filePath] = true
-                    }
-                }
+                            Text {
+                                Layout.fillWidth: true
+                                text: fileName
+                                font.pixelSize: 16
+                                color: "black"
+                                elide: Text.ElideRight
+                            }
+
+                            Rectangle {
+                                id: button_Edit_AFQ
+                                visible: vcfListView.parsedFiles[filePath] === true
+                                width: 30
+                                height: 30
+                                color: "transparent"
+                                border.color: "darkgreen"
+                                border.width: 1
+                                radius: 4
+                                Layout.alignment: Qt.AlignRight
+
+                                Image {
+                                    anchors.centerIn: parent
+                                    width: 24
+                                    height: 24
+                                    source: "./images/SNP_AFQ_ICON.jpg"
+                                    fillMode: Image.PreserveAspectFit
+                                }
+
+                                MouseArea {
+                                    anchors.fill: parent
+                                    cursorShape: Qt.PointingHandCursor
+                                    onClicked: {
+                                        windowLauncher.openAFQEditor()
+                                    }
+                                }
+                            }
+                        }
+
+                        MouseArea {
+                            id: mouseAreaVcfListView
+                            anchors.fill: parent
+                            hoverEnabled: true
+                            propagateComposedEvents: true // Allow child MouseAreas to receive events
+                            onClicked: {
+                                vcfListView.currentIndex = index
+                                mouse.accepted = false // Let the event propagate to children
+                            }
+                            onDoubleClicked: {
+                                vcfParser.startParsing(filePath);
+
+                                var updatedParsedFiles = vcfListView.parsedFiles;
+                                updatedParsedFiles[filePath] = true;
+                                vcfListView.parsedFiles = updatedParsedFiles;
+                            }
+                        }
+                    
+
             }
         }
     }
@@ -484,8 +526,6 @@ Rectangle {
             if (selectedFiles.length > 0) {
                 var fileUrlStr = selectedFiles[0];
                 vcfParser.startParsing(fileUrlStr);
-            } else {
-                console.log("No file selected");
             }
         }
     }
@@ -517,7 +557,7 @@ Rectangle {
     // FolderDialog for selection of folder containing VCF files
     FolderDialog {
         id: folderDialog
-        title: "Ordner mit VCF-Dateien ausw�hlen"
+        title: "select folder with VCF-files"
         currentFolder: StandardPaths.writableLocation(StandardPaths.HomeLocation)
         onAccepted: {
             folderModel.folder = selectedFolder

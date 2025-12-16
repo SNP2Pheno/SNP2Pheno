@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/">
-        <file>AFQEditor.qml</file>
+        <file>QML/AFQEditor.qml</file>
+        <file>QML/main.qml</file>
+        <file>images/ICONV6.ico</file>
     </qresource>
 </RCC>

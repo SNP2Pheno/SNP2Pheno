@@ -1,7 +1,6 @@
 #include "../headers/vcf_to_snp.h"
 #include <QFile>
 #include <QTextStream>
-#include <QDebug>
 #include <QUrl>
 
 
@@ -13,26 +12,21 @@ static bool isSNP(const QString& ref, const QString& alt) {
 VcfToSnp::VcfToSnp(QObject* parent)
     : QObject(parent)
 {
-    qDebug() << "VcfToSnp instance created.";
 }
 
 QStringList VcfToSnp::parseVCF(const QString& filePath) {
     QStringList result;
-    qDebug() << "Attempting to open file:" << filePath;
 
     // Convert a file URL (e.g., "file:///C:/...") to a local file path
     QString localFilePath = filePath;
     if (filePath.startsWith("file://")) {
         localFilePath = QUrl(filePath).toLocalFile();
-        qDebug() << "Converted file URL to local path:" << localFilePath;
     }
 
     QFile file(localFilePath);
     if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        qDebug() << "Error: Could not open file" << localFilePath;
         return result;
     }
-    qDebug() << "File opened successfully.";
 
     QTextStream in(&file);
     int lineCount = 0;
@@ -83,17 +77,14 @@ QStringList VcfToSnp::parseVCF(const QString& filePath) {
                 for (const QString& snp : snpTokens) {
                     QString finalSnp = chrLabel + " " + snp;
                     result << finalSnp;
-                    qDebug() << "Parsed SNP:" << finalSnp;
                 }
             }
             else {
                 // If the expected arrow ("->") isn't found, add the raw id.
                 result << id;
-                qDebug() << "Parsed SNP (raw id):" << id;
             }
         }
     }
     file.close();
-    qDebug() << "Finished parsing file. Total SNP tokens:" << result.size();
     return result;
 }

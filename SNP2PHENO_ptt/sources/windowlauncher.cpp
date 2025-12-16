@@ -4,5 +4,5 @@
 
 void WindowLauncher::openAFQEditor() {
     auto* engine = new QQmlApplicationEngine();
-    engine->load(QUrl("../AFQEditor.qml"));  // später im Resource-System!
+    engine->load(QUrl("qrc:/QML/AFQEditor.qml"));
 }
