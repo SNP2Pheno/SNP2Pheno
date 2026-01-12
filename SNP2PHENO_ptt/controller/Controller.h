@@ -46,7 +46,6 @@ public slots:
     void showResult(QString const& fileName);
 
 private slots:
-    void onPlaceholderData();
 };
 
 
