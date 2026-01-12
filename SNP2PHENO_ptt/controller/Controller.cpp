@@ -11,6 +11,8 @@
 #include <iostream>
 #include <qurl.h>
 #include <ranges>
+#include <regex>
+#include "sources/subprocess.hpp"
 
 using std::cout;
 
@@ -90,7 +92,7 @@ void Controller::startParsing(const QString &fileName) {
     m_selectedFiles[fileName].state = parsing;
     emit fileStatusChanged(fileName);
 
-    auto future = QtConcurrent::run([this, localPath, ext]() -> std::vector<vcf::VCFRecord> {
+    auto future = QtConcurrent::run([this, localPath, ext]() -> std::map<std::string, std::string> {
         if (ext == "vcf") {
             return parseVCF(localPath);
         }
@@ -100,12 +102,12 @@ void Controller::startParsing(const QString &fileName) {
         return {};
     });
 
-    auto *watcher = new QFutureWatcher<std::vector<vcf::VCFRecord>>(this);
+    auto *watcher = new QFutureWatcher<std::map<std::string, std::string>>(this);
 
-    connect(watcher, &QFutureWatcher<std::vector<vcf::VCFRecord>>::finished,
+    connect(watcher, &QFutureWatcher<std::map<std::string, std::string>>::finished,
             this, [this, watcher, fileName]() {
         auto future = watcher->future();
-        std::vector<vcf::VCFRecord> records = future.result();
+        std::map<std::string, std::string> records = future.result();
         watcher->deleteLater();
 
         if (records.empty()) {
@@ -114,14 +116,8 @@ void Controller::startParsing(const QString &fileName) {
             return;
         }
 
+        m_selectedFiles[fileName].rsIDs = records;
         m_selectedFiles[fileName].state = parsedSuccessfully;
-        std::map<std::string, std::string>& rsIDs = m_selectedFiles[fileName].rsIDs;
-        for (const vcf::VCFRecord &record : records) {
-            auto [id, allele] = record.decodeAlleles();
-            if (id.length() >= 3) {
-                rsIDs[id] = allele;
-            }
-        }
 
         emit fileStatusChanged(fileName);
         emit resultsChanged();
@@ -136,19 +132,48 @@ void Controller::showResult(QString const &fileName) {
     emit resultsChanged();
 }
 
-std::vector<vcf::VCFRecord> Controller::parseVCF(const QString &fileName) {
+std::map<std::string, std::string> Controller::parseVCF(const QString &fileName) {
     try {
         vcf::VCFParser parser{fileName.toStdString()};
-        return parser.parseAll();
+        std::map<std::string, std::string> rsIDs = {};
+        for (const vcf::VCFRecord &record : parser.parseAll()) {
+            auto [id, allele] = record.decodeAlleles();
+            if (id.length() >= 3) {
+                rsIDs[id] = allele;
+            }
+        }
+        return rsIDs;
     } catch (...) {
         return {};
     }
 }
 
-std::vector<vcf::VCFRecord> Controller::parseTXT(const QString &fileName) {
+std::map<std::string, std::string> Controller::parseTXT(const QString &fileName) {
     try {
-        // TODO: Implement 23andMe parser here
-        return {};
+        auto p = subprocess::Popen(
+            {"python3", "-u", "../controller/sources/23andme_parse.py",
+             fileName.toStdString()},
+            subprocess::output{subprocess::PIPE}
+        );
+        auto res = p.communicate();
+        std::string output(res.first.buf.data(), res.first.length);
+
+        std::regex pattern(R"(\['(rs\d+)',\s*'([ACGT])'\])");
+        std::smatch match;
+
+        std::string::const_iterator search_start(output.cbegin());
+        std::map<std::string, std::string> rsIDs = {};
+
+        while (std::regex_search(search_start, output.cend(), match, pattern)) {
+            std::string id = match[1].str();
+            std::string allele    = match[2].str();
+
+            rsIDs[id] = allele;
+
+            search_start = match.suffix().first;
+        }
+
+        return rsIDs;
     } catch (...) {
         return {};
     }

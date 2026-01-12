@@ -35,8 +35,8 @@ public:
 private:
     QVariantList m_results = QVariantList();
     QMap<QString, fileData> m_selectedFiles = QMap<QString, fileData>();
-    static std::vector<vcf::VCFRecord> parseVCF(const QString &fileName);
-    static std::vector<vcf::VCFRecord> parseTXT(const QString &fileName);
+    static std::map<std::string, std::string> parseVCF(const QString &fileName);
+    static std::map<std::string, std::string> parseTXT(const QString &fileName);
 
 public slots:
     void invokeAction(const QString& actionName);

@@ -1,9 +1,13 @@
 import os.path
 import re
+import sys
 
 rsID_pattern = re.compile(r'^(rs\d*)\s')
 
-filename = "invalid01.txt"
+if len(sys.argv) != 2:
+    print("ERROR: invalid number of arguments")
+
+filename = sys.argv[1]
 result = []
 tt_and_me = False
 
@@ -20,7 +24,7 @@ def ourfileformat(l):
 
 ## check if file exists
 if not os.path.exists(filename):
-    print(f"The file {filename} does not exist.")
+    print(f"ERROR: The file {filename} does not exist.")
     exit(1)
 
 ## open file to read
