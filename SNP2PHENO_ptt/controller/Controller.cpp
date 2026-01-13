@@ -151,7 +151,7 @@ std::map<std::string, std::string> Controller::parseVCF(const QString &fileName)
 std::map<std::string, std::string> Controller::parseTXT(const QString &fileName) {
     try {
         auto p = subprocess::Popen(
-            {"python3", "-u", "../controller/sources/23andme_parse.py",
+            {"python3", "-u", std::string(OS_PREFIX) + "controller/sources/23andme_parse.py",
              fileName.toStdString()},
             subprocess::output{subprocess::PIPE}
         );

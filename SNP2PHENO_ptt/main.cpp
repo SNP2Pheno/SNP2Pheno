@@ -8,14 +8,14 @@ int main(int argc, char* argv[])
 {
 	QGuiApplication app(argc, argv);
 
-	QGuiApplication::setWindowIcon(QIcon(ICON_PATH_CPP));
+	QGuiApplication::setWindowIcon(QIcon(OS_PREFIX + QString("images/ICONV6.ico")));
 
 	QQmlApplicationEngine engine;
 
 	Controller controller;
 	engine.rootContext()->setContextProperty("controller", &controller);
 
-	engine.load(QUrl::fromLocalFile(MAIN_QML_PATH));
+	engine.load(QUrl::fromLocalFile(OS_PREFIX + QString("main.qml")));
 
 	return QGuiApplication::exec();
 }

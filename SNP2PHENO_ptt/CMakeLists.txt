@@ -44,8 +44,7 @@ add_executable(SNP2PHENO_ptt
 # This makes the constants available in .cpp files (mainly main.cpp)
 target_compile_definitions(SNP2PHENO_ptt
         PRIVATE
-        MAIN_QML_PATH=\"${MAIN_QML_PATH}\"
-        ICON_PATH_CPP=\"${ICON_PATH_CPP}\"
+        OS_PREFIX=\"${OS_PREFIX}\"
 )
 
 target_link_libraries(SNP2PHENO_ptt
