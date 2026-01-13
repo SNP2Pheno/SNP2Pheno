@@ -15,6 +15,11 @@ class Database:
             data.append(row[0])
         return data
 
+    def insert_rsID(self, rsID):
+        self.cur.execute("INSERT INTO SNP_TABLE (rs_ID) VALUES (?)", [rsID])
+        self.db.commit()
+        return self.cur.lastrowid
+
     def insert_disease(self, association, alleleID):
         # insert into GWAS table
         GWAS_ID = self.__insert_GWAS(association)
@@ -49,7 +54,7 @@ class Database:
             betaDirection,\
             CI_min,\
             CI_max) \
-            VALUES (?,?,?,?,?,?,?,?)",
+            VALUES (?,?,?,?,?,?,?,?, ?)",
             [
             association.riskAllele,
             association.pValueMantissa,
