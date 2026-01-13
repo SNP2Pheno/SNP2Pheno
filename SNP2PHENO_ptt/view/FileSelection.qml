@@ -16,8 +16,13 @@ Rectangle {
         nameFilters: ["All Fileformats (*.txt *.vcf)", "VCF (*.vcf)", "TXT / 23andMe (*.txt)"]
 
         onAccepted: {
-            controller.addSelectedFiles(selectedFiles)
-            console.log("Selected files:", selectedFiles)
+            var paths = []
+            for (var i = 0; i < selectedFiles.length; ++i) {
+                var urlString = selectedFiles[i].toString()
+                urlString = decodeURIComponent(urlString)
+                paths.push(urlString)
+            }
+            controller.addSelectedFiles(paths)
         }
     }
 
