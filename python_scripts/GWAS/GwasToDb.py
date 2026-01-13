@@ -27,6 +27,7 @@ class GwasToDb:
             for association in parseSNP("rs" + str(ID)):
                 self.insert_association(association, alleleID)
                 self.db.commit()
+                print(f"Inserted association for rs{ID}")
 
 if __name__ == "__main__":
     gwas = GwasToDb("../Database/SNP2Pheno.db")
