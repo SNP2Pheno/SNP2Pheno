@@ -126,7 +126,7 @@ Rectangle {
                         background: Rectangle {
                             id: bg
                             radius: 5
-                            color: parent.colorForStatus(controller.requestFileStatus(modelData.toString()))
+                            color: "white"
                         }
 
                         function colorForStatus(status) {
