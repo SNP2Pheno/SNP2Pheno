@@ -6,7 +6,9 @@
 #define SNP2PHENO_PTT_CONTROLLER_H
 
 #include <QVariantList>
-#include <QProperty>
+#include <QObject>
+
+class DatabaseManager;
 
 class Controller : public QObject
 {
@@ -17,19 +19,21 @@ class Controller : public QObject
 
 public:
     explicit Controller(QObject* parent = nullptr);
+    ~Controller();
 
     [[nodiscard]] QVariantList results() const { return m_results; }
     [[nodiscard]] QStringList availableActions() const;
     [[nodiscard]] QVariantList selectedFiles() const;
 
-    signals:
-        void resultsChanged();
-        void actionsChanged();
-        void selectedFilesChanged();
+signals:
+    void resultsChanged();
+    void actionsChanged();
+    void selectedFilesChanged();
 
 private:
-    QVariantList m_results = QVariantList();
-    QSet<QString> m_selectedFiles = QSet<QString>();
+    DatabaseManager* m_dbManager;
+    QVariantList m_results;
+    QSet<QString> m_selectedFiles;
 
 public slots:
     void invokeAction(const QString& actionName);
@@ -38,6 +42,7 @@ public slots:
 
 private slots:
     void onPlaceholderData();
+    void initializeDatabase();
 };
 
 
