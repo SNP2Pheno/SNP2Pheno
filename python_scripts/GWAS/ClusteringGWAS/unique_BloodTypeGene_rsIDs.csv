@@ -1,0 +1,116 @@
+rsID,pValueExponent,pValueMantissa,orValue,betaNum,betaUnit,betaDirection,CIMax,CIMin,expression,traitName,type,NumOfIndividualsInStudy,strongestAllele
+rs2519093,-217,4,0.0,0.20180124,unit,decrease,0.22],[0.19,Unknown,B-cell antigen receptor complex-associated protein beta chain measurement,TYPE.APPEARANCE,47745,T
+rs10901252,-66,2,0.0,0.448,unit,increase,0.5],[0.4,Unknown,multiple inositol polyphosphate phosphatase 1 measurement,TYPE.APPEARANCE,10708,C
+rs8176693,-71,2,0.0,0.72,unit,increase,0.8],[0.64,Unknown,semaphorin-6B measurement,TYPE.APPEARANCE,1852,?
+rs8176685,-12,8,0.0,0.218,unit,decrease,0.28],[0.16,Unknown,P-Selectin measurement,TYPE.APPEARANCE,2923,?
+rs8176743,-17,2,0.0,0.582,unit,decrease,0.72],[0.45,(vWF),von Willebrand factor quality,TYPE.APPEARANCE,2100,C
+rs8176746,-43,4,0.0,0.375,unit,increase,0.43],[0.32,Unknown,angiotensin-converting enzyme measurement,TYPE.APPEARANCE,10708,T
+rs505922,-57,5,0.0,0.561,unit,decrease,0.63],[0.49,(vWF),von Willebrand factor quality,TYPE.APPEARANCE,2100,T
+rs687289,-98,4,0.0,0.36,lU/dL,increase,0.0,0.0,(ABO allele - A1),blood coagulation trait,TYPE.APPEARANCE,212,A
+rs507666,-29,5,0.0,17.73,umol/L,decrease,0.0,0.0, ,icam-1 measurement,TYPE.APPEARANCE,4570,G
+rs8176749,-98,4,0.0,0.36,lU/dL,increase,0.0,0.0,(ABO allele - A1),blood coagulation trait,TYPE.APPEARANCE,212,A
+rs8176741,-38,1,0.0,0.46,unit,increase,0.54],[0.38,Unknown,neurogenic locus notch homolog protein 1 measurement,TYPE.APPEARANCE,1852,?
+rs643434,-49,1,0.0,0.51,unit,decrease,0.58],[0.44,(vWF),von Willebrand factor quality,TYPE.APPEARANCE,2100,G
+rs529565,-51,5,0.0,0.202,unit,decrease,0.23],[0.18,Unknown,protein measurement,TYPE.APPEARANCE,10708,T
+rs587611953,-31,1,0.0,0.2223,unit,decrease,0.26],[0.18,Unknown,blood coagulation disease,TYPE.APPEARANCE,439483,C
+rs8176644,-23,1,0.0,0.365133,unit,increase,0.44],[0.29,Unknown,blood protein amount,TYPE.APPEARANCE,5361,T
+rs10793962,-19,2,0.0,0.362001,unit,increase,0.44],[0.28,Unknown,CD109 antigen measurement,TYPE.APPEARANCE,2935,T
+rs550057,-14,1,0.0,0.963655,unit,increase,1.14],[0.79,Unknown,level of ER membrane protein complex subunit 1 in blood serum,TYPE.APPEARANCE,198,T
+rs8176759,-17,2,0.0,0.3648,unit,increase,0.45],[0.28,Unknown,protein measurement,TYPE.APPEARANCE,3334,A
+rs657152,-13,9,0.0,8.0,%,increase,0.0,0.0,(campesterol),phytosterol measurement,TYPE.APPEARANCE,1495,T
+rs9411378,-38,1,0.0,0.310809,unit,decrease,0.36],[0.26,Unknown,blood protein amount,TYPE.APPEARANCE,5366,A
+rs8176747,-12,9,0.0,0.34,unit,increase,0.44],[0.24,Unknown,basal cell adhesion molecule amount,TYPE.APPEARANCE,3301,G
+rs8176643,-24,4,0.0,0.33,unit,decrease,0.0,0.0,Unknown,toll-like receptor 4:Lymphocyte antigen 96 complex amount,TYPE.APPEARANCE,3301,A
+rs8176671,-19,6,0.0,0.24,unit,decrease,0.29],[0.19,Unknown,interleukin-6 receptor subunit beta amount,TYPE.APPEARANCE,10708,A
+rs149037075,-66,7,0.0,0.83,unit,increase,0.93],[0.73,Unknown,interleukin-3 receptor subunit alpha measurement,TYPE.APPEARANCE,3301,T
+rs532436,-12,7,0.0,0.201295,unit,decrease,0.26],[0.14,Unknown,CCL25 measurement,TYPE.APPEARANCE,5366,A
+rs8176672,-14,9,0.0,0.37,unit,increase,0.47],[0.27,Unknown,GDNF family receptor alpha-like measurement,TYPE.APPEARANCE,3301,T
+rs8176645,-14,6,0.0,0.2539486,unit,decrease,0.32],[0.19,Unknown,gut microbiome measurement,TYPE.APPEARANCE,7738,A
+rs115478735,-184,7,0.0,0.3903,unit,decrease,0.41],[0.37,Unknown,deep vein thrombosis,TYPE.APPEARANCE,59236,A
+rs8176720,-10,6,0.0,0.2767,unit,decrease,0.36],[0.19,(EA),a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement,TYPE.APPEARANCE,997,C
+rs12216891,-30,8,0.0,0.8764,unit,increase,1.02],[0.73,Unknown,chymotrypsin-C measurement,TYPE.APPEARANCE,497,T
+rs75949790,-12,4,0.0,15744.726,unit,decrease,0.0,0.0,Unknown,soluble triggering receptor expressed on myeloid cells 2 measurement,TYPE.DISEASE,1001,?
+rs9411377,-480,2,0.0,0.633,unit,increase,0.66],[0.61,Unknown,protein measurement,TYPE.APPEARANCE,10708,A
+rs1633513,-300,1,0.0,38.2,z-score,increase,0.0,0.0,Unknown,alkaline phosphatase measurement,TYPE.DISEASE,390964,C
+rs612169,-40,9,0.0,0.202,unit,increase,0.0,0.0,(SM-8 + 3 other traits),metabolite measurement,TYPE.APPEARANCE,2820,G
+rs182267720,-8,1,0.0,0.327,unit,decrease,0.44],[0.22,(Sub-Saharan African),complement factor D measurement,TYPE.APPEARANCE,1510,T
+rs687621,-100,9,0.0,0.817,unit,increase,0.90],[0.73,Unknown,blood coagulation trait,TYPE.APPEARANCE,9240,A
+rs7853989,-64,2,0.0,0.202004,Unknown,increase,0.23],[0.18,Unknown,ESAM/LAMA4 protein level ratio in blood,TYPE.APPEARANCE,43509,?
+rs1053878,-69,2,0.0,0.236468,Unknown,decrease,0.26],[0.21,Unknown,CDH17/PECAM1 protein level ratio in blood,TYPE.APPEARANCE,43509,?
+rs8176719,-19,1,0.0,0.223,unit,increase,0.27],[0.17,(additive),malaria,TYPE.DISEASE,776,?
+rs8176722,-80,3,0.0,0.7,unit,increase,0.78],[0.62,Unknown,immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement,TYPE.APPEARANCE,1852,?
+rs2769071,-61,9,0.0,0.342479,unit,increase,0.38],[0.3,Unknown,blood protein amount,TYPE.APPEARANCE,5365,G
+rs494242,-14,6,0.0,0.727565,unit,increase,0.95],[0.51,Unknown,level of protocadherin alpha-C1 in blood serum,TYPE.APPEARANCE,192,T
+rs587729126,-14,7,0.0,0.24,unit,decrease,0.0,0.0,Unknown,intercellular adhesion molecule 2 measurement,TYPE.APPEARANCE,3301,G
+rs514659,-51,7,0.0,0.307266,unit,increase,0.35],[0.27,Unknown,von Willebrand factor quality,TYPE.APPEARANCE,5356,C
+rs8176704,-34,4,0.0,0.34,lU/dL,decrease,0.0,0.0,(Conditioned on rs687289),blood coagulation trait,TYPE.APPEARANCE,212,A
+rs79343853,-126,2,0.0,0.876537,unit,increase,0.95],[0.8,Unknown,blood protein amount,TYPE.APPEARANCE,5368,C
+rs492488,-1201,6,0.0,1.4569663,unit,decrease,1.48],[1.43,"(ABO, 9253_52_3)",blood protein amount,TYPE.APPEARANCE,3200,G
+rs9411476,-15,1,0.0,0.747246,unit,increase,0.93],[0.56,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,2935,A
+rs75179845,-57,8,0.0,0.7454,unit,decrease,0.84],[0.65,Unknown,level of chymotrypsin-C in blood serum,TYPE.APPEARANCE,2858,?
+rs597974,-1101,3,0.0,0.832,unit,decrease,0.86],[0.81,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,10708,A
+rs78755596,-11,1,0.0,0.570094,unit,increase,0.73],[0.41,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,2935,A
+rs144275764,-14,2,0.0,0.40787125,unit,increase,0.52],[0.29,Unknown,B-cell antigen receptor complex-associated protein beta chain measurement,TYPE.APPEARANCE,47745,T
+rs142956930,-54,7,0.0,0.45778108,unit,decrease,0.53],[0.39,Unknown,intercellular adhesion molecule 2 measurement,TYPE.APPEARANCE,47745,G
+rs112134200,-12,3,0.0,0.45356297,unit,increase,0.59],[0.32,Unknown,level of roundabout homolog 4 in blood serum,TYPE.APPEARANCE,47745,G
+rs8176688,-15,6,0.0,0.68998355,unit,increase,0.87],[0.51,Unknown,neurogenic locus notch homolog protein 1 measurement,TYPE.APPEARANCE,47745,T
+rs28850884,-54,3,0.0,1.30432,unit,increase,1.48],[1.13,Unknown,cadherin-5 measurement,TYPE.APPEARANCE,47745,C
+rs7469199,-62,2,0.0,0.46254522,unit,increase,0.52],[0.4,Unknown,odorant-binding protein 2b measurement,TYPE.APPEARANCE,47745,G
+rs528127806,-19,4,0.0,0.5307902,unit,decrease,0.65],[0.41,Unknown,odorant-binding protein 2b measurement,TYPE.APPEARANCE,47745,GGCTGCAGTCGTGTGTCTGA
+rs73660468,-21,6,0.0,1.13033,unit,increase,1.37],[0.89,Unknown,"tyrosine-protein kinase receptor Tie-1, soluble measurement",TYPE.APPEARANCE,2935,A
+rs782095625,-306,2,0.0,0.21619795,unit,decrease,0.23],[0.2,Unknown,level of receptor-type tyrosine-protein phosphatase mu in blood,TYPE.APPEARANCE,47745,C
+rs1137827,-119,3,0.0,0.599,unit,increase,0.65],[0.55,Unknown,protein measurement,TYPE.APPEARANCE,10708,T
+rs139840563,-19,5,0.0,0.24,unit,increase,0.3],[0.18,Unknown,mannose-binding protein C measurement,TYPE.APPEARANCE,3301,T
+rs35230453,-44,8,0.0,0.37,unit,increase,0.43],[0.31,Unknown,"tyrosine-protein kinase receptor Tie-1, soluble measurement",TYPE.APPEARANCE,3301,C
+rs140032935,-39,5,0.0,0.85,unit,increase,0.99],[0.71,Unknown,histo-blood group ABO system transferase measurement,TYPE.APPEARANCE,3301,G
+rs977371848,-14,1,0.0,0.2,unit,increase,0.26],[0.14,Unknown,hematocrit,TYPE.DISEASE,14035,C
+rs7857390,-11,6,0.0,0.2949,unit,decrease,0.38],[0.21,Unknown,"tyrosine-protein kinase receptor Tie-1, soluble measurement",TYPE.APPEARANCE,997,A
+rs879055593,-13,1,0.0,0.61,unit,decrease,0.77],[0.45,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,466,C
+rs12554580,-14,9,0.0,0.238759,unit,increase,0.0,0.0,Unknown,serum carcinoembryonic antigen measurement,TYPE.APPEARANCE,1916,C
+rs992108547,-17,7,0.0,0.86,unit,increase,1.06],[0.66,Unknown,E-selectin amount,TYPE.APPEARANCE,466,G
+rs920065566,-194,3,0.0,0.2801,unit,decrease,0.3],[0.26,Unknown,venous thromboembolism,TYPE.APPEARANCE,915868,T
+rs13292932,-13,2,0.0,7.35,z score,increase,0.0,0.0,Unknown,cortical thickness,TYPE.DISEASE,33748,A
+rs566529676,-67,2,0.0,0.4108517,unit,increase,0.46],[0.36,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,47745,CA
+rs8176761,-14,3,0.0,0.24336362,unit,decrease,0.32],[0.17,Unknown,intestinal-type alkaline phosphatase measurement,TYPE.APPEARANCE,47745,C
+rs112565602,-17,2,0.0,0.4514931,unit,decrease,0.56],[0.34,Unknown,a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement,TYPE.APPEARANCE,47745,A
+rs149899707,-18,8,0.0,0.41020435,unit,increase,0.54],[0.28,Unknown,histo-blood group ABO system transferase measurement,TYPE.APPEARANCE,47745,T
+rs191325486,-41,3,0.0,0.49017087,unit,increase,0.59],[0.39,Unknown,histo-blood group ABO system transferase measurement,TYPE.APPEARANCE,47745,A
+rs947073006,-262,2,0.0,0.422,unit,increase,0.45],[0.4,Unknown,E-selectin amount,TYPE.APPEARANCE,2932,G
+rs779860630,-146,3,0.0,0.398,unit,decrease,0.43],[0.37,Unknown,dipeptidase 2 measurement,TYPE.APPEARANCE,10708,?
+rs630510,-15,2,0.0,0.3499,unit,decrease,0.43],[0.27,Unknown,"tyrosine-protein kinase receptor Tie-1, soluble measurement",TYPE.APPEARANCE,997,A
+rs60585338,-13,1,0.0,0.606847,unit,increase,0.77],[0.45,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,2935,T
+rs7045111,-14,2,0.0,0.241565,unit,increase,0.3],[0.18,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,2935,A
+rs8176694,-13,4,0.0,0.237476,unit,decrease,0.3],[0.17,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,2935,C
+rs188658949,-11,3,0.0,0.76376,unit,increase,0.99],[0.54,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,2935,T
+rs8176725,-12,8,0.0,0.26803,unit,increase,0.34],[0.19,Unknown,junctional adhesion molecule B measurement,TYPE.APPEARANCE,2935,A
+rs60563410,-32,1,0.0,0.369909,unit,increase,0.43],[0.31,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,2935,CCT
+rs8176690,-26,5,0.0,0.291627,unit,decrease,0.35],[0.24,Unknown,"tyrosine-protein kinase receptor Tie-1, soluble measurement",TYPE.APPEARANCE,2935,G
+rs7873635,-18,2,0.0,0.24347,unit,increase,0.3],[0.19,Unknown,E-selectin amount,TYPE.APPEARANCE,2935,T
+rs2073824,-15,7,0.0,0.215512,unit,increase,0.27],[0.16,Unknown,insulin receptor measurement,TYPE.APPEARANCE,2935,G
+rs576125,-83,2,0.0,0.254,unit,increase,0.28],[0.23,Unknown,protein measurement,TYPE.APPEARANCE,10708,A
+rs59602812,-126,1,0.0,0.319,unit,decrease,0.34],[0.29,Unknown,protein CASC4 measurement,TYPE.APPEARANCE,10708,?
+rs199718999,-47,2,0.0,0.369,unit,increase,0.42],[0.32,Unknown,protein measurement,TYPE.APPEARANCE,10708,?
+rs8176730,-15,9,0.0,0.29,unit,increase,0.37],[0.21,Unknown,endothelial cell-selective adhesion molecule measurement,TYPE.APPEARANCE,1852,?
+rs635634,-33,3,0.0,0.38,unit,decrease,0.0,0.0,Unknown,hepatocyte growth factor receptor amount,TYPE.APPEARANCE,3301,T
+rs579459,-41,2,0.0,14.0,%,increase,15.96],[12.04,(P-Selectin),soluble p-selectin measurement,TYPE.APPEARANCE,9813,T
+rs495828,-8,3,0.0,4.9,Unknown,Unknown,0.0,0.0,Unknown,angiotensin converting enzyme activity attribute,TYPE.APPEARANCE,400,A
+rs600038,-21,9,0.0,0.385787,unit,decrease,0.47],[0.3,Unknown,OX-2 membrane glycoprotein amount,TYPE.APPEARANCE,2935,C
+rs649129,-15,1,0.0,3.95,%,decrease,4.91],[2.99,(ICAM),icam-1 measurement,TYPE.APPEARANCE,9813,T
+rs176694,-406,1,0.0,0.542,unit,increase,0.0,0.0,Unknown,E-selectin amount,TYPE.APPEARANCE,21758,T
+rs651007,-96,1,0.0,0.9436,unit,decrease,1.02],[0.86,Unknown,E-selectin amount,TYPE.APPEARANCE,997,T
+rs633862,-28,6,0.0,0.290717,unit,increase,0.34],[0.24,Unknown,E-selectin amount,TYPE.APPEARANCE,2935,C
+rs11244061,-204,5,0.0,0.25873166,unit,decrease,0.28],[0.24,Unknown,level of C-type lectin domain family 1 member A in blood,TYPE.APPEARANCE,47745,T
+rs558240,-14,4,0.0,0.211486,unit,decrease,0.27],[0.16,Unknown,immunoglobulin superfamily containing leucine-rich repeat protein 2 measurement,TYPE.APPEARANCE,2935,A
+rs78590974,-27,1,0.0,0.24443081,unit,increase,0.29],[0.2,Unknown,endothelin-converting enzyme 1 measurement,TYPE.APPEARANCE,47745,T
+rs116851371,-36,3,0.0,0.39416364,unit,increase,0.47],[0.32,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,47745,C
+rs587600964,-151,9,0.0,0.23333554,unit,increase,0.25],[0.21,Unknown,CUB and zona pellucida-like domain-containing protein 1 measurement,TYPE.APPEARANCE,47745,G
+rs138683771,-70,5,0.0,0.31929728,unit,increase,0.36],[0.28,Unknown,level of pancreatic secretory granule membrane major glycoprotein GP2 in blood,TYPE.APPEARANCE,47745,C
+rs10901257,-22,4,0.0,0.289324,unit,increase,0.35],[0.23,Unknown,CD209 antigen measurement,TYPE.APPEARANCE,2935,A
+rs587660387,-17,3,0.0,0.49680042,unit,decrease,0.62],[0.37,Unknown,odorant-binding protein 2b measurement,TYPE.APPEARANCE,47745,G
+rs141638449,-17,5,0.0,0.29524553,unit,increase,0.38],[0.21,Unknown,intercellular adhesion molecule 2 measurement,TYPE.APPEARANCE,47745,T
+rs150593209,-22,4,0.0,0.4149957,unit,increase,0.53],[0.3,Unknown,histo-blood group ABO system transferase measurement,TYPE.APPEARANCE,47745,T
+rs147278971,-11,2,0.0,0.688694,unit,decrease,0.89],[0.49,Unknown,E-selectin amount,TYPE.APPEARANCE,2935,C
+rs11244065,-11,5,0.0,0.4473,unit,decrease,0.58],[0.32,Unknown,cadherin-5 measurement,TYPE.APPEARANCE,496,T
+rs176696,-13,1,0.0,0.209808,unit,decrease,0.27],[0.15,Unknown,cadherin-5 measurement,TYPE.APPEARANCE,2935,C
+rs12683493,-13,1,0.0,0.229128,unit,decrease,0.29],[0.17,Unknown,protein FAM3D measurement,TYPE.APPEARANCE,2935,T
+rs1927311,-22,1,0.0,0.276621,unit,decrease,0.33],[0.22,Unknown,a disintegrin and metalloproteinase with thrombospondin motifs 13 measurement,TYPE.APPEARANCE,2935,T
