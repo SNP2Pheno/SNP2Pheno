@@ -12,9 +12,12 @@ CMakeFiles/
 CMakeScripts/
 Testing/
 Makefile
-CMakeLists.txt
 cmake_install.cmake
+config.cmake
 install_manifest.txt
+out/
+CMakePresets.json
+CMakeUserPresets.json
 
 # Qt Creator
 *.pro.user
@@ -46,7 +49,5 @@ cmake-build-*/
 # Windows
 Thumbs.db
 Desktop.ini
-SNP2PHENO_ptt/CMakeLists.txt
-SNP2PHENO_ptt/CMakeLists.txt
 SNP2PHENO_ptt/CMakeLists.txt
 SNP2PHENO_ptt/config.cmake
